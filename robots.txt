@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+Disallow: /admin
+Disallow: /api
+Disallow: /.netlify
+
+Sitemap: https://cbmc-gimhae.netlify.app/sitemap.xml

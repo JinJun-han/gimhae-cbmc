@@ -1,0 +1,1306 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CBMC 김해한마음지회 | 크리스천 비즈니스맨의 일터 사역</title>
+<meta name="description" content="CBMC 김해한마음지회 - 매주 토요일 조찬포럼, 크리스천 비즈니스맨의 말씀과 교제, 일터 선교와 네트워킹. 경남 김해시 장유로 반석인더스트리즈에서 함께합니다.">
+<meta name="keywords" content="CBMC, 김해, 한마음지회, 조찬포럼, 크리스천 비즈니스맨, 일터 사역, 경남, 장유">
+<meta name="author" content="엘림G선교회">
+<meta name="robots" content="index, follow">
+<meta property="og:type" content="website">
+<meta property="og:title" content="CBMC 김해한마음지회 | 일상이 교회, 삶이 예배">
+<meta property="og:description" content="매주 토요일 아침, 크리스천 비즈니스맨들이 말씀과 기도로 세상을 변화시킵니다. 조찬포럼에서 함께하십시오.">
+<meta property="og:image" content="https://cbmc-gimhae.netlify.app/img-net02-business.jpg">
+<meta property="og:url" content="https://cbmc-gimhae.netlify.app">
+<meta property="og:locale" content="ko_KR">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="CBMC 김해한마음지회">
+<meta name="twitter:description" content="매주 토요일 조찬포럼 — 크리스천 비즈니스맨의 말씀과 교제, 일터 사역">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect rx='18' width='100' height='100' fill='%230a1f35'/><text x='50' y='68' font-size='50' text-anchor='middle' fill='%23b8892e' font-family='serif' font-weight='bold'>C</text></svg>" type="image/svg+xml">
+<link rel="canonical" href="https://cbmc-gimhae.netlify.app">
+<!-- Google Analytics (GA4) - 측정 ID를 발급받아 G-7MP3H919FH 부분을 교체하세요 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-7MP3H919FH"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-7MP3H919FH');</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Nanum+Myeongjo:wght@400;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--nd:#0a1f35;--nm:#1a4b7a;--nl:#2e6ea6;--g:#b8892e;--gl:#d4a94a;--gp:#f0e2c4;--w:#fff;--ow:#faf9f7;--wm:#f8f5f0;--g1:#f4f3f0;--g2:#e5e3de;--g5:#8a8680;--g7:#4a4742;--tx:#2a2724;--r:14px;--rs:8px;--e:cubic-bezier(.25,.46,.45,.94)}
+*{margin:0;padding:0;box-sizing:border-box}html{scroll-behavior:smooth}
+body{font-family:'Noto Sans KR',sans-serif;color:var(--tx);background:var(--ow);line-height:1.8;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+
+/* NAV */
+.nav{position:fixed;top:0;left:0;width:100%;z-index:1000;padding:.9rem 2.5rem;transition:all .5s var(--e)}
+.nav.scrolled{background:rgba(10,31,53,.97);backdrop-filter:blur(20px);padding:.5rem 2.5rem;box-shadow:0 4px 30px rgba(0,0,0,.18)}
+.ni{max-width:1320px;margin:0 auto;display:flex;align-items:center;justify-content:space-between}
+.nl{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--w);flex-shrink:0}
+.nl-i{width:34px;height:34px;border-radius:8px;background:rgba(184,137,46,.15);border:1.5px solid rgba(184,137,46,.3);display:flex;align-items:center;justify-content:center;font-weight:800;font-size:.55rem;color:var(--gl);letter-spacing:-.5px}
+.nl-t{font-weight:700;font-size:.9rem;white-space:nowrap}.nl-s{font-size:.55rem;opacity:.5;font-weight:300;letter-spacing:1.5px;text-transform:uppercase;white-space:nowrap}
+.nk{display:flex;align-items:center;gap:1.5rem;list-style:none;margin:0}
+.nk a{color:rgba(255,255,255,.65);text-decoration:none;font-size:.78rem;font-weight:400;transition:color .3s ease;white-space:nowrap}.nk a:hover{color:var(--w)}
+.nj{background:var(--g)!important;color:var(--w)!important;padding:7px 20px!important;border-radius:28px!important;font-weight:600!important;font-size:.76rem!important}
+.nj:hover{background:var(--gl)!important}
+.mb{display:none;background:none;border:none;cursor:pointer;padding:6px}.mb span{display:block;width:20px;height:1.5px;background:var(--w);margin:5px 0;border-radius:2px}
+
+/* HERO */
+.hero{position:relative;height:100vh;min-height:650px;overflow:hidden;background:#050d18}
+.hs{position:absolute;inset:0;opacity:0;transition:opacity 1.8s cubic-bezier(.4,0,.2,1);will-change:opacity,transform}
+.hs.on{opacity:1}
+.hs .hs-bg{position:absolute;inset:-20px;background-size:cover;background-position:center;animation:kenBurns 12s ease-in-out infinite alternate}
+@keyframes kenBurns{0%{transform:scale(1) translate(0,0)}100%{transform:scale(1.08) translate(-1%,-1%)}}
+.hs-ov{position:absolute;inset:0;background:linear-gradient(180deg,rgba(5,13,24,.15) 0%,rgba(5,13,24,.1) 30%,rgba(5,13,24,.45) 65%,rgba(5,13,24,.88) 100%)}
+.hc{position:absolute;bottom:0;left:0;right:0;z-index:5;padding:0 3rem 6rem}
+.hci{max-width:1280px;margin:0 auto}
+.htag{display:inline-block;padding:6px 18px;background:rgba(184,137,46,.12);border:1px solid rgba(184,137,46,.25);border-radius:24px;font-size:.62rem;color:var(--gl);letter-spacing:3px;text-transform:uppercase;font-weight:600;margin-bottom:1rem;backdrop-filter:blur(8px)}
+.hh1{font-family:'Nanum Myeongjo',serif;font-size:clamp(2rem,4.5vw,3.4rem);font-weight:800;color:var(--w);line-height:1.35;margin-bottom:.8rem;max-width:700px;text-shadow:0 4px 40px rgba(0,0,0,.4)}
+.hh1 em{font-style:normal;color:var(--gl)}
+.hp{font-size:.95rem;color:rgba(255,255,255,.6);font-weight:300;max-width:500px;margin-bottom:2rem;line-height:1.85;letter-spacing:.3px}
+.hbtns{display:flex;gap:.8rem;flex-wrap:wrap}
+.hb{padding:12px 30px;border-radius:40px;font-size:.82rem;font-weight:600;text-decoration:none;transition:all .4s cubic-bezier(.4,0,.2,1);cursor:pointer;border:none;display:inline-flex;align-items:center;gap:8px;letter-spacing:.3px}
+.hb1{background:var(--g);color:var(--w);box-shadow:0 6px 24px rgba(184,137,46,.35)}
+.hb1:hover{background:var(--gl);transform:translateY(-3px);box-shadow:0 12px 36px rgba(184,137,46,.45)}
+.hb2{background:rgba(255,255,255,.05);color:rgba(255,255,255,.85);border:1px solid rgba(255,255,255,.18);backdrop-filter:blur(8px)}
+.hb2:hover{background:rgba(255,255,255,.12);border-color:rgba(255,255,255,.3)}
+.hdots{position:absolute;bottom:2.2rem;left:50%;transform:translateX(-50%);z-index:10;display:flex;gap:8px}
+.hd{width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,.2);cursor:pointer;transition:all .5s cubic-bezier(.4,0,.2,1);border:1px solid rgba(255,255,255,.1)}
+.hd.on{background:var(--g);width:32px;border-radius:4px;border-color:var(--gl);box-shadow:0 0 12px rgba(184,137,46,.4)}
+.harr-w{position:absolute;top:50%;right:2.5rem;transform:translateY(-50%);z-index:10;display:flex;flex-direction:column;gap:10px}
+.harr{width:44px;height:44px;border-radius:50%;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.12);color:var(--w);display:flex;align-items:center;justify-content:center;cursor:pointer;transition:all .4s ease;font-size:.8rem;backdrop-filter:blur(12px)}
+.harr:hover{background:rgba(255,255,255,.15);transform:scale(1.1)}
+.hcnt{position:absolute;bottom:2.2rem;right:2.5rem;z-index:10;font-family:'Cormorant Garamond',serif;font-size:.85rem;color:rgba(255,255,255,.25)}
+.hcnt .c{font-size:1.6rem;font-weight:700;color:rgba(255,255,255,.7)}
+/* Hero progress bar */
+.hprog{position:absolute;bottom:0;left:0;height:3px;background:linear-gradient(90deg,var(--g),var(--gl));z-index:11;width:0;transition:none}
+.hprog.run{transition:width 5.5s linear;width:100%}
+
+/* REVEAL */
+.rv{opacity:0;transform:translateY(30px);transition:all .7s var(--e)}.rv.ac{opacity:1;transform:translateY(0)}
+
+/* COMMON */
+section{padding:90px 2.5rem}.si{max-width:1180px;margin:0 auto}
+.sl{font-size:.66rem;letter-spacing:3.5px;text-transform:uppercase;color:var(--g);font-weight:700;margin-bottom:.5rem;display:block}
+.st{font-family:'Nanum Myeongjo',serif;font-size:clamp(1.5rem,2.8vw,2.2rem);font-weight:800;color:var(--nd);line-height:1.4;margin-bottom:.5rem}
+.sd{font-size:.92rem;color:var(--g5);max-width:580px;line-height:1.85;font-weight:300}
+.sh{margin-bottom:3rem}.ct{text-align:center}.cm{margin-left:auto;margin-right:auto}
+
+/* FORUM */
+.forum{background:var(--w)}.fg{display:grid;grid-template-columns:1.05fr 1fr;gap:3.5rem;align-items:center}
+.fv{position:relative}.fimg{width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:var(--r);box-shadow:0 12px 36px rgba(10,31,53,.1)}
+.fbdg{position:absolute;top:-12px;right:-12px;background:var(--g);color:var(--w);padding:12px 18px;border-radius:10px;text-align:center;box-shadow:0 6px 20px rgba(184,137,46,.3)}
+.fbdg-d{font-family:'Cormorant Garamond',serif;font-size:1.8rem;font-weight:700;line-height:1}
+.fbdg-t{font-size:.6rem;letter-spacing:1.5px;text-transform:uppercase;font-weight:500;opacity:.9}
+.fi .st{font-size:1.8rem}
+.ftag{font-family:'Cormorant Garamond',serif;font-style:italic;color:var(--g);font-size:1.05rem;margin-bottom:1.2rem}
+.fi>p{color:var(--g7);font-size:.9rem;margin-bottom:1.2rem;line-height:1.85}
+.fmeta{display:flex;flex-direction:column;gap:.5rem;margin-bottom:1.5rem}
+.fmi{display:flex;align-items:center;gap:8px;font-size:.85rem;color:var(--g7)}
+.fmic{width:28px;height:28px;border-radius:7px;background:var(--wm);display:flex;align-items:center;justify-content:center;font-size:.8rem;flex-shrink:0}
+.ffs{display:grid;grid-template-columns:1fr 1fr;gap:.7rem;margin-top:1.5rem}
+.ff{padding:.9rem 1rem;border-radius:var(--rs);background:var(--g1);transition:all .3s ease;border:1px solid transparent}
+.ff:hover{border-color:var(--gp);background:var(--w);box-shadow:0 2px 12px rgba(10,31,53,.05)}
+.ff h4{font-size:.82rem;font-weight:700;color:var(--nd);margin-bottom:.15rem}.ff p{font-size:.72rem;color:var(--g5);line-height:1.5}
+
+.fup{margin-top:2.5rem;padding:2.2rem;background:var(--nd);border-radius:var(--r);color:var(--w)}
+.fup h3{font-size:1rem;font-weight:700;margin-bottom:1.2rem;color:var(--gl)}
+.upl{display:flex;flex-direction:column;gap:.8rem}
+.upi{display:flex;align-items:center;gap:1rem;padding:.9rem 1rem;background:rgba(255,255,255,.03);border-radius:var(--rs);border:1px solid rgba(255,255,255,.05);transition:all .3s ease}
+.upi:hover{background:rgba(255,255,255,.07)}
+.upd{min-width:50px;text-align:center;padding:6px;background:rgba(184,137,46,.12);border-radius:7px}
+.upd .mo{font-size:.55rem;text-transform:uppercase;letter-spacing:1.5px;color:var(--gl);font-weight:600}
+.upd .dy{font-family:'Cormorant Garamond',serif;font-size:1.4rem;font-weight:700;color:var(--w);line-height:1.1}
+.upn h4{font-size:.85rem;font-weight:600;margin-bottom:.1rem}.upn p{font-size:.73rem;color:rgba(255,255,255,.45)}
+.upy{margin-left:auto;padding:5px 12px;border-radius:18px;background:rgba(255,0,0,.12);border:1px solid rgba(255,0,0,.25);color:#ff4444;font-size:.65rem;font-weight:600;text-decoration:none;white-space:nowrap}
+
+/* NETWORK */
+.network{background:var(--ow)}.ng{display:grid;grid-template-columns:repeat(3,1fr);gap:1.3rem}
+.nc{border-radius:var(--r);overflow:hidden;background:var(--w);box-shadow:0 2px 12px rgba(10,31,53,.05);transition:all .4s var(--e);border:1px solid var(--g2)}
+.nc:hover{transform:translateY(-6px);box-shadow:0 20px 56px rgba(10,31,53,.16);border-color:transparent}
+.nciw{overflow:hidden}.ncimg{width:100%;aspect-ratio:16/10;object-fit:cover;transition:transform .6s ease}
+.nc:hover .ncimg{transform:scale(1.05)}.ncb{padding:1.6rem}
+.nct{display:inline-block;padding:2px 9px;border-radius:4px;font-size:.6rem;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:.6rem}
+.nc:nth-child(1) .nct{background:rgba(26,75,122,.07);color:var(--nm)}
+.nc:nth-child(2) .nct{background:rgba(184,137,46,.08);color:var(--g)}
+.nc:nth-child(3) .nct{background:rgba(91,163,217,.08);color:#5ba3d9}
+.nc:nth-child(4) .nct{background:rgba(76,175,80,.07);color:#4caf50}
+.nc:nth-child(5) .nct{background:rgba(156,39,176,.07);color:#9c27b0}
+.nc:nth-child(6) .nct{background:rgba(255,87,34,.07);color:#e64a19}
+.nc h3{font-size:1.02rem;font-weight:700;color:var(--nd);margin-bottom:.3rem;line-height:1.4}
+.nc p{font-size:.8rem;color:var(--g5);line-height:1.7}
+
+/* SERVE */
+.serve{background:var(--nd);color:var(--w)}.serve .sl{color:var(--gl)}.serve .st{color:var(--w)}.serve .sd{color:rgba(255,255,255,.5)}
+.sg{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem;margin-top:2.5rem}
+.sv{padding:1.8rem 1.3rem;border-radius:var(--r);text-align:center;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.05);transition:all .35s ease}
+.sv:hover{background:rgba(255,255,255,.08);transform:translateY(-4px)}
+.svi{font-size:2.2rem;margin-bottom:.8rem}.sv h4{font-size:.9rem;font-weight:700;margin-bottom:.35rem}
+.sv p{font-size:.75rem;color:rgba(255,255,255,.5);line-height:1.6}
+
+/* GALLERY */
+.gallery{background:var(--w)}
+.gtabs{display:flex;gap:.4rem;margin-bottom:2rem;flex-wrap:wrap}
+.gtab{padding:7px 18px;border-radius:28px;font-size:.78rem;font-weight:500;cursor:pointer;transition:all .3s ease;border:1px solid var(--g2);background:var(--w);color:var(--g7)}
+.gtab:hover,.gtab.on{background:var(--nd);color:var(--w);border-color:var(--nd)}
+.gg{display:grid;grid-template-columns:repeat(4,1fr);gap:.8rem}
+.gi{position:relative;border-radius:var(--rs);overflow:hidden;aspect-ratio:1;cursor:pointer}
+.gi img{width:100%;height:100%;object-fit:cover;transition:transform .5s ease}
+.gi:hover img{transform:scale(1.08)}
+.gi::after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,transparent 40%,rgba(10,31,53,.65) 100%);opacity:0;transition:opacity .3s ease}
+.gi:hover::after{opacity:1}
+.gl{position:absolute;bottom:8px;left:8px;right:8px;z-index:2;font-size:.72rem;color:var(--w);font-weight:500;opacity:0;transition:opacity .3s ease}
+.gi:hover .gl{opacity:1}
+.gi.vid::before{content:'▶';position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);z-index:3;width:42px;height:42px;border-radius:50%;background:rgba(255,0,0,.82);color:white;font-size:.85rem;display:flex;align-items:center;justify-content:center;padding-left:2px;box-shadow:0 4px 14px rgba(0,0,0,.3)}
+.gi:first-child{grid-row:span 2;aspect-ratio:auto}
+
+/* TEAM */
+.team{background:var(--ow)}
+.tg{display:grid;grid-template-columns:repeat(4,1fr);gap:1.3rem;margin-top:2.5rem}
+.tc{text-align:center;transition:all .35s ease}.tc:hover{transform:translateY(-4px)}
+.ta{width:110px;height:110px;border-radius:50%;margin:0 auto .8rem;background:linear-gradient(135deg,var(--nm),var(--nl));display:flex;align-items:center;justify-content:center;font-family:'Cormorant Garamond',serif;font-size:1.8rem;font-weight:700;color:var(--w);box-shadow:0 8px 32px rgba(10,31,53,.08);border:3px solid var(--w);transition:all .35s ease}
+.tc:hover .ta{box-shadow:0 16px 48px rgba(10,31,53,.12);border-color:var(--gp)}
+.tc h4{font-size:.92rem;font-weight:700;color:var(--nd);margin-bottom:.1rem}
+.tr{font-size:.72rem;color:var(--g);font-weight:600;margin-bottom:.25rem}
+.td{font-size:.72rem;color:var(--g5);line-height:1.5}
+
+/* LINKS */
+.links{background:var(--wm)}.lg{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem}
+.lc{padding:1.8rem;border-radius:var(--r);background:var(--w);text-align:center;transition:all .35s ease;text-decoration:none;color:var(--tx);border:1px solid var(--g2);display:block}
+.lc:hover{transform:translateY(-5px);box-shadow:0 8px 32px rgba(10,31,53,.08);border-color:var(--nl)}
+.lci{font-size:2rem;margin-bottom:.7rem}.lc h4{font-size:.85rem;font-weight:700;color:var(--nd);margin-bottom:.2rem}
+.lc p{font-size:.72rem;color:var(--g5)}.lc .ar{color:var(--nl);font-size:.75rem;margin-top:.5rem;display:block}
+
+/* CTA */
+.cta{background:linear-gradient(145deg,var(--nd),var(--nm));color:var(--w);text-align:center;padding:75px 2.5rem}
+.ctai{max-width:620px;margin:0 auto}
+.ctat{font-family:'Nanum Myeongjo',serif;font-size:clamp(1.4rem,2.8vw,2rem);font-weight:800;margin-bottom:.8rem;line-height:1.4}
+.ctad{font-size:.9rem;color:rgba(255,255,255,.55);margin-bottom:2rem;font-weight:300}
+.ctab{display:flex;gap:.7rem;justify-content:center;flex-wrap:wrap}
+
+/* FOOTER */
+.footer{background:var(--nd);color:rgba(255,255,255,.4);padding:45px 2.5rem 22px}
+.fin{max-width:1180px;margin:0 auto}
+.ftt{display:grid;grid-template-columns:2.5fr 1fr 1fr 1fr;gap:2.5rem;margin-bottom:2rem}
+.ftb{display:flex;align-items:center;gap:8px;margin-bottom:.7rem}
+.ftbi{width:28px;height:28px;border-radius:6px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);display:flex;align-items:center;justify-content:center;font-size:.5rem;font-weight:800;color:var(--w)}
+.ftb span{font-size:.85rem;font-weight:700;color:var(--w)}
+.fta{font-size:.73rem;line-height:1.8}
+.fth{font-size:.75rem;font-weight:700;color:var(--w);margin-bottom:.6rem}
+.ftl{list-style:none}.ftl li{margin-bottom:4px}
+.ftl a{color:rgba(255,255,255,.35);text-decoration:none;font-size:.73rem;transition:color .3s ease}.ftl a:hover{color:var(--gl)}
+.ftbt{border-top:1px solid rgba(255,255,255,.04);padding-top:.8rem;display:flex;justify-content:space-between;flex-wrap:wrap;gap:.5rem}
+.ftc{font-size:.65rem}.ftm{font-size:.6rem;text-align:center;margin-top:.6rem;color:rgba(255,255,255,.18)}.ftm a{color:var(--gl);text-decoration:none}
+
+/* LANG SWITCH */
+.lang-sw{display:flex;gap:3px;margin-left:10px;align-items:center;flex-shrink:0}
+.lang-btn{padding:3px 8px;border-radius:14px;border:1px solid rgba(255,255,255,.1);background:transparent;color:rgba(255,255,255,.45);font-size:.58rem;cursor:pointer;transition:all .3s ease;white-space:nowrap}
+.lang-btn.on{background:rgba(184,137,46,.15);border-color:rgba(184,137,46,.3);color:var(--gl)}
+.lang-btn:hover{background:rgba(255,255,255,.08)}
+.nav.scrolled .lang-btn{border-color:rgba(255,255,255,.15);color:rgba(255,255,255,.5)}
+.nav.scrolled .lang-btn.on{background:rgba(184,137,46,.2);border-color:rgba(184,137,46,.35);color:var(--gl)}
+
+/* MOBILE MENU */
+.mm{position:fixed;inset:0;background:rgba(10,31,53,.98);z-index:9999;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1.3rem;opacity:0;pointer-events:none;transition:opacity .3s ease}
+.mm.open{opacity:1;pointer-events:all}.mm a{color:var(--w);font-size:1.1rem;text-decoration:none;font-weight:500}
+.mmx{position:absolute;top:1.3rem;right:1.3rem;background:none;border:none;color:var(--w);font-size:1.5rem;cursor:pointer}
+
+/* LIGHTBOX */
+.lb{position:fixed;inset:0;background:rgba(0,0,0,.92);z-index:10000;display:flex;align-items:center;justify-content:center;opacity:0;pointer-events:none;transition:opacity .3s ease;backdrop-filter:blur(10px)}
+.lb.open{opacity:1;pointer-events:all}
+.lb img{max-width:90vw;max-height:85vh;object-fit:contain;border-radius:8px;box-shadow:0 20px 60px rgba(0,0,0,.5)}
+.lb-x{position:absolute;top:1.5rem;right:1.5rem;background:rgba(255,255,255,.1);border:none;color:#fff;font-size:1.3rem;cursor:pointer;width:44px;height:44px;border-radius:50%;display:flex;align-items:center;justify-content:center;transition:background .3s ease}
+.lb-x:hover{background:rgba(255,255,255,.2)}
+.lb-cap{position:absolute;bottom:2rem;left:50%;transform:translateX(-50%);color:rgba(255,255,255,.7);font-size:.82rem;text-align:center;max-width:80vw}
+.lb-arr{position:absolute;top:50%;background:rgba(255,255,255,.08);border:none;color:#fff;font-size:1.2rem;cursor:pointer;width:48px;height:48px;border-radius:50%;display:flex;align-items:center;justify-content:center;transition:all .3s ease}
+.lb-arr:hover{background:rgba(255,255,255,.18)}
+.lb-prv{left:1.5rem}.lb-nxt{right:1.5rem}
+.gi.hide{display:none}
+
+/* RESPONSIVE */
+@media(max-width:1024px){.fg{grid-template-columns:1fr;gap:2rem}.ng,.lg{grid-template-columns:repeat(2,1fr)}.sg{grid-template-columns:repeat(2,1fr)}.tg{grid-template-columns:repeat(2,1fr)}.ftt{grid-template-columns:1fr 1fr}.harr-w{display:none}[style*="grid-template-columns:repeat(4"]{grid-template-columns:repeat(2,1fr)!important}}
+@media(max-width:768px){section{padding:65px 1.2rem}.nav{padding:.7rem 1.2rem}.nav.scrolled{padding:.45rem 1.2rem}.nk{display:none}.mb{display:block}.hc{padding:0 1.5rem 5rem}.ng,.lg{grid-template-columns:1fr}.sg{grid-template-columns:1fr}.gg{grid-template-columns:repeat(2,1fr)}.gi:first-child{grid-row:span 1}.tg{grid-template-columns:repeat(2,1fr)}.ffs{grid-template-columns:1fr}.ftt{grid-template-columns:1fr;gap:1.2rem}.ftbt{flex-direction:column;text-align:center}.hbtns,.ctab{flex-direction:column;align-items:flex-start}.hcnt{display:none}[style*="grid-template-columns:repeat(3"]{grid-template-columns:1fr!important}[style*="grid-template-columns:repeat(4"]{grid-template-columns:repeat(2,1fr)!important}[style*="grid-template-columns:1fr 1fr;gap:2rem"]{grid-template-columns:1fr!important}}
+</style>
+</head>
+<body>
+<!-- NAV -->
+<nav class="nav" id="nav"><div class="ni">
+<a href="#hero" class="nl"><div class="nl-i">CBMC</div><div><div class="nl-t">김해한마음지회</div><div class="nl-s">Gimhae Hanmaeum</div></div></a>
+<ul class="nk"><li><a href="#forum" data-i="nav1">조찬포럼</a></li><li><a href="#net" data-i="nav2">네트워크</a></li><li><a href="#resources">자료실</a></li><li><a href="#gal" data-i="nav3">갤러리</a></li><li><a href="#plan" data-i="nav4">운영계획</a></li><li><a href="#map" data-i="nav5">오시는 길</a></li></ul>
+<div class="lang-sw" id="langSw"><button class="lang-btn on" data-lang="ko">🇰🇷 한국어</button><button class="lang-btn" data-lang="en">🇺🇸 ENG</button><button class="lang-btn" data-lang="vi">🇻🇳 Tiếng Việt</button></div>
+<button class="mb" onclick="tmm()" aria-label="메뉴 열기"><span></span><span></span><span></span></button>
+</div></nav>
+
+<div class="mm" id="mm"><button class="mmx" onclick="tmm()" aria-label="메뉴 닫기">✕</button>
+<a href="#forum" onclick="tmm()" data-i="nav1">조찬포럼</a><a href="#net" onclick="tmm()" data-i="nav2">네트워크</a><a href="#resources" onclick="tmm()">📚 자료실</a><a href="#gal" onclick="tmm()" data-i="nav3">갤러리</a><a href="#plan" onclick="tmm()" data-i="nav4">운영계획</a><a href="#map" onclick="tmm()" data-i="nav5">오시는 길</a>
+<div style="display:flex;gap:6px;margin-top:1rem"><button class="lang-btn on" data-lang="ko" onclick="switchLang('ko');tmm()">🇰🇷</button><button class="lang-btn" data-lang="en" onclick="switchLang('en');tmm()">🇺🇸</button><button class="lang-btn" data-lang="vi" onclick="switchLang('vi');tmm()">🇻🇳</button></div></div>
+
+<!-- HERO -->
+<section class="hero" id="hero">
+<div class="hs on"><div class="hs-bg" style="background-image:url('img-hydrangea-new.jpg')"></div><div class="hs-ov"></div></div>
+<div class="hs"><div class="hs-bg" style="background-image:url('img-spring.jpg')"></div><div class="hs-ov"></div></div>
+<div class="hs"><div class="hs-bg" style="background-image:url('img-mountain.jpg')"></div><div class="hs-ov"></div></div>
+<div class="hs"><div class="hs-bg" style="background-image:url('img-flower1.jpg')"></div><div class="hs-ov"></div></div>
+<div class="hs"><div class="hs-bg" style="background-image:url('img-bridge.jpg')"></div><div class="hs-ov"></div></div>
+<div class="hs"><div class="hs-bg" style="background-image:url('img-bansuk-night.jpg')"></div><div class="hs-ov"></div></div>
+<div class="hs"><div class="hs-bg" style="background-image:url('img-garden.jpg')"></div><div class="hs-ov"></div></div>
+<div class="hs"><div class="hs-bg" style="background-image:url('img-museum.jpg')"></div><div class="hs-ov"></div></div>
+<div class="hs"><div class="hs-bg" style="background-image:url('img-meal.jpg')"></div><div class="hs-ov"></div></div>
+<div class="hs"><div class="hs-bg" style="background-image:url('img-forum-live.jpg')"></div><div class="hs-ov"></div></div>
+<div class="hc"><div class="hci">
+<div class="htag" id="hTag">CBMC 김해한마음지회</div>
+<h1 class="hh1" id="hT">비즈니스 세계에<br><em>하나님 나라</em>가 임하게 하라</h1>
+<p class="hp" id="hD">한 사람이 변화되면 세상이 변화됩니다. 당신의 일터가 곧 사역지입니다.</p>
+<div class="hbtns"><a href="#forum" class="hb hb1">토요조찬포럼 →</a><a href="#ct" class="hb hb2">함께하기</a></div>
+</div></div>
+<div class="harr-w"><div class="harr" onclick="hgo(-1)" aria-label="이전 슬라이드">▲</div><div class="harr" onclick="hgo(1)" aria-label="다음 슬라이드">▼</div></div>
+<div class="hdots" id="hDots"></div>
+<div class="hprog" id="hProg"></div>
+<div class="hcnt"><span class="c" id="hN">01</span> / <span id="hTot">06</span></div>
+</section>
+
+<!-- FORUM -->
+<section class="forum" id="forum"><div class="si"><div class="fg">
+<div class="fv rv"><div style="overflow:hidden;border-radius:var(--r)"><img src="img-seo.jpg" alt="서재찬 박사 강의" class="fimg"></div><div class="fbdg"><div class="fbdg-d">SAT</div><div class="fbdg-t">Every Week</div></div></div>
+<div class="fi rv">
+<span class="sl">Signature Program</span><h2 class="st" style="font-size:1.8rem" data-i="f_title">토요조찬포럼</h2>
+<div class="ftag" data-i="f_tag">"일상이 교회, 삶이 예배"</div>
+<p><span data-i="f_desc">CBMC 김해한마음지회의 트레이드 마크입니다. 매주 토요일 아침, 크리스천 비즈니스맨들이 함께 모여 말씀을 나누고, 간증을 듣고, 일터의 문제를 기도로 풀어갑니다.</span></p>
+<div class="fmeta">
+<div class="fmi"><div class="fmic">📅</div> <span data-i="f_time">매주 토요일 오전 7:00 ~ 9:00</span></div>
+<div class="fmi"><div class="fmic">📍</div> <span data-i="f_addr">반석인더스트리즈(주) — 경남 김해시 장유로 167-23</span></div>
+<div class="fmi"><div class="fmic">👥</div> <span data-i="f_who">회원 및 초청 VIP 비즈니스맨</span></div>
+</div>
+<div class="ffs">
+<div class="ff"><h4 data-i="f_ft1t">🎤 초청 강의</h4><p data-i="f_ft1d">비즈니스 리더, 목회자, 전문가 초청 강연</p></div>
+<div class="ff"><h4 data-i="f_ft2t">📖 말씀 나눔</h4><p data-i="f_ft2d">토론식 성경공부, 삶에 적용하는 말씀</p></div>
+<div class="ff"><h4 data-i="f_ft3t">🙏 구원 간증</h4><p data-i="f_ft3d">Before → How → After 3분 구원 간증</p></div>
+<div class="ff"><h4>📺 YouTube 공개</h4><p>핵심 강의 영상 공개, 온라인 확산</p></div>
+</div></div></div>
+
+<!-- 강사 소개 -->
+<div class="rv" style="margin-top:3rem">
+<h3 style="font-family:'Nanum Myeongjo',serif;font-size:1.3rem;font-weight:800;color:var(--nd);margin-bottom:.4rem">🎓 <span data-i="spk_t">조찬포럼 강사진</span></h3>
+<p style="font-size:.82rem;color:var(--g5);margin-bottom:1.5rem"><span data-i="spk_d">김해한마음지회 조찬포럼에서 말씀과 삶의 지혜를 나눠주시는 강사님들입니다.</span></p>
+<div style="display:grid;grid-template-columns:repeat(4,1fr);gap:1rem">
+
+<div style="background:var(--w);border-radius:var(--r);overflow:hidden;border:1px solid var(--g2);transition:all .35s ease" onmouseover="this.style.transform='translateY(-5px)';this.style.boxShadow='0 12px 40px rgba(10,31,53,.1)'" onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='none'">
+<div style="overflow:hidden;aspect-ratio:4/3"><img src="img-choi.jpg" alt="최무열 목사" style="width:100%;height:100%;object-fit:cover;object-position:center top;transition:transform .5s ease" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'"></div>
+<div style="padding:1.1rem">
+<div style="font-size:.58rem;letter-spacing:2px;color:var(--g);font-weight:700;text-transform:uppercase;margin-bottom:.3rem">Speaker</div>
+<h4 style="font-size:.92rem;font-weight:800;color:var(--nd);margin-bottom:.15rem">최무열 목사</h4>
+<p style="font-size:.72rem;color:var(--g5);line-height:1.5">전 부산장신대 총장<br>김해한마음지회 지도목사</p>
+<a href="https://www.youtube.com/watch?v=MDJIkMahVYY&list=PLIhQ51lQQFP8s95ZNqD9fZyi1F1rpqYCU" target="_blank" rel="noopener noreferrer" style="display:inline-block;margin-top:.5rem;padding:3px 10px;border-radius:14px;background:rgba(255,0,0,.08);border:1px solid rgba(255,0,0,.15);color:#e44;font-size:.62rem;font-weight:600;text-decoration:none" data-i="spk_yt">▶ 강의 보기</a>
+</div></div>
+
+<div style="background:var(--w);border-radius:var(--r);overflow:hidden;border:1px solid var(--g2);transition:all .35s ease" onmouseover="this.style.transform='translateY(-5px)';this.style.boxShadow='0 12px 40px rgba(10,31,53,.1)'" onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='none'">
+<div style="overflow:hidden;aspect-ratio:4/3"><img src="img-han.jpg" alt="한진준 목사" style="width:100%;height:100%;object-fit:cover;object-position:center top;transition:transform .5s ease" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'"></div>
+<div style="padding:1.1rem">
+<div style="font-size:.58rem;letter-spacing:2px;color:var(--g);font-weight:700;text-transform:uppercase;margin-bottom:.3rem">Speaker</div>
+<h4 style="font-size:.92rem;font-weight:800;color:var(--nd);margin-bottom:.15rem">한진준 목사</h4>
+<p style="font-size:.72rem;color:var(--g5);line-height:1.5">엘림G선교회 대표<br>김해한마음지회 지도목사</p>
+<a href="https://www.youtube.com/watch?v=MDJIkMahVYY&list=PLIhQ51lQQFP8s95ZNqD9fZyi1F1rpqYCU" target="_blank" rel="noopener noreferrer" style="display:inline-block;margin-top:.5rem;padding:3px 10px;border-radius:14px;background:rgba(255,0,0,.08);border:1px solid rgba(255,0,0,.15);color:#e44;font-size:.62rem;font-weight:600;text-decoration:none">▶ 강의 보기</a>
+</div></div>
+
+<div style="background:var(--w);border-radius:var(--r);overflow:hidden;border:1px solid var(--g2);transition:all .35s ease" onmouseover="this.style.transform='translateY(-5px)';this.style.boxShadow='0 12px 40px rgba(10,31,53,.1)'" onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='none'">
+<div style="overflow:hidden;aspect-ratio:4/3"><img src="img-seo.jpg" alt="서재찬 박사" style="width:100%;height:100%;object-fit:cover;object-position:center top;transition:transform .5s ease" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'"></div>
+<div style="padding:1.1rem">
+<div style="font-size:.58rem;letter-spacing:2px;color:var(--g);font-weight:700;text-transform:uppercase;margin-bottom:.3rem">Speaker</div>
+<h4 style="font-size:.92rem;font-weight:800;color:var(--nd);margin-bottom:.15rem">서재찬 박사</h4>
+<p style="font-size:.72rem;color:var(--g5);line-height:1.5">반석인더스트리즈 대표</p>
+<a href="https://www.youtube.com/watch?v=MDJIkMahVYY&list=PLIhQ51lQQFP8s95ZNqD9fZyi1F1rpqYCU&index=11" target="_blank" rel="noopener noreferrer" style="display:inline-block;margin-top:.5rem;padding:3px 10px;border-radius:14px;background:rgba(255,0,0,.08);border:1px solid rgba(255,0,0,.15);color:#e44;font-size:.62rem;font-weight:600;text-decoration:none">▶ 강의 보기</a>
+</div></div>
+
+<div style="background:var(--w);border-radius:var(--r);overflow:hidden;border:1px solid var(--g2);transition:all .35s ease" onmouseover="this.style.transform='translateY(-5px)';this.style.boxShadow='0 12px 40px rgba(10,31,53,.1)'" onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='none'">
+<div style="overflow:hidden;aspect-ratio:4/3"><img src="img-lim.jpg" alt="임성태 한의박사" style="width:100%;height:100%;object-fit:cover;object-position:center top;transition:transform .5s ease" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'"></div>
+<div style="padding:1.1rem">
+<div style="font-size:.58rem;letter-spacing:2px;color:var(--g);font-weight:700;text-transform:uppercase;margin-bottom:.3rem">Speaker</div>
+<h4 style="font-size:.92rem;font-weight:800;color:var(--nd);margin-bottom:.15rem">임성태 한의박사</h4>
+<p style="font-size:.72rem;color:var(--g5);line-height:1.5">자연힐 한방병원 원장</p>
+<a href="https://www.youtube.com/watch?v=MDJIkMahVYY&list=PLIhQ51lQQFP8s95ZNqD9fZyi1F1rpqYCU" target="_blank" rel="noopener noreferrer" style="display:inline-block;margin-top:.5rem;padding:3px 10px;border-radius:14px;background:rgba(255,0,0,.08);border:1px solid rgba(255,0,0,.15);color:#e44;font-size:.62rem;font-weight:600;text-decoration:none">▶ 강의 보기</a>
+</div></div>
+
+</div></div>
+
+<!-- 은혜로운 나눔 공간 -->
+<div class="rv" style="margin-top:2.5rem;padding:2rem;background:linear-gradient(135deg,#f8f5f0,#fff);border-radius:var(--r);border:1px solid var(--g2)">
+<h3 style="font-family:'Nanum Myeongjo',serif;font-size:1.15rem;font-weight:800;color:var(--nd);margin-bottom:.8rem">✨ <span data-i="grace_t">은혜로운 나눔 공간</span></h3>
+<p style="font-size:.88rem;color:var(--g7);line-height:1.9;margin-bottom:1rem" data-i="grace_d">조찬포럼은 단순한 강의가 아닙니다. 말씀을 통해 삶을 돌아보고, 간증을 통해 서로를 격려하며, 기도를 통해 하나님의 인도하심을 구하는 은혜의 자리입니다. 비즈니스 현장에서 겪는 고민과 감사를 나누고, 함께 기도하며 성장하는 공동체입니다.</p>
+<div style="display:grid;grid-template-columns:repeat(3,1fr);gap:.8rem">
+<div style="padding:1rem;background:var(--w);border-radius:var(--rs);text-align:center;cursor:pointer;transition:all .3s ease" onclick="document.getElementById('modal-word').style.display='block'" onmouseover="this.style.transform='translateY(-3px)';this.style.boxShadow='0 8px 24px rgba(0,0,0,.08)'" onmouseout="this.style.transform='';this.style.boxShadow=''">
+<div style="font-size:1.5rem;margin-bottom:.4rem">📖</div>
+<div style="font-size:.78rem;font-weight:700;color:var(--nd);margin-bottom:.15rem" data-i="gr1t">말씀 묵상</div>
+<div style="font-size:.68rem;color:var(--g5)"><span data-i="gr1d">매주 본문을 함께 읽고 삶에 적용합니다</span></div>
+<div style="margin-top:.4rem;font-size:.6rem;color:var(--gl);font-weight:600">클릭하여 보기 →</div>
+</div>
+<div style="padding:1rem;background:var(--w);border-radius:var(--rs);text-align:center;cursor:pointer;transition:all .3s ease" onclick="document.getElementById('modal-group').style.display='block'" onmouseover="this.style.transform='translateY(-3px)';this.style.boxShadow='0 8px 24px rgba(0,0,0,.08)'" onmouseout="this.style.transform='';this.style.boxShadow=''">
+<div style="font-size:1.5rem;margin-bottom:.4rem">🤝</div>
+<div style="font-size:.78rem;font-weight:700;color:var(--nd);margin-bottom:.15rem" data-i="gr2t">소그룹 나눔</div>
+<div style="font-size:.68rem;color:var(--g5)"><span data-i="gr2d">테이블별 진솔한 삶의 이야기를 나눕니다</span></div>
+<div style="margin-top:.4rem;font-size:.6rem;color:var(--gl);font-weight:600">클릭하여 보기 →</div>
+</div>
+<div style="padding:1rem;background:var(--w);border-radius:var(--rs);text-align:center;cursor:pointer;transition:all .3s ease" onclick="document.getElementById('modal-prayer').style.display='block'" onmouseover="this.style.transform='translateY(-3px)';this.style.boxShadow='0 8px 24px rgba(0,0,0,.08)'" onmouseout="this.style.transform='';this.style.boxShadow=''">
+<div style="font-size:1.5rem;margin-bottom:.4rem">🙏</div>
+<div style="font-size:.78rem;font-weight:700;color:var(--nd);margin-bottom:.15rem" data-i="gr3t">합심 기도</div>
+<div style="font-size:.68rem;color:var(--g5)"><span data-i="gr3d">서로의 일터와 가정을 위해 기도합니다</span></div>
+<div style="margin-top:.4rem;font-size:.6rem;color:var(--gl);font-weight:600">클릭하여 보기 →</div>
+</div>
+</div>
+
+<!-- 🎵 찬양인도자 -->
+<div style="margin-top:1.2rem;padding:1rem;background:var(--w);border-radius:var(--rs);display:flex;align-items:center;gap:1rem;border:1px solid rgba(76,175,80,.2)">
+<img src="img-han-worship.jpg" alt="한석영 목사" style="width:60px;height:60px;border-radius:50%;object-fit:cover;object-position:center top">
+<div>
+<div style="font-size:.6rem;letter-spacing:2px;color:#4caf50;font-weight:700;text-transform:uppercase;margin-bottom:.2rem">🎵 귀한 섬김</div>
+<div style="font-size:.88rem;font-weight:800;color:var(--nd)">한석영 목사</div>
+<div style="font-size:.72rem;color:var(--g5)">찬양인도자 · 일터사역자</div>
+</div>
+</div>
+
+</div>
+
+<!-- 포럼 일정: 지난 / 현재 / 다음 -->
+<div class="fup rv" style="margin-top:2rem">
+<h3 data-i="sch_t">📋 포럼 일정</h3>
+<div class="upl">
+
+<div style="font-size:.62rem;letter-spacing:2px;color:rgba(255,255,255,.35);font-weight:600;text-transform:uppercase;margin-bottom:.3rem;margin-top:.3rem">지난 포럼</div>
+<div class="upi" style="opacity:.7">
+<div class="upd"><div class="mo">FEB</div><div class="dy">08</div></div>
+<div class="upn"><h4>"가짜 복음과 진짜 복음의 차이를 아십니까"</h4><p>갈라디아서 1:6-10 · 강사: 한진준 목사</p></div>
+<div style="display:flex;gap:6px;flex-wrap:wrap"><a href="https://www.youtube.com/watch?v=H_i5L8Qwo9k" target="_blank" rel="noopener noreferrer" class="upy">▶ 5분 영상</a><a href="https://www.youtube.com/watch?v=OerzKuFZ2PQ&list=PLIhQ51lQQFP8s95ZNqD9fZyi1F1rpqYCU&index=1" target="_blank" rel="noopener noreferrer" class="upy" style="background:rgba(255,165,0,.12);border-color:rgba(255,165,0,.25);color:#ffa500">▶ 2분 영상</a></div>
+</div>
+
+<div style="font-size:.62rem;letter-spacing:2px;color:var(--gl);font-weight:600;text-transform:uppercase;margin-bottom:.3rem;margin-top:1rem">📢 설 명절 휴강 안내</div>
+<div class="upi" style="border-color:rgba(184,137,46,.25);background:rgba(184,137,46,.06)">
+<div class="upd" style="background:rgba(184,137,46,.25)"><div class="mo">FEB</div><div class="dy">15</div></div>
+<div class="upn"><h4 style="color:var(--gl)">설 명절 휴강</h4><p>복된 설 명절 보내시기 바랍니다. 🙏</p></div>
+<span style="padding:4px 10px;border-radius:12px;background:rgba(255,165,0,.15);color:#ffa500;font-size:.62rem;font-weight:700;white-space:nowrap">휴강</span>
+</div>
+
+<div style="font-size:.62rem;letter-spacing:2px;color:var(--gl);font-weight:600;text-transform:uppercase;margin-bottom:.3rem;margin-top:1rem">📢 설 명절 휴강 안내</div>
+<div class="upi" style="border-color:rgba(184,137,46,.25);background:rgba(184,137,46,.06)">
+<div class="upd" style="background:rgba(184,137,46,.25)"><div class="mo">FEB</div><div class="dy">21</div></div>
+<div class="upn"><h4 style="color:var(--gl)">설 명절 휴강</h4><p>복된 설 명절 보내시기 바랍니다. 🙏</p></div>
+<span style="padding:4px 10px;border-radius:12px;background:rgba(255,165,0,.15);color:#ffa500;font-size:.62rem;font-weight:700;white-space:nowrap">휴강</span>
+</div>
+
+<div style="font-size:.62rem;letter-spacing:2px;color:rgba(255,255,255,.35);font-weight:600;text-transform:uppercase;margin-bottom:.3rem;margin-top:1rem">다가오는 포럼</div>
+<div class="upi">
+<div class="upd"><div class="mo">FEB</div><div class="dy">28</div></div>
+<div class="upn"><h4>조찬주회</h4><p>강사: 최무열 목사 (전 부산장신대 총장)</p></div>
+<span style="padding:4px 10px;border-radius:12px;background:rgba(255,165,0,.15);color:#ffa500;font-size:.62rem;font-weight:700;white-space:nowrap">예정</span>
+</div>
+<div class="upi">
+<div class="upd"><div class="mo">MAR</div><div class="dy">07</div></div>
+<div class="upn"><h4>조찬주회</h4><p>강사: 임성태 한의박사 (자연힐 한방병원 병원장)</p></div>
+<span style="padding:4px 10px;border-radius:12px;background:rgba(255,165,0,.15);color:#ffa500;font-size:.62rem;font-weight:700;white-space:nowrap">예정</span>
+</div>
+
+<div style="margin-top:1.2rem;padding:1rem;background:rgba(255,255,255,.04);border-radius:var(--rs);border:1px solid rgba(255,255,255,.06);text-align:center">
+<p style="font-size:.82rem;color:rgba(255,255,255,.5);margin-bottom:.6rem" data-i="sch_yt">지난 포럼 강의를 다시 만나보십시오</p>
+<a href="https://www.youtube.com/watch?v=MDJIkMahVYY&list=PLIhQ51lQQFP8s95ZNqD9fZyi1F1rpqYCU&index=11" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;gap:6px;padding:8px 22px;border-radius:24px;background:rgba(255,0,0,.12);border:1px solid rgba(255,0,0,.25);color:#ff4444;font-size:.78rem;font-weight:600;text-decoration:none;transition:all .3s ease" onmouseover="this.style.background='rgba(255,0,0,.2)'" onmouseout="this.style.background='rgba(255,0,0,.12)'" data-i="sch_ytb">▶ 조찬포럼 강의 시청하기 (YouTube)</a>
+</div>
+
+</div></div>
+
+</div></section>
+
+<!-- NETWORK & SERVE 통합 -->
+<section class="network" id="net"><div class="si">
+<div class="sh ct rv"><span class="sl">Ministry & Service</span><h2 class="st" data-i="net_t">사역과 섬김</h2><p class="sd cm"><span data-i="net_d">조찬포럼을 중심으로 네트워킹, 봉사, 글로컬 연결까지 — 삶의 모든 영역에서 하나님 나라를 세워갑니다.</span></p></div>
+<div class="ng">
+<div class="nc rv"><div class="nciw"><img src="img-net01-fellowship.jpg" alt="조찬 교제" class="ncimg"></div><div class="ncb"><div class="nct">Fellowship</div><h3 data-i="n1t">조찬 교제 · 소그룹 나눔</h3><p data-i="n1d">매주 토요일 아침, 따뜻한 밥상을 나누며 서로의 일터와 삶을 격려합니다. 테이블별 소그룹 나눔과 합심 기도가 이어집니다.</p></div></div>
+<div class="nc rv"><div class="nciw"><img src="img-net02-business.jpg" alt="회원 기업 네트워킹" class="ncimg"></div><div class="ncb"><div class="nct">Business</div><h3 data-i="n2t">회원 기업 네트워킹</h3><p data-i="n2d">삼성생명·네이처셀, 켐텍, 정밀인쇄, 반석인더스트리즈 등 회원 기업 간 신뢰 기반 협력과 비즈니스 매칭을 진행합니다.</p></div></div>
+<div class="nc rv"><div class="nciw"><img src="img-net03-glocal.jpg" alt="글로컬 연결" class="ncimg"></div><div class="ncb"><div class="nct">Glocal</div><h3 data-i="n3t">이주민 · 글로컬 브릿지</h3><p data-i="n3d">엘림G선교회와 연계하여 18개국 이주민 네트워크와 글로컬 인재 양성 플랫폼을 구축합니다.</p></div></div>
+<div class="nc rv"><div class="nciw"><img src="img-net04-culture.jpg" alt="역사 탐방" class="ncimg"></div><div class="ncb"><div class="nct">Culture</div><h3 data-i="n4t">기독교 문화 · 역사 탐방</h3><p data-i="n4d">세계기독교박물관 방문, 한국 기독교 유적지 탐방 등 신앙의 뿌리를 함께 돌아봅니다.</p></div></div>
+<div class="nc rv"><div class="nciw"><img src="img-net05-retreat.jpg" alt="수련회" class="ncimg"></div><div class="ncb"><div class="nct">Retreat</div><h3 data-i="n5t">야외 수련회 · 친교</h3><p data-i="n5d">봄 야유회, 체육대회, CBMC 경남연합 수련회를 통해 깊은 형제 교제와 영적 충전의 시간을 갖습니다.</p></div></div>
+<div class="nc rv"><div class="nciw"><img src="img-net06-service.jpg" alt="교회 봉사" class="ncimg"></div><div class="ncb"><div class="nct">Service</div><h3 data-i="n6t">교회 · 지역사회 봉사</h3><p data-i="n6d">지역 교회 협력, 이주민 한국어 교육, 다문화가정 지원, 청년 창업 멘토링으로 선한 영향력을 나눕니다.</p></div></div>
+</div></div></section>
+
+<!-- GALLERY -->
+<section class="gallery" id="gal"><div class="si">
+<div class="sh rv"><span class="sl">Gallery & Media</span><h2 class="st" data-i="gal_t">사역의 현장을 만나보십시오</h2></div>
+<div class="gtabs rv"><div class="gtab on" data-f="all" data-i="gt_all">전체</div><div class="gtab" data-f="forum" data-i="gt_forum">포럼</div><div class="gtab" data-f="fellowship" data-i="gt_fellow">교제·수련회</div><div class="gtab" data-f="nature" data-i="gt_nature">풍경</div></div>
+<div class="gg rv">
+<div class="gi vid" data-cat="forum"><img src="img-gal01.jpg" alt="서재찬 박사 강의"><div class="gl" data-i="gc1">서재찬 박사 — 믿음과 실력, 사마이론(DHT)</div></div>
+<div class="gi" data-cat="forum"><img src="img-gal02.jpg" alt="조찬 교제"><div class="gl" data-i="gc2">조찬포럼 — 따뜻한 교제의 시간</div></div>
+<div class="gi" data-cat="fellowship"><img src="img-gal03.jpg" alt="세계기독교박물관"><div class="gl" data-i="gc3">세계기독교박물관 연합 수련회</div></div>
+<div class="gi" data-cat="fellowship"><img src="img-gal04.jpg" alt="야외 수련회"><div class="gl" data-i="gc4">자연 속에서 나누는 형제 교제</div></div>
+<div class="gi" data-cat="fellowship"><img src="img-gal05.jpg" alt="한국 기독교 유산"><div class="gl" data-i="gc5">한국 기독교 역사 유적 탐방</div></div>
+<div class="gi" data-cat="fellowship"><img src="img-gal06.jpg" alt="야외 모임"><div class="gl" data-i="gc6">경남연합 야외 친교 모임</div></div>
+<div class="gi" data-cat="nature"><img src="img-gal07.jpg" alt="예배당"><div class="gl" data-i="gc7">예배당 — 십자가 아래 모이는 공동체</div></div>
+<div class="gi" data-cat="nature"><img src="img-gal08.jpg" alt="수국"><div class="gl" data-i="gc8">하나님의 창조 세계 — 수국의 아름다움</div></div>
+<div class="gi" data-cat="nature"><img src="img-gal09.jpg" alt="수국 정원"><div class="gl" data-i="gc9">하나님이 입히신 영광 — 수국 정원</div></div>
+<div class="gi" data-cat="nature"><img src="img-gal10.jpg" alt="어부와 등대"><div class="gl" data-i="gc10">어부와 등대 — 회원 비즈니스 네트워크</div></div>
+<div class="gi" data-cat="nature"><img src="img-gal11.jpg" alt="김해 도시 전경"><div class="gl" data-i="gc11">김해 장유 — 우리가 섬기는 도시</div></div>
+<div class="gi" data-cat="nature"><img src="img-gal12.jpg" alt="붉은 석양"><div class="gl" data-i="gc12">하나님의 작품 — 장엄한 석양</div></div>
+</div></div></section>
+
+<!-- RESOURCES 자료실 -->
+<section style="background:linear-gradient(145deg,#f8f6f1,#fff);padding:65px 2.5rem" id="resources"><div class="si">
+<div class="sh ct rv"><span class="sl">Resources & Library</span><h2 class="st" data-i="res_t">📚 자료실</h2><p class="sd cm"><span data-i="res_d">토요조찬포럼의 말씀과 비즈니스 원칙을 체계적으로 정리한 자료를 다운로드하십시오.</span></p></div>
+
+<!-- 카테고리 탭 -->
+<div style="display:flex;gap:8px;justify-content:center;margin-bottom:2rem;flex-wrap:wrap" class="rv">
+<button onclick="filterRes('all')" class="res-tab res-tab-on" data-rf="all" style="padding:8px 20px;border-radius:20px;border:1.5px solid var(--gl);background:var(--nd);color:var(--w);font-size:.78rem;font-weight:700;cursor:pointer;transition:all .3s">전체</button>
+<button onclick="filterRes('study')" class="res-tab" data-rf="study" style="padding:8px 20px;border-radius:20px;border:1.5px solid var(--gl);background:transparent;color:var(--nd);font-size:.78rem;font-weight:600;cursor:pointer;transition:all .3s">📖 성경공부</button>
+<button onclick="filterRes('biz')" class="res-tab" data-rf="biz" style="padding:8px 20px;border-radius:20px;border:1.5px solid #5e35b1;background:transparent;color:#5e35b1;font-size:.78rem;font-weight:600;cursor:pointer;transition:all .3s">🏛 비즈니스 원칙</button>
+<button onclick="filterRes('booklet')" class="res-tab" data-rf="booklet" style="padding:8px 20px;border-radius:20px;border:1.5px solid var(--gl);background:transparent;color:var(--nd);font-size:.78rem;font-weight:600;cursor:pointer;transition:all .3s">📕 소책자</button>
+<button onclick="filterRes('testimony')" class="res-tab" data-rf="testimony" style="padding:8px 20px;border-radius:20px;border:1.5px solid var(--gl);background:transparent;color:var(--nd);font-size:.78rem;font-weight:600;cursor:pointer;transition:all .3s">🎤 간증 시리즈</button>
+</div>
+
+<!-- 자료 그리드 -->
+<div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:1.2rem" id="res-grid">
+
+<!-- 성경공부 A4 -->
+<div class="res-card rv" data-rc="study" style="background:var(--w);border-radius:16px;overflow:hidden;box-shadow:0 2px 16px rgba(0,0,0,.06);border:1px solid rgba(184,137,46,.15);transition:all .3s" onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='0 8px 30px rgba(0,0,0,.12)'" onmouseout="this.style.transform='';this.style.boxShadow='0 2px 16px rgba(0,0,0,.06)'">
+<div style="padding:1.2rem">
+<div style="display:flex;align-items:center;gap:8px;margin-bottom:.8rem">
+<div style="width:42px;height:42px;border-radius:10px;background:var(--nd);display:flex;flex-direction:column;align-items:center;justify-content:center">
+<div style="font-size:.45rem;color:rgba(255,255,255,.6);font-weight:700">FEB</div>
+<div style="font-size:.85rem;color:var(--w);font-weight:800;line-height:1">08</div>
+</div>
+<div>
+<div style="font-size:.85rem;font-weight:700;color:var(--nd)">갈라디아서 1:6-10 · 창세기 5:21-27</div>
+<div style="font-size:.65rem;color:var(--g5)">성경공부 자료 (A4) | 13페이지</div>
+</div>
+</div>
+<p style="font-size:.75rem;color:var(--g5);line-height:1.6;margin-bottom:.8rem">"가짜 복음과 진짜 복음의 차이를 아십니까" — 바울의 다메섹 ↔ 에녹의 므두셀라 전환점 · 므두셀라 969년 심화 · 소그룹 질문 · 간증 프레임워크</p>
+<div style="display:flex;gap:6px;flex-wrap:wrap">
+<a href="study-week-2025-02-08.pdf" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;gap:4px;padding:7px 14px;border-radius:8px;background:var(--nd);color:var(--w);font-size:.7rem;font-weight:700;text-decoration:none;transition:all .3s" onmouseover="this.style.background='#b8892e'" onmouseout="this.style.background='#0a1f35'">📄 PDF 다운로드</a>
+<span style="padding:4px 10px;border-radius:6px;background:rgba(46,125,50,.08);color:#2e7d32;font-size:.6rem;font-weight:700">NEW</span>
+</div>
+</div>
+</div>
+
+<!-- 비즈니스 원칙 모듈 1 -->
+<div class="res-card rv" data-rc="biz" style="background:var(--w);border-radius:16px;overflow:hidden;box-shadow:0 2px 16px rgba(0,0,0,.06);border:1px solid rgba(94,53,177,.15);transition:all .3s" onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='0 8px 30px rgba(0,0,0,.12)'" onmouseout="this.style.transform='';this.style.boxShadow='0 2px 16px rgba(0,0,0,.06)'">
+<div style="padding:1.2rem">
+<div style="display:flex;align-items:center;gap:8px;margin-bottom:.8rem">
+<div style="width:42px;height:42px;border-radius:10px;background:#5e35b1;display:flex;align-items:center;justify-content:center">
+<span style="font-size:1rem;color:var(--w);font-weight:800">01</span>
+</div>
+<div>
+<div style="font-size:.85rem;font-weight:700;color:#5e35b1">므두셀라 공식</div>
+<div style="font-size:.65rem;color:var(--g5)">CBMC 비즈니스 원칙 시리즈 모듈 1 | 5페이지</div>
+</div>
+</div>
+<p style="font-size:.75rem;color:var(--g5);line-height:1.6;margin-bottom:.8rem">심판의 확실성 × 은혜의 오래 참으심 = 회개의 기회 — 비즈니스 3원칙 · 자가진단 워크시트 · 12모듈 로드맵</p>
+<div style="display:flex;gap:6px;flex-wrap:wrap;align-items:center">
+<a href="cbmc-biz-module-01-methuselah.pdf" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;gap:4px;padding:7px 14px;border-radius:8px;background:#5e35b1;color:var(--w);font-size:.7rem;font-weight:700;text-decoration:none;transition:all .3s" onmouseover="this.style.background='#7e57c2'" onmouseout="this.style.background='#5e35b1'">🏛 PDF 다운로드</a>
+<span style="padding:4px 10px;border-radius:6px;background:rgba(94,53,177,.08);color:#5e35b1;font-size:.6rem;font-weight:700">시리즈</span>
+<span style="padding:4px 10px;border-radius:6px;background:rgba(46,125,50,.08);color:#2e7d32;font-size:.6rem;font-weight:700">NEW</span>
+</div>
+</div>
+</div>
+
+<!-- A5 소책자 -->
+<div class="res-card rv" data-rc="booklet" style="background:var(--w);border-radius:16px;overflow:hidden;box-shadow:0 2px 16px rgba(0,0,0,.06);border:1px solid rgba(184,137,46,.15);transition:all .3s" onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='0 8px 30px rgba(0,0,0,.12)'" onmouseout="this.style.transform='';this.style.boxShadow='0 2px 16px rgba(0,0,0,.06)'">
+<div style="padding:1.2rem">
+<div style="display:flex;align-items:center;gap:8px;margin-bottom:.8rem">
+<div style="width:42px;height:42px;border-radius:10px;background:var(--gl);display:flex;align-items:center;justify-content:center">
+<span style="font-size:1.1rem">📕</span>
+</div>
+<div>
+<div style="font-size:.85rem;font-weight:700;color:var(--nd)">소책자 — 갈라디아서·창세기</div>
+<div style="font-size:.65rem;color:var(--g5)">A5 인쇄용 소책자 | 8페이지</div>
+</div>
+</div>
+<p style="font-size:.75rem;color:var(--g5);line-height:1.6;margin-bottom:.8rem">양면 인쇄 → 중철 제본용. 갈라디아서 + 창세기 핵심 요약 · 바울↔에녹 비교 · 므두셀라 공식 · 소그룹 질문 · 간증 메모 시트</p>
+<div style="display:flex;gap:6px;flex-wrap:wrap">
+<a href="study-week-2025-02-08-booklet-a5.pdf" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;gap:4px;padding:7px 14px;border-radius:8px;background:var(--gl);color:var(--w);font-size:.7rem;font-weight:700;text-decoration:none;transition:all .3s" onmouseover="this.style.opacity='.85'" onmouseout="this.style.opacity='1'">📕 소책자 다운로드</a>
+<span style="padding:4px 10px;border-radius:6px;background:rgba(184,137,46,.08);color:var(--gl);font-size:.6rem;font-weight:700">인쇄용 A5</span>
+</div>
+</div>
+</div>
+
+<!-- 비즈니스 원칙 시리즈 로드맵 카드 -->
+<div class="res-card rv" data-rc="biz" style="background:linear-gradient(135deg,#f3e5f5,#fff);border-radius:16px;overflow:hidden;box-shadow:0 2px 16px rgba(0,0,0,.06);border:1px solid rgba(94,53,177,.2);transition:all .3s" onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='0 8px 30px rgba(0,0,0,.12)'" onmouseout="this.style.transform='';this.style.boxShadow='0 2px 16px rgba(0,0,0,.06)'">
+<div style="padding:1.2rem">
+<div style="display:flex;align-items:center;gap:8px;margin-bottom:.8rem">
+<div style="width:42px;height:42px;border-radius:10px;background:linear-gradient(135deg,#5e35b1,#7e57c2);display:flex;align-items:center;justify-content:center">
+<span style="font-size:.9rem;color:var(--w)">📋</span>
+</div>
+<div>
+<div style="font-size:.85rem;font-weight:700;color:#5e35b1">CBMC 비즈니스 원칙 시리즈</div>
+<div style="font-size:.65rem;color:var(--g5)">전체 12모듈 로드맵 | 글로컬 AI 아카데미 정규 커리큘럼</div>
+</div>
+</div>
+<div style="font-size:.72rem;color:var(--g5);line-height:1.8">
+<div style="display:grid;grid-template-columns:auto 1fr;gap:2px 8px">
+<span style="color:#5e35b1;font-weight:700">01 ★</span><span>므두셀라 공식 — 창 5장 (완료)</span>
+<span style="color:var(--g3)">02</span><span style="color:var(--g3)">노아의 방주 경영학 — 창 6-9장</span>
+<span style="color:var(--g3)">03</span><span style="color:var(--g3)">아브라함의 협상론 — 창 13, 23장</span>
+<span style="color:var(--g3)">04</span><span style="color:var(--g3)">요셉의 7년 전략 — 창 41장</span>
+<span style="color:var(--g3)">05</span><span style="color:var(--g3)">느헤미야 프로젝트 리더십 — 느 1-6장</span>
+<span style="color:var(--g3)">06</span><span style="color:var(--g3)">바울의 텐트메이커 — 행 18장</span>
+<span style="color:var(--g3)">07-12</span><span style="color:var(--g3)">잠언 · 다니엘 · 달란트 · 청지기 · ESG · 종합</span>
+</div>
+</div>
+</div>
+</div>
+
+<!-- 간증 시리즈: 나의 므두셀라 -->
+<div class="res-card rv" data-rc="testimony" style="background:var(--w);border-radius:16px;overflow:hidden;box-shadow:0 2px 16px rgba(0,0,0,.06);border:1px solid rgba(184,137,46,.15);transition:all .3s" onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='0 8px 30px rgba(0,0,0,.12)'" onmouseout="this.style.transform='';this.style.boxShadow='0 2px 16px rgba(0,0,0,.06)'">
+<div style="padding:1.2rem">
+<div style="display:flex;align-items:center;gap:8px;margin-bottom:.8rem">
+<div style="width:42px;height:42px;border-radius:10px;background:var(--g);display:flex;align-items:center;justify-content:center">
+<span style="font-size:1.1rem">🎤</span>
+</div>
+<div>
+<div style="font-size:.85rem;font-weight:700;color:var(--nd)">"나의 므두셀라는 무엇입니까?"</div>
+<div style="font-size:.65rem;color:var(--g5)">CBMC 간증 시리즈 | 3단계 프레임워크</div>
+</div>
+</div>
+<p style="font-size:.75rem;color:var(--g5);line-height:1.6;margin-bottom:.5rem">삶의 전환점을 통해 하나님을 증거하는 비즈니스맨의 이야기</p>
+<div style="display:flex;gap:4px;flex-wrap:wrap;margin-bottom:.6rem">
+<span style="padding:2px 8px;border-radius:4px;background:var(--g1);font-size:.6rem;color:var(--g5)">Before</span>
+<span style="font-size:.6rem;color:var(--g5)">→</span>
+<span style="padding:2px 8px;border-radius:4px;background:rgba(198,40,40,.06);font-size:.6rem;color:#c62828">Turning Point</span>
+<span style="font-size:.6rem;color:var(--g5)">→</span>
+<span style="padding:2px 8px;border-radius:4px;background:rgba(46,125,50,.06);font-size:.6rem;color:#2e7d32">After</span>
+</div>
+<div style="font-size:.68rem;color:var(--g5);line-height:1.5;margin-bottom:.8rem;padding:.5rem .7rem;background:var(--g1);border-radius:8px">
+간증 아카이브: 배병옥 회장 · 김도현 부회장 · 임명식 총무 — 매주 축적
+</div>
+<div style="display:flex;gap:6px;flex-wrap:wrap">
+<a href="https://www.notion.so/3835d61b7c3f4aa383657b4660935f20" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;gap:4px;padding:7px 14px;border-radius:8px;background:var(--nd);color:var(--w);font-size:.7rem;font-weight:700;text-decoration:none;transition:all .3s" onmouseover="this.style.background='#b8892e'" onmouseout="this.style.background='#0a1f35'">📋 Notion 간증 DB</a>
+<span style="padding:4px 10px;border-radius:6px;background:rgba(46,125,50,.08);color:#2e7d32;font-size:.6rem;font-weight:700">NEW</span>
+</div>
+</div>
+</div>
+
+</div>
+
+<!-- 글로컬 AI 아카데미 편입 안내 -->
+<div style="margin-top:2rem;padding:1.5rem;background:linear-gradient(135deg,rgba(94,53,177,.04),rgba(184,137,46,.04));border-radius:16px;border:1px solid rgba(94,53,177,.12);text-align:center" class="rv">
+<p style="font-size:.72rem;color:#5e35b1;font-weight:700;margin-bottom:.3rem">🎓 글로컬 AI 아카데미 정규 커리큘럼 편입</p>
+<p style="font-size:.78rem;color:var(--nd);font-weight:700;margin-bottom:.3rem">CBMC 비즈니스 원칙 시리즈 12모듈 → 글로컬 AI 아카데미 비즈니스 과정</p>
+<p style="font-size:.68rem;color:var(--g5)">이주민 사역자 · 일터사역자 · CBMC 회원을 위한 성경적 비즈니스 교육 체계</p>
+</div>
+
+</div></section>
+
+<!-- TESTIMONY 간증 -->
+<section style="background:linear-gradient(145deg,var(--nd),var(--nm));padding:65px 2.5rem" id="testimony"><div class="si">
+<div class="ct sh rv"><span class="sl" style="color:rgba(184,137,46,.6)">Testimonies</span><h2 class="st" style="color:var(--w)" data-i="test_t">포럼에서 만난 은혜</h2></div>
+<div style="display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem" class="rv">
+<div style="padding:1.8rem;border-radius:var(--r);background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.06)">
+<div style="font-size:1.2rem;margin-bottom:.8rem;opacity:.3">❝</div>
+<p style="font-size:.85rem;color:rgba(255,255,255,.7);line-height:1.8;margin-bottom:1rem" data-i="ts1">보험과 바이오 분야에서 오랜 세월 일하면서 성과와 실적에만 매달렸습니다. 조찬포럼에서 형제들과 기도하며 깨달은 것은 — 비즈니스의 궁극적 목적은 하나님 나라를 세우는 것이라는 사실이었습니다. 그 깨달음이 매 순간 제 사업의 방향을 바로잡아 줍니다.</p>
+<div style="display:flex;align-items:center;gap:.6rem"><div style="width:36px;height:36px;border-radius:50%;background:rgba(184,137,46,.2);display:flex;align-items:center;justify-content:center;font-size:.7rem;color:var(--gl);font-weight:700" data-i="ts1i">배</div><div><div style="font-size:.78rem;color:var(--w);font-weight:600" data-i="ts1n">배병옥 회장</div><div style="font-size:.62rem;color:rgba(255,255,255,.35)" data-i="ts1r">삼성생명 · 네이처셀</div></div></div>
+</div>
+<div style="padding:1.8rem;border-radius:var(--r);background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.06)">
+<div style="font-size:1.2rem;margin-bottom:.8rem;opacity:.3">❝</div>
+<p style="font-size:.85rem;color:rgba(255,255,255,.7);line-height:1.8;margin-bottom:1rem" data-i="ts2">인쇄업을 운영하며 경기 침체와 디지털 전환이라는 이중 파도를 맞았습니다. 포럼에서 나눈 말씀 한 구절 — "두려워하지 말라, 내가 너와 함께함이라" — 이 말씀이 새벽마다 저를 일으켜 세웁니다. 혼자가 아니라는 것, 이것이 CBMC의 힘입니다.</p>
+<div style="display:flex;align-items:center;gap:.6rem"><div style="width:36px;height:36px;border-radius:50%;background:rgba(184,137,46,.2);display:flex;align-items:center;justify-content:center;font-size:.7rem;color:var(--gl);font-weight:700" data-i="ts2i">임</div><div><div style="font-size:.78rem;color:var(--w);font-weight:600" data-i="ts2n">임명식 총무</div><div style="font-size:.62rem;color:rgba(255,255,255,.35)" data-i="ts2r">정밀인쇄 대표</div></div></div>
+</div>
+<div style="padding:1.8rem;border-radius:var(--r);background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.06)">
+<div style="font-size:1.2rem;margin-bottom:.8rem;opacity:.3">❝</div>
+<p style="font-size:.85rem;color:rgba(255,255,255,.7);line-height:1.8;margin-bottom:1rem" data-i="ts3">화학 소재 사업은 전문성과 신뢰가 생명입니다. 조찬포럼에서 만난 형제들의 기도가 거래처와의 관계를 변화시켰습니다. 계약서 앞에서 기도하게 되었고, 경쟁 대신 동행을 선택하게 되었습니다. 일터가 진짜 사역지가 되는 경험을 하고 있습니다.</p>
+<div style="display:flex;align-items:center;gap:.6rem"><div style="width:36px;height:36px;border-radius:50%;background:rgba(184,137,46,.2);display:flex;align-items:center;justify-content:center;font-size:.7rem;color:var(--gl);font-weight:700" data-i="ts3i">김</div><div><div style="font-size:.78rem;color:var(--w);font-weight:600" data-i="ts3n">김도현 부회장</div><div style="font-size:.62rem;color:rgba(255,255,255,.35)" data-i="ts3r">켐텍 대표</div></div></div>
+</div>
+</div></div></section>
+
+
+<!-- TEAM -->
+<section class="team" id="tm"><div class="si">
+<div class="ct sh rv"><span class="sl">Leadership Team</span><h2 class="st" data-i="team_t">함께 걸어가는 임원진</h2><p class="sd cm"><span data-i="team_d">김해한마음지회를 이끌어가는 크리스천 비즈니스 리더들입니다.</span></p></div>
+<div class="tg">
+<div class="tc rv"><div class="ta">회장</div><h4>배병옥 회장</h4><div class="tr">지회장</div><div class="td">삼성생명 · 네이처셀</div></div>
+<div class="tc rv"><div class="ta">부회</div><h4>김도현 부회장</h4><div class="tr">부지회장</div><div class="td">켐텍 대표</div></div>
+<div class="tc rv"><div class="ta">총무</div><h4>임명식 총무</h4><div class="tr">사무국장</div><div class="td">정밀인쇄 대표</div></div>
+<div class="tc rv"><div class="ta">부총</div><h4>정철석 부총무</h4><div class="tr">부총무</div><div class="td">법무사</div></div>
+<div class="tc rv"><div class="ta">회계</div><h4>공권세 회계</h4><div class="tr">재무</div><div class="td">진해어린이집 대표</div></div>
+<div class="tc rv"><div class="ta" style="background:rgba(184,137,46,.15);color:var(--gl)">강사</div><h4>서재찬 박사</h4><div class="tr">강사</div><div class="td">반석인더스트리즈 대표</div></div>
+<div class="tc rv"><div class="ta" style="background:rgba(26,75,122,.15);color:#1a4b7a">고문</div><h4>한진준 목사</h4><div class="tr">고문</div><div class="td">엘림G선교회 대표</div></div>
+</div></div></section>
+
+<!-- MEMBERS 회원 -->
+<section style="background:var(--w);padding:70px 2.5rem" id="members"><div class="si">
+<div class="ct sh rv"><span class="sl">Our Members</span><h2 class="st">함께하는 회원</h2><p class="sd cm">일터에서 하나님 나라를 세워가는 크리스천 비즈니스맨들입니다.</p></div>
+
+<div class="rv" style="max-width:800px;margin:1.5rem auto 0;background:#f9f8f5;border-radius:var(--r);border:1px solid var(--g2);overflow:hidden">
+<div style="padding:1.2rem 1.5rem;background:linear-gradient(135deg,var(--nd),#1a4b7a);color:var(--w);display:flex;justify-content:space-between;align-items:center">
+<div><h3 style="font-size:1rem;font-weight:700;margin-bottom:.2rem">CBMC 김해한마음지회 회원 명부</h3>
+<p style="font-size:.72rem;opacity:.6">이름 · 대표 · 기업(직장)</p></div>
+<a href="cbmc-members.pdf" target="_blank" rel="noopener noreferrer" style="padding:8px 20px;border-radius:24px;background:var(--g);color:var(--w);font-size:.75rem;font-weight:600;text-decoration:none;display:inline-flex;align-items:center;gap:6px;transition:all .3s ease" onmouseover="this.style.background='var(--gl)'" onmouseout="this.style.background='var(--g)'">📄 PDF 열기</a>
+</div>
+<table style="width:100%;border-collapse:collapse;font-size:.82rem">
+<thead><tr style="background:#f0ede6"><th style="padding:.7rem 1rem;text-align:left;font-weight:700;color:var(--nd);border-bottom:2px solid var(--g2)">이름</th><th style="padding:.7rem 1rem;text-align:left;font-weight:700;color:var(--nd);border-bottom:2px solid var(--g2)">직함</th><th style="padding:.7rem 1rem;text-align:left;font-weight:700;color:var(--nd);border-bottom:2px solid var(--g2)">기업(직장)</th></tr></thead>
+<tbody>
+<tr style="border-bottom:1px solid var(--g1)"><td style="padding:.6rem 1rem;color:var(--nd);font-weight:600">배병옥</td><td style="padding:.6rem 1rem;color:var(--g7)">회장</td><td style="padding:.6rem 1rem;color:var(--g5)">삼성생명 · 네이처셀</td></tr>
+<tr style="border-bottom:1px solid var(--g1);background:#faf9f6"><td style="padding:.6rem 1rem;color:var(--nd);font-weight:600">김도현</td><td style="padding:.6rem 1rem;color:var(--g7)">부회장</td><td style="padding:.6rem 1rem;color:var(--g5)">켐텍 대표</td></tr>
+<tr style="border-bottom:1px solid var(--g1)"><td style="padding:.6rem 1rem;color:var(--nd);font-weight:600">임명식</td><td style="padding:.6rem 1rem;color:var(--g7)">총무</td><td style="padding:.6rem 1rem;color:var(--g5)">정밀인쇄 대표</td></tr>
+<tr style="border-bottom:1px solid var(--g1);background:#faf9f6"><td style="padding:.6rem 1rem;color:var(--nd);font-weight:600">정철석</td><td style="padding:.6rem 1rem;color:var(--g7)">부총무</td><td style="padding:.6rem 1rem;color:var(--g5)">법무사</td></tr>
+<tr style="border-bottom:1px solid var(--g1)"><td style="padding:.6rem 1rem;color:var(--nd);font-weight:600">공권세</td><td style="padding:.6rem 1rem;color:var(--g7)">회계</td><td style="padding:.6rem 1rem;color:var(--g5)">진해어린이집 대표</td></tr>
+<tr style="border-bottom:1px solid var(--g1);background:#faf9f6"><td style="padding:.6rem 1rem;color:var(--nd);font-weight:600">서재찬</td><td style="padding:.6rem 1rem;color:var(--g7)">강사</td><td style="padding:.6rem 1rem;color:var(--g5)">반석인더스트리즈 대표</td></tr>
+<tr><td style="padding:.6rem 1rem;color:var(--nd);font-weight:600">한진준</td><td style="padding:.6rem 1rem;color:var(--g7)">고문</td><td style="padding:.6rem 1rem;color:var(--g5)">엘림G선교회 대표</td></tr>
+</tbody></table>
+<div style="padding:.8rem 1rem;background:#f0ede6;text-align:center;font-size:.7rem;color:var(--g5)">※ 상세 명부는 PDF를 통해 확인하실 수 있습니다. <code>cbmc-members.pdf</code> 파일을 교체하시면 됩니다.</div>
+</div>
+</div></section>
+
+<!-- NEW MEMBERS 새 회원 -->
+<section style="background:linear-gradient(135deg,#0a1f35 0%,#122d4a 100%);padding:50px 2.5rem;color:var(--w)" id="new-members"><div class="si">
+<div class="ct sh rv"><span class="sl" style="color:var(--gl)">Welcome New Members</span><h2 class="st" style="color:var(--w);font-size:1.4rem">새 회원을 환영합니다</h2><p class="sd cm" style="color:rgba(255,255,255,.5);font-size:.82rem">비즈니스 세계에서 하나님 나라를 함께 세워갈 새로운 동역자들입니다.</p></div>
+<div style="display:flex;justify-content:center;gap:.8rem;flex-wrap:wrap;margin-top:1.2rem;max-width:720px;margin-left:auto;margin-right:auto">
+
+<div style="background:rgba(255,255,255,.05);border-radius:10px;border:1px solid rgba(255,255,255,.08);transition:all .3s ease;width:160px;overflow:hidden" onmouseover="this.style.transform='translateY(-3px)';this.style.borderColor='rgba(184,137,46,.35)'" onmouseout="this.style.transform='';this.style.borderColor='rgba(255,255,255,.08)'">
+<div style="aspect-ratio:1/1;overflow:hidden;background:linear-gradient(135deg,rgba(184,137,46,.15),rgba(184,137,46,.03))"><img src="img-new01.jpg" alt="새 회원" style="width:100%;height:100%;object-fit:cover;object-position:center top"></div>
+<div style="padding:.6rem .7rem"><div style="font-size:.5rem;letter-spacing:1.5px;color:var(--gl);font-weight:600;text-transform:uppercase;margin-bottom:.15rem">New</div><h4 style="font-size:.78rem;font-weight:600;color:var(--w);margin-bottom:.1rem">새 회원명</h4><p style="font-size:.62rem;color:rgba(255,255,255,.4);line-height:1.4">소속</p></div></div>
+
+<div style="background:rgba(255,255,255,.05);border-radius:10px;border:1px solid rgba(255,255,255,.08);transition:all .3s ease;width:160px;overflow:hidden" onmouseover="this.style.transform='translateY(-3px)';this.style.borderColor='rgba(184,137,46,.35)'" onmouseout="this.style.transform='';this.style.borderColor='rgba(255,255,255,.08)'">
+<div style="aspect-ratio:1/1;overflow:hidden;background:linear-gradient(135deg,rgba(184,137,46,.15),rgba(184,137,46,.03))"><img src="img-new02.jpg" alt="새 회원" style="width:100%;height:100%;object-fit:cover;object-position:center top"></div>
+<div style="padding:.6rem .7rem"><div style="font-size:.5rem;letter-spacing:1.5px;color:var(--gl);font-weight:600;text-transform:uppercase;margin-bottom:.15rem">New</div><h4 style="font-size:.78rem;font-weight:600;color:var(--w);margin-bottom:.1rem">새 회원명</h4><p style="font-size:.62rem;color:rgba(255,255,255,.4);line-height:1.4">소속</p></div></div>
+
+<div style="background:rgba(255,255,255,.05);border-radius:10px;border:1px solid rgba(255,255,255,.08);transition:all .3s ease;width:160px;overflow:hidden" onmouseover="this.style.transform='translateY(-3px)';this.style.borderColor='rgba(184,137,46,.35)'" onmouseout="this.style.transform='';this.style.borderColor='rgba(255,255,255,.08)'">
+<div style="aspect-ratio:1/1;overflow:hidden;background:linear-gradient(135deg,rgba(184,137,46,.15),rgba(184,137,46,.03))"><img src="img-new03.jpg" alt="새 회원" style="width:100%;height:100%;object-fit:cover;object-position:center top"></div>
+<div style="padding:.6rem .7rem"><div style="font-size:.5rem;letter-spacing:1.5px;color:var(--gl);font-weight:600;text-transform:uppercase;margin-bottom:.15rem">New</div><h4 style="font-size:.78rem;font-weight:600;color:var(--w);margin-bottom:.1rem">새 회원명</h4><p style="font-size:.62rem;color:rgba(255,255,255,.4);line-height:1.4">소속</p></div></div>
+
+<div style="background:rgba(255,255,255,.05);border-radius:10px;border:1px solid rgba(255,255,255,.08);transition:all .3s ease;width:160px;overflow:hidden" onmouseover="this.style.transform='translateY(-3px)';this.style.borderColor='rgba(184,137,46,.35)'" onmouseout="this.style.transform='';this.style.borderColor='rgba(255,255,255,.08)'">
+<div style="aspect-ratio:1/1;overflow:hidden;background:linear-gradient(135deg,rgba(184,137,46,.15),rgba(184,137,46,.03))"><img src="img-new04.jpg" alt="새 회원" style="width:100%;height:100%;object-fit:cover;object-position:center top"></div>
+<div style="padding:.6rem .7rem"><div style="font-size:.5rem;letter-spacing:1.5px;color:var(--gl);font-weight:600;text-transform:uppercase;margin-bottom:.15rem">New</div><h4 style="font-size:.78rem;font-weight:600;color:var(--w);margin-bottom:.1rem">새 회원명</h4><p style="font-size:.62rem;color:rgba(255,255,255,.4);line-height:1.4">소속</p></div></div>
+
+</div>
+<p style="text-align:center;margin-top:.8rem;font-size:.65rem;color:rgba(255,255,255,.25)">※ img-new01.jpg ~ img-new04.jpg 교체 가능</p>
+</div></section>
+
+<!-- 2026 운영계획 -->
+<section style="background:linear-gradient(135deg,#f8f5f0,#fff);padding:70px 2.5rem" id="plan"><div class="si">
+<div class="ct sh rv"><span class="sl">2026 Operation Plan</span><h2 class="st" data-i="plan_t">2026년 김해한마음지회 운영계획</h2><p class="sd cm"><span data-i="plan_d">비전, 회칙, 연간일정을 확인하시고 함께 동행해 주십시오.</span></p></div>
+<div style="display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem" class="rv">
+<a href="https://2026vision.netlify.app" target="_blank" rel="noopener noreferrer" style="padding:2.2rem 1.5rem;border-radius:var(--r);background:var(--w);text-align:center;text-decoration:none;color:var(--tx);border:2px solid var(--g2);transition:all .35s ease;display:block" onmouseover="this.style.borderColor='#b8892e';this.style.transform='translateY(-6px)';this.style.boxShadow='0 12px 40px rgba(184,137,46,.15)'" onmouseout="this.style.borderColor='#e5e3de';this.style.transform='translateY(0)';this.style.boxShadow='none'"><div style="font-size:2.5rem;margin-bottom:.8rem">🎯</div><div style="font-size:1rem;font-weight:800;color:#0a1f35;margin-bottom:.3rem" data-i="pl1t">2026 비전</div><div style="font-size:.78rem;color:#8a8680;line-height:1.6" data-i="pl1d">비전 선언문 · 핵심 목표<br>연간 전략 방향</div><div style="margin-top:.8rem;padding:6px 18px;border-radius:20px;background:rgba(184,137,46,.08);color:#b8892e;font-size:.72rem;font-weight:600;display:inline-block">바로가기 →</div></a>
+<a href="https://bylaw-hanmaum.netlify.app" target="_blank" rel="noopener noreferrer" style="padding:2.2rem 1.5rem;border-radius:var(--r);background:var(--w);text-align:center;text-decoration:none;color:var(--tx);border:2px solid var(--g2);transition:all .35s ease;display:block" onmouseover="this.style.borderColor='#1a4b7a';this.style.transform='translateY(-6px)';this.style.boxShadow='0 12px 40px rgba(26,75,122,.12)'" onmouseout="this.style.borderColor='#e5e3de';this.style.transform='translateY(0)';this.style.boxShadow='none'"><div style="font-size:2.5rem;margin-bottom:.8rem">📜</div><div style="font-size:1rem;font-weight:800;color:#0a1f35;margin-bottom:.3rem" data-i="pl2t">회칙</div><div style="font-size:.78rem;color:#8a8680;line-height:1.6" data-i="pl2d">김해한마음지회 회칙<br>운영 규정 안내</div><div style="margin-top:.8rem;padding:6px 18px;border-radius:20px;background:rgba(26,75,122,.08);color:#1a4b7a;font-size:.72rem;font-weight:600;display:inline-block">바로가기 →</div></a>
+<a href="https://hanmaum-schedule.netlify.app" target="_blank" rel="noopener noreferrer" style="padding:2.2rem 1.5rem;border-radius:var(--r);background:var(--w);text-align:center;text-decoration:none;color:var(--tx);border:2px solid var(--g2);transition:all .35s ease;display:block" onmouseover="this.style.borderColor='#4caf50';this.style.transform='translateY(-6px)';this.style.boxShadow='0 12px 40px rgba(76,175,80,.12)'" onmouseout="this.style.borderColor='#e5e3de';this.style.transform='translateY(0)';this.style.boxShadow='none'"><div style="font-size:2.5rem;margin-bottom:.8rem">📅</div><div style="font-size:1rem;font-weight:800;color:#0a1f35;margin-bottom:.3rem" data-i="pl3t">연간 일정</div><div style="font-size:.78rem;color:#8a8680;line-height:1.6" data-i="pl3d">2026년 월별 행사<br>포럼 · 연합 · 봉사 일정</div><div style="margin-top:.8rem;padding:6px 18px;border-radius:20px;background:rgba(76,175,80,.08);color:#4caf50;font-size:.72rem;font-weight:600;display:inline-block">바로가기 →</div></a>
+</div></div></section>
+
+<!-- LINKS -->
+<section class="links" id="lnk"><div class="si">
+<div class="ct sh rv"><span class="sl">CBMC Ministry Links</span><h2 class="st" data-i="link_t">CBMC 사역과 연결</h2></div>
+<div class="lg">
+<a href="https://cbmc.or.kr" target="_blank" rel="noopener noreferrer" class="lc rv"><div class="lci">🏛️</div><h4>CBMC 한국본부</h4><p>사단법인 한국기독실업인회</p><span class="ar">→</span></a>
+<a href="https://bylaw-hanmaum.netlify.app" target="_blank" rel="noopener noreferrer" class="lc rv"><div class="lci">📘</div><h4>지회 운영 가이드</h4><p>3단계 비전 · 7대 핵심가치 · 6P 전략</p><span class="ar">→</span></a>
+<a href="https://glocalbridge.netlify.app" target="_blank" rel="noopener noreferrer" class="lc rv"><div class="lci">🌏</div><h4>글로컬브릿지</h4><p>이주민 글로컬 인재 양성 플랫폼</p><span class="ar">→</span></a>
+<a href="https://elimgmission.netlify.app" target="_blank" rel="noopener noreferrer" class="lc rv"><div class="lci">✝️</div><h4>엘림G 선교회</h4><p>이주민 선교 · 글로컬 네트워크</p><span class="ar">→</span></a>
+</div></div></section>
+
+<!-- MAP 오시는 길 -->
+<section style="background:#f8f5f0;padding:60px 2.5rem" id="map"><div class="si">
+<div class="ct sh rv"><span class="sl">Location & Access</span><h2 class="st" data-i="map_t">오시는 길</h2><p class="sd cm">반석인더스트리즈(주) — 경남 김해시 장유로 167-23</p></div>
+<div class="rv" style="display:grid;grid-template-columns:1fr 1fr;gap:2rem;align-items:start">
+<div>
+<div style="border-radius:var(--r);overflow:hidden;border:1px solid var(--g2);box-shadow:0 4px 20px rgba(0,0,0,.06);margin-bottom:1rem">
+<img src="img-bansuk.jpg" alt="반석인더스트리즈(주)" style="width:100%;height:220px;object-fit:cover;display:block">
+</div>
+<div style="border-radius:var(--r);overflow:hidden;border:1px solid var(--g2);box-shadow:0 4px 20px rgba(0,0,0,.06)">
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3266.8!2d128.8095!3d35.1780!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x356893c8a9d3f24d%3A0x1!2z67CY7ISd7J247YSw7Iqk7Yq466as7KaI!5e0!3m2!1sko!2skr!4v1700000000000" width="100%" height="220" frameborder="0" style="display:block;border:0" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+</div>
+</div>
+<div style="padding:1rem 0">
+<div style="margin-bottom:1.5rem">
+<div style="font-size:.62rem;letter-spacing:2px;color:var(--g);font-weight:700;text-transform:uppercase;margin-bottom:.5rem">Address</div>
+<p style="font-size:1rem;font-weight:700;color:var(--nd);line-height:1.6">반석인더스트리즈(주)</p>
+<p style="font-size:.88rem;color:var(--g7)">경상남도 김해시 장유로 167-23</p>
+</div>
+<div style="margin-bottom:1.5rem">
+<div style="font-size:.62rem;letter-spacing:2px;color:var(--g);font-weight:700;text-transform:uppercase;margin-bottom:.5rem">Forum Time</div>
+<p style="font-size:.88rem;color:var(--g7)">매주 토요일 오전 7:00 ~ 9:00</p>
+</div>
+<div style="margin-bottom:1.5rem">
+<div style="font-size:.62rem;letter-spacing:2px;color:var(--g);font-weight:700;text-transform:uppercase;margin-bottom:.5rem">Contact</div>
+<a href="tel:010-2083-3106" style="font-size:.95rem;font-weight:700;color:var(--nd);text-decoration:none">📞 010-2083-3106</a>
+</div>
+<div style="display:flex;gap:.6rem;flex-wrap:wrap;margin-top:1.5rem">
+<a href="https://www.google.com/maps/search/경남+김해시+장유로+167-23" target="_blank" rel="noopener noreferrer" style="padding:10px 20px;border-radius:8px;background:#4285f4;color:var(--w);font-size:.78rem;font-weight:600;text-decoration:none;transition:all .3s ease" onmouseover="this.style.opacity='.85'" onmouseout="this.style.opacity='1'" data-i="map_g">📍 구글 지도 열기</a>
+<a href="https://map.naver.com/v5/search/경남 김해시 장유로 167-23" target="_blank" rel="noopener noreferrer" style="padding:10px 20px;border-radius:8px;background:#03c75a;color:var(--w);font-size:.78rem;font-weight:600;text-decoration:none;transition:all .3s ease" onmouseover="this.style.opacity='.85'" onmouseout="this.style.opacity='1'" data-i="map_n">🗺️ 네이버 지도 열기</a>
+<a href="tel:010-2083-3106" style="padding:10px 20px;border-radius:8px;background:var(--w);color:var(--nd);font-size:.78rem;font-weight:600;text-decoration:none;border:1px solid var(--g2);transition:all .3s ease" onmouseover="this.style.borderColor='var(--nd)'" onmouseout="this.style.borderColor='var(--g2)'">📞 전화 연결</a>
+</div>
+</div>
+</div></div></section>
+
+<!-- CTA -->
+<section class="cta" id="ct"><div class="ctai rv">
+<h2 class="ctat" data-i="cta_t">당신의 일터에서<br>하나님 나라를 함께 세우십시오</h2>
+<p class="ctad" data-i="cta_d">CBMC 김해한마음지회는 크리스천 비즈니스맨의 연합입니다.<br>매주 토요일, 조찬포럼에서 먼저 만나겠습니다.</p>
+<p style="font-size:.82rem;color:rgba(255,255,255,.45);margin-bottom:1.5rem">📍 반석인더스트리즈(주) — 경남 김해시 장유로 167-23</p>
+<div class="ctab"><a href="tel:010-2083-3106" class="hb hb1">📞 010-2083-3106</a><a href="https://www.youtube.com/watch?v=MDJIkMahVYY&list=PLIhQ51lQQFP8s95ZNqD9fZyi1F1rpqYCU&index=11" target="_blank" rel="noopener noreferrer" class="hb hb2">📺 YouTube 채널</a></div>
+</div></section>
+
+<!-- FOOTER -->
+<footer class="footer"><div class="fin">
+<div class="ftt">
+<div><div class="ftb"><div class="ftbi">CBMC</div><span data-i="ft_name">김해한마음지회</span></div><p class="fta" data-i="ft_about">CBMC는 실업인과 전문인에게 복음을 전하여 예수 그리스도가 구주이심을 증거하고, 주님의 지상명령을 성취하는 국제적 복음단체입니다.<br>📍 반석인더스트리즈(주) — 경남 김해시 장유로 167-23<br>📞 010-2083-3106</p></div>
+<div><div class="fth" data-i="ft_h1">사역</div><ul class="ftl"><li><a href="#forum" data-i="ft_m1">토요조찬포럼</a></li><li><a href="#resources">📚 자료실</a></li><li><a href="#net" data-i="ft_m2">사역과 섬김</a></li><li><a href="#testimony" data-i="ft_m3">간증</a></li><li><a href="#plan" data-i="ft_m4">2026 운영계획</a></li></ul></div>
+<div><div class="fth" data-i="ft_h2">소개</div><ul class="ftl"><li><a href="#tm" data-i="ft_i1">임원소개</a></li><li><a href="#gal" data-i="ft_i2">갤러리</a></li><li><a href="https://www.youtube.com/watch?v=MDJIkMahVYY&list=PLIhQ51lQQFP8s95ZNqD9fZyi1F1rpqYCU" target="_blank" rel="noopener noreferrer" data-i="ft_i3">YouTube</a></li><li><a href="#map" data-i="ft_i4">오시는 길</a></li></ul></div>
+<div><div class="fth" data-i="ft_h3">연결</div><ul class="ftl"><li><a href="https://cbmc.or.kr" target="_blank" rel="noopener noreferrer" data-i="ft_c1">CBMC 한국본부</a></li><li><a href="https://2026vision.netlify.app" target="_blank" rel="noopener noreferrer" data-i="ft_c2">2026 비전</a></li><li><a href="https://bylaw-hanmaum.netlify.app" target="_blank" rel="noopener noreferrer" data-i="ft_c3">회칙</a></li><li><a href="https://hanmaum-schedule.netlify.app" target="_blank" rel="noopener noreferrer" data-i="ft_c4">연간 일정</a></li></ul></div>
+</div>
+<div class="ftbt">
+<div style="text-align:center;margin-bottom:12px;padding:12px 0;border-top:1px solid rgba(255,255,255,.08)">
+<div style="display:inline-flex;gap:2rem;flex-wrap:wrap;justify-content:center;font-size:.72rem;color:rgba(255,255,255,.55);line-height:1.8">
+<span><b style="color:rgba(184,137,46,.7)">회원가입문의</b>&nbsp;&nbsp;<a href="tel:010-3844-4422" style="color:rgba(255,255,255,.7);text-decoration:none">📞 010-3844-4422</a><span style="color:rgba(255,255,255,.25)">(회장)</span>&nbsp;&nbsp;·&nbsp;&nbsp;<a href="tel:010-3338-3332" style="color:rgba(255,255,255,.7);text-decoration:none">📞 010-3338-3332</a><span style="color:rgba(255,255,255,.25)">(총무)</span></span>
+<span><b style="color:rgba(184,137,46,.7)">웹페이지문의</b>&nbsp;&nbsp;<a href="tel:010-2083-3106" style="color:rgba(255,255,255,.7);text-decoration:none">📞 010-2083-3106</a><span style="color:rgba(255,255,255,.25)">(엘림G선교회)</span></span>
+</div>
+</div>
+<div class="ftc" data-i="ft_copy">© 2026 CBMC 김해한마음지회 · 사단법인 한국기독실업인회</div>
+<a href="#privacy" style="font-size:.65rem;color:rgba(255,255,255,.3);text-decoration:none;margin-left:1rem" data-i="ft_privacy">개인정보처리방침</a></div>
+<div class="ftm">제작: <a href="https://elimgmission.netlify.app" target="_blank" rel="noopener noreferrer">엘림G선교회</a></div>
+</div></footer>
+
+<!-- 개인정보처리방침 모달 -->
+<div id="privacy" style="display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,.7);z-index:9999;overflow-y:auto;padding:2rem">
+<div style="max-width:720px;margin:2rem auto;background:var(--w);border-radius:16px;padding:2.5rem;position:relative">
+<button onclick="document.getElementById('privacy').style.display='none'" style="position:absolute;top:1rem;right:1rem;background:none;border:none;font-size:1.2rem;cursor:pointer;color:var(--g5)">✕</button>
+<h2 style="font-size:1.3rem;font-weight:800;color:var(--nd);margin-bottom:1.5rem" data-i="pv_title">개인정보처리방침</h2>
+<div style="font-size:.82rem;color:var(--g7);line-height:1.9" data-i="pv_body">
+<p><strong>제1조 (목적)</strong><br>CBMC 김해한마음지회(이하 "지회")는 개인정보 보호법에 따라 이용자의 개인정보를 보호하고 이와 관련한 고충을 처리하기 위하여 다음과 같은 개인정보 처리방침을 수립합니다.</p>
+<p style="margin-top:1rem"><strong>제2조 (수집하는 개인정보 항목)</strong><br>지회는 조찬포럼 참석 및 회원 관리를 위해 다음 항목을 수집합니다: 성명, 연락처(전화번호), 소속 기업명, 직위. 웹사이트 방문 시 Google Analytics를 통해 방문 통계(접속 IP, 브라우저 정보, 방문 페이지)가 자동 수집됩니다.</p>
+<p style="margin-top:1rem"><strong>제3조 (개인정보의 수집 및 이용 목적)</strong><br>지회는 수집한 개인정보를 다음 목적으로 이용합니다: 조찬포럼 안내 및 연락, 회원 관리, 지회 운영 관련 공지사항 전달, 웹사이트 이용 통계 분석.</p>
+<p style="margin-top:1rem"><strong>제4조 (보유 및 이용 기간)</strong><br>개인정보는 수집 목적이 달성되면 지체 없이 파기합니다. 다만, 관련 법령에 의해 보존이 필요한 경우 해당 기간 동안 보관합니다.</p>
+<p style="margin-top:1rem"><strong>제5조 (제3자 제공)</strong><br>지회는 이용자의 동의 없이 개인정보를 외부에 제공하지 않습니다.</p>
+<p style="margin-top:1rem"><strong>제6조 (개인정보 보호 책임자)</strong><br>성명: 임명식 (총무) / 연락처: 010-3338-3332</p>
+<p style="margin-top:1rem"><strong>제7조 (시행일)</strong><br>이 방침은 2025년 1월 1일부터 시행합니다.</p>
+</div>
+</div>
+</div>
+
+
+<!-- 말씀 묵상 모달 (아카이브) -->
+<div id="modal-word" style="display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,.7);z-index:9999;overflow-y:auto;padding:2rem">
+<div style="max-width:720px;margin:2rem auto;background:var(--w);border-radius:16px;padding:2.5rem;position:relative">
+<button onclick="document.getElementById('modal-word').style.display='none'" style="position:absolute;top:1rem;right:1rem;background:none;border:none;font-size:1.2rem;cursor:pointer;color:var(--g5)">✕</button>
+<h2 style="font-size:1.3rem;font-weight:800;color:var(--nd);margin-bottom:.3rem">📖 포럼 성경공부 아카이브</h2>
+<p style="font-size:.78rem;color:var(--g5);margin-bottom:.5rem">조찬포럼에서 나누었던 말씀을 다시 묵상하십시오.</p>
+<p style="font-size:.68rem;color:var(--gl);font-weight:600;margin-bottom:1.5rem">매주 성경공부 자료가 축적됩니다 · PDF 다운로드 · YouTube 강의 영상</p>
+
+<!-- 2025.02.08 -->
+<div style="margin-bottom:1.2rem;padding:1.2rem;background:linear-gradient(135deg,#fff8ed,#fff);border-radius:12px;border:2px solid rgba(184,137,46,.3)">
+<div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:.6rem;flex-wrap:wrap;gap:.4rem">
+<div style="display:flex;align-items:center;gap:8px">
+<div style="width:42px;height:42px;border-radius:10px;background:var(--nd);display:flex;flex-direction:column;align-items:center;justify-content:center">
+<div style="font-size:.5rem;color:rgba(255,255,255,.6);line-height:1;font-weight:700">FEB</div>
+<div style="font-size:.9rem;color:var(--w);font-weight:800;line-height:1">08</div>
+</div>
+<div>
+<div style="font-size:.92rem;font-weight:700;color:var(--nd)">"가짜 복음과 진짜 복음의 차이를 아십니까"</div>
+<div style="font-size:.7rem;color:var(--g5)">갈라디아서 1:6-10 · 창세기 5:21-27 | 강사: 서재찬 박사</div>
+</div>
+</div>
+<span style="padding:3px 10px;border-radius:10px;background:rgba(76,175,80,.1);color:#4caf50;font-size:.6rem;font-weight:700">최신</span>
+</div>
+<div style="display:flex;gap:6px;flex-wrap:wrap">
+<a href="study-week-2025-02-08.pdf" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;gap:4px;padding:8px 14px;border-radius:8px;background:var(--nd);color:var(--w);font-size:.72rem;font-weight:700;text-decoration:none;transition:all .3s" onmouseover="this.style.background='#b8892e'" onmouseout="this.style.background='#0a1f35'">📄 PDF 성경공부 자료</a>
+<a href="https://www.youtube.com/watch?v=H_i5L8Qwo9k" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;gap:4px;padding:8px 14px;border-radius:8px;background:rgba(255,0,0,.08);border:1px solid rgba(255,0,0,.15);color:#e44;font-size:.72rem;font-weight:600;text-decoration:none">▶ 5분 영상</a>
+<a href="https://www.youtube.com/watch?v=OerzKuFZ2PQ&list=PLIhQ51lQQFP8s95ZNqD9fZyi1F1rpqYCU&index=1" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;gap:4px;padding:8px 14px;border-radius:8px;background:rgba(255,165,0,.08);border:1px solid rgba(255,165,0,.15);color:#ffa500;font-size:.72rem;font-weight:600;text-decoration:none">▶ 2분 영상</a>
+</div>
+<div style="margin-top:.8rem;font-size:.72rem;color:var(--g5);line-height:1.7">
+<b>PDF 구성:</b> 본문(한/영) · 헬라어 키워드 분석 · 에녹&므두셀라 비교표 · 영적 통찰 · 소그룹 나눔 질문 5개 · 삶의 적용표 · 합심 기도제목
+</div>
+</div>
+
+<!-- 예정: 2025.02.28 -->
+<div style="margin-bottom:1.2rem;padding:1rem;background:#f8f8f8;border-radius:12px;border:1px dashed #ddd">
+<div style="display:flex;align-items:center;gap:8px">
+<div style="width:42px;height:42px;border-radius:10px;background:rgba(184,137,46,.15);display:flex;flex-direction:column;align-items:center;justify-content:center">
+<div style="font-size:.5rem;color:var(--gl);line-height:1;font-weight:700">FEB</div>
+<div style="font-size:.9rem;color:var(--gl);font-weight:800;line-height:1">28</div>
+</div>
+<div>
+<div style="font-size:.88rem;font-weight:700;color:var(--g5)">조찬주회 — 최무열 목사</div>
+<div style="font-size:.68rem;color:var(--g3)">전 부산장신대 총장 · 김해한마음지회 지도목사</div>
+</div>
+<span style="padding:3px 10px;border-radius:10px;background:rgba(255,165,0,.1);color:#ffa500;font-size:.6rem;font-weight:700;margin-left:auto">예정</span>
+</div>
+</div>
+
+<!-- 예정: 2025.03.07 -->
+<div style="margin-bottom:1.2rem;padding:1rem;background:#f8f8f8;border-radius:12px;border:1px dashed #ddd">
+<div style="display:flex;align-items:center;gap:8px">
+<div style="width:42px;height:42px;border-radius:10px;background:rgba(184,137,46,.15);display:flex;flex-direction:column;align-items:center;justify-content:center">
+<div style="font-size:.5rem;color:var(--gl);line-height:1;font-weight:700">MAR</div>
+<div style="font-size:.9rem;color:var(--gl);font-weight:800;line-height:1">07</div>
+</div>
+<div>
+<div style="font-size:.88rem;font-weight:700;color:var(--g5)">조찬주회 — 임성태 한의박사</div>
+<div style="font-size:.68rem;color:var(--g3)">자연힐 한방병원 병원장</div>
+</div>
+<span style="padding:3px 10px;border-radius:10px;background:rgba(255,165,0,.1);color:#ffa500;font-size:.6rem;font-weight:700;margin-left:auto">예정</span>
+</div>
+</div>
+
+<!-- 전체 YouTube -->
+<div style="padding:1rem;background:rgba(255,0,0,.04);border-radius:12px;border:1px solid rgba(255,0,0,.1);text-align:center">
+<p style="font-size:.78rem;color:var(--g5);margin-bottom:.5rem">지난 포럼 강의를 다시 만나보십시오</p>
+<a href="https://www.youtube.com/watch?v=MDJIkMahVYY&list=PLIhQ51lQQFP8s95ZNqD9fZyi1F1rpqYCU" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;gap:6px;padding:10px 20px;border-radius:10px;background:rgba(255,0,0,.1);border:1px solid rgba(255,0,0,.2);color:#e44;font-size:.78rem;font-weight:700;text-decoration:none">▶ YouTube 전체 재생목록 보기</a>
+</div>
+</div>
+</div>
+
+<!-- 소그룹 나눔 모달 -->
+<div id="modal-group" style="display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,.7);z-index:9999;overflow-y:auto;padding:2rem">
+<div style="max-width:680px;margin:2rem auto;background:var(--w);border-radius:16px;padding:2.5rem;position:relative">
+<button onclick="document.getElementById('modal-group').style.display='none'" style="position:absolute;top:1rem;right:1rem;background:none;border:none;font-size:1.2rem;cursor:pointer;color:var(--g5)">✕</button>
+<h2 style="font-size:1.3rem;font-weight:800;color:var(--nd);margin-bottom:.5rem">🤝 소그룹 나눔 질문</h2>
+<p style="font-size:.82rem;color:var(--g5);margin-bottom:1.5rem">테이블별로 아래 질문을 함께 나누어 보십시오.</p>
+
+<div style="margin-bottom:1.5rem;padding:1.2rem;background:linear-gradient(135deg,#f0f5ff,#fff);border-radius:12px;border-left:4px solid #1a4b7a">
+<h3 style="font-size:.88rem;font-weight:700;color:#1a4b7a;margin-bottom:.6rem">📜 갈라디아서 1장 6-10절</h3>
+<p style="font-size:.8rem;color:var(--g7);line-height:1.8;font-style:italic">"그리스도의 은혜로 너희를 부르신 이를 이같이 속히 떠나 다른 복음을 따르는 것을 내가 이상히 여기노라"</p>
+</div>
+
+<div style="margin-bottom:1.5rem;padding:1.2rem;background:linear-gradient(135deg,#f5f0e8,#fff);border-radius:12px;border-left:4px solid var(--gl)">
+<h3 style="font-size:.88rem;font-weight:700;color:var(--gl);margin-bottom:.6rem">📜 창세기 5장 21-27절</h3>
+<p style="font-size:.8rem;color:var(--g7);line-height:1.8;font-style:italic">"에녹은 하나님과 동행하더니 하나님이 그를 데려가시므로 세상에 있지 아니하였더라"</p>
+</div>
+
+<div style="background:#f8f8f8;border-radius:12px;padding:1.2rem">
+<h3 style="font-size:.95rem;font-weight:700;color:var(--nd);margin-bottom:1rem">💬 나눔 질문 3가지</h3>
+<div style="margin-bottom:1rem;padding:.8rem;background:var(--w);border-radius:8px;border:1px solid var(--g2)">
+<div style="font-size:.72rem;color:var(--gl);font-weight:700;margin-bottom:.3rem">질문 1</div>
+<p style="font-size:.85rem;color:var(--nd);font-weight:600;line-height:1.7">바울이 경고하는 '다른 복음'은 오늘날 비즈니스 현장에서 어떤 모습으로 나타날 수 있습니까? 나의 사업 결정에서 '진짜 복음'과 '가짜 복음'의 기준은 무엇이었습니까?</p>
+</div>
+<div style="margin-bottom:1rem;padding:.8rem;background:var(--w);border-radius:8px;border:1px solid var(--g2)">
+<div style="font-size:.72rem;color:var(--gl);font-weight:700;margin-bottom:.3rem">질문 2</div>
+<p style="font-size:.85rem;color:var(--nd);font-weight:600;line-height:1.7">에녹은 '하나님과 동행'하며 365년을 살았습니다. 나의 일터에서 하나님과 동행한다는 것은 구체적으로 어떤 모습입니까? 최근 하나님의 임재를 경험한 순간이 있었습니까?</p>
+</div>
+<div style="padding:.8rem;background:var(--w);border-radius:8px;border:1px solid var(--g2)">
+<div style="font-size:.72rem;color:var(--gl);font-weight:700;margin-bottom:.3rem">질문 3</div>
+<p style="font-size:.85rem;color:var(--nd);font-weight:600;line-height:1.7">바울은 "사람의 마음에 들려고 하는 것이냐"(갈 1:10)고 묻습니다. 비즈니스에서 사람을 기쁘게 하는 것과 하나님을 기쁘시게 하는 것 사이에서 갈등했던 경험을 나누어 주십시오.</p>
+</div>
+</div>
+</div>
+</div>
+
+<!-- 합심 기도 모달 -->
+<div id="modal-prayer" style="display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,.7);z-index:9999;overflow-y:auto;padding:2rem">
+<div style="max-width:680px;margin:2rem auto;background:var(--w);border-radius:16px;padding:2.5rem;position:relative">
+<button onclick="document.getElementById('modal-prayer').style.display='none'" style="position:absolute;top:1rem;right:1rem;background:none;border:none;font-size:1.2rem;cursor:pointer;color:var(--g5)">✕</button>
+<h2 style="font-size:1.3rem;font-weight:800;color:var(--nd);margin-bottom:.5rem">🙏 합심 기도 제목</h2>
+<p style="font-size:.82rem;color:var(--g5);margin-bottom:1.5rem">함께 마음을 모아 기도합시다.</p>
+
+<div style="margin-bottom:1.2rem;padding:1.5rem;background:linear-gradient(135deg,#fff8ed,#fff);border-radius:12px;border-left:4px solid var(--gl)">
+<div style="font-size:.72rem;color:var(--gl);font-weight:700;letter-spacing:1px;margin-bottom:.4rem">기도제목 1</div>
+<h3 style="font-size:.95rem;font-weight:700;color:var(--nd);margin-bottom:.4rem">🏢 회원 기업의 형통과 비즈니스 사역</h3>
+<p style="font-size:.82rem;color:var(--g7);line-height:1.8">각 회원의 기업이 하나님의 뜻 안에서 형통하게 하시고, 일터가 곧 사역지임을 매 순간 깨닫게 해 주옵소서. 경제적 어려움 가운데 있는 형제들에게 지혜와 돌파의 은혜를 부어 주옵소서.</p>
+</div>
+
+<div style="margin-bottom:1.2rem;padding:1.5rem;background:linear-gradient(135deg,#f0f5ff,#fff);border-radius:12px;border-left:4px solid #1a4b7a">
+<div style="font-size:.72rem;color:#1a4b7a;font-weight:700;letter-spacing:1px;margin-bottom:.4rem">기도제목 2</div>
+<h3 style="font-size:.95rem;font-weight:700;color:var(--nd);margin-bottom:.4rem">👨‍👩‍👧‍👦 회원 가정의 평안과 자녀 축복</h3>
+<p style="font-size:.82rem;color:var(--g7);line-height:1.8">각 가정에 주님의 평강이 넘치게 하시고, 부부 사이에 사랑과 존경이 깊어지게 하옵소서. 자녀들이 믿음 안에서 바르게 성장하고, 부모의 신앙이 다음 세대로 이어지게 해 주옵소서.</p>
+</div>
+
+<div style="padding:1.5rem;background:linear-gradient(135deg,#f0faf0,#fff);border-radius:12px;border-left:4px solid #4caf50">
+<div style="font-size:.72rem;color:#4caf50;font-weight:700;letter-spacing:1px;margin-bottom:.4rem">기도제목 3</div>
+<h3 style="font-size:.95rem;font-weight:700;color:var(--nd);margin-bottom:.4rem">🌏 김해한마음지회의 부흥과 글로컬 사역 확장</h3>
+<p style="font-size:.82rem;color:var(--g7);line-height:1.8">토요조찬포럼이 더 많은 비즈니스맨에게 복음의 통로가 되게 하시고, 이주민 사역과 글로컬 브릿지 사역이 18개국으로 확장되게 하옵소서. CBMC를 통해 일터에서 하나님 나라가 세워지게 하옵소서.</p>
+</div>
+</div>
+</div>
+
+<!-- LIGHTBOX -->
+<div class="lb" id="lb"><button class="lb-x" onclick="clb()">✕</button><button class="lb-arr lb-prv" onclick="lbn(-1)">◀</button><button class="lb-arr lb-nxt" onclick="lbn(1)">▶</button><img id="lbi" src=""><div class="lb-cap" id="lbc"></div></div>
+
+<script>
+const S=document.querySelectorAll('.hs'),HD=[
+{tag:'하나님의 창조',t:'<em>수국</em>의 향연,<br>하나님이 입히신 영광',d:'들의 백합화가 어떻게 자라는가 생각하여 보라 — 마태복음 6:28'},
+{tag:'새 생명의 계절',t:'봄처럼 <em>새롭게</em>,<br>꽃처럼 아름답게',d:'하나님의 창조 세계 속에서 새 생명의 소망을 노래합니다.'},
+{tag:'Glocal Vision',t:'구름 위에서<br><em>세상</em>을 품다',d:'지역에서 세계로 — 하나님이 주신 비전의 산 위에서 열방을 바라봅니다.'},
+{tag:'하나님의 작품',t:'한 송이 <em>꽃</em>에 담긴<br>창조주의 섬세함',d:'하나님의 솜씨는 가장 작은 꽃잎 하나에도 온전히 담겨 있습니다.'},
+{tag:'빛과 소금',t:'어둠 속에서<br><em>빛</em>으로 서다',d:'세상의 어둠을 밝히는 크리스천 비즈니스맨의 사명입니다.'},
+{tag:'하나님의 반석기업',t:'밤에도 빛나는<br><em>하나님의 기업</em>',d:'하나님의 불꽃이 반석기업 위에 임합니다.'},
+{tag:'에덴의 정원',t:'하나님이 <em>심으신</em><br>아름다운 동산',d:'주님이 가꾸시는 정원처럼, 우리의 삶도 주님의 손길로 아름답게 피어납니다.'},
+{tag:'세계기독교박물관',t:'<em>말씀</em>의 뿌리를 찾아<br>함께 걸어가다',d:'CBMC 경남연합 수련회 — 신앙의 역사 위에 세워지는 비즈니스 사명'},
+{tag:'함께하는 교제',t:'밥상 위의 <em>은혜</em>,<br>나눔의 공동체',d:'조찬의 따뜻함 속에서 서로를 격려하고 세워가는 형제 자매의 교제'},
+{tag:'조찬포럼 현장',t:'매주 토요일 아침,<br><em>조찬포럼</em>에서 만납니다',d:'말씀과 기도, 간증과 교제 — 비즈니스맨의 영적 충전소'}
+];
+let ci=0,si;
+const dc=document.getElementById('hDots');
+S.forEach((_,i)=>{const d=document.createElement('div');d.className='hd'+(i===0?' on':'');d.onclick=()=>gs(i);dc.appendChild(d);});
+const D=dc.querySelectorAll('.hd');
+document.getElementById('hTot').textContent=String(S.length).padStart(2,'0');
+
+function gs(i){
+S[ci].classList.remove('on');D[ci].classList.remove('on');ci=i;
+S[ci].classList.add('on');D[ci].classList.add('on');
+document.getElementById('hN').textContent=String(i+1).padStart(2,'0');
+const e=HD[i],tg=document.getElementById('hTag'),h=document.getElementById('hT'),p=document.getElementById('hD');
+// Fade out text
+var hci=document.querySelector('.hci');
+hci.style.transition='opacity .4s ease, transform .4s ease';
+hci.style.opacity='0';hci.style.transform='translateY(12px)';
+// Update & fade in
+setTimeout(function(){
+tg.textContent=e.tag;h.innerHTML=e.t;p.textContent=e.d;
+hci.style.transition='opacity .6s ease, transform .6s ease';
+hci.style.opacity='1';hci.style.transform='translateY(0)';
+},450);
+// Progress bar
+var pb=document.getElementById('hProg');
+pb.classList.remove('run');pb.style.width='0';pb.offsetHeight;
+pb.classList.add('run');
+clearInterval(si);ss();
+}
+function hgo(d){gs((ci+d+S.length)%S.length);}
+function ss(){si=setInterval(()=>gs((ci+1)%S.length),5500);}ss();
+
+window.addEventListener('scroll',()=>document.getElementById('nav').classList.toggle('scrolled',window.scrollY>50));
+function tmm(){document.getElementById('mm').classList.toggle('open');}
+
+const ob=new IntersectionObserver(e=>{e.forEach(el=>{if(el.isIntersecting)el.target.classList.add('ac');});},{threshold:.1,rootMargin:'0px 0px -30px 0px'});
+document.querySelectorAll('.rv').forEach(el=>ob.observe(el));
+
+document.querySelectorAll('a[href^="#"]').forEach(a=>{a.addEventListener('click',function(e){
+const h=this.getAttribute('href');
+if(h==='#privacy'){e.preventDefault();document.getElementById('privacy').style.display='block';return;}
+e.preventDefault();const t=document.querySelector(h);if(t)t.scrollIntoView({behavior:'smooth',block:'start'});
+});});
+document.querySelectorAll('.gtab').forEach(t=>{t.addEventListener('click',function(){document.querySelectorAll('.gtab').forEach(x=>x.classList.remove('on'));this.classList.add('on');const f=this.dataset.f;document.querySelectorAll('.gi').forEach(g=>{if(f==='all'||g.dataset.cat===f){g.classList.remove('hide')}else{g.classList.add('hide')}});});});
+
+// Lightbox
+let lbItems=[],lbIdx=0;
+document.querySelectorAll('.gi').forEach(g=>{g.addEventListener('click',function(){const img=this.querySelector('img');const cap=this.querySelector('.gl');lbItems=Array.from(document.querySelectorAll('.gi:not(.hide)')).map(el=>({src:el.querySelector('img').src,cap:el.querySelector('.gl')?.textContent||''}));lbIdx=lbItems.findIndex(i=>i.src===img.src);olb();});});
+function olb(){const lb=document.getElementById('lb');lb.classList.add('open');document.getElementById('lbi').src=lbItems[lbIdx].src;document.getElementById('lbc').textContent=lbItems[lbIdx].cap;document.body.style.overflow='hidden';}
+function clb(){document.getElementById('lb').classList.remove('open');document.body.style.overflow='';}
+function lbn(d){lbIdx=(lbIdx+d+lbItems.length)%lbItems.length;document.getElementById('lbi').src=lbItems[lbIdx].src;document.getElementById('lbc').textContent=lbItems[lbIdx].cap;}
+document.getElementById('lb').addEventListener('click',function(e){if(e.target===this)clb();});
+document.addEventListener('keydown',function(e){if(document.getElementById('lb').classList.contains('open')){if(e.key==='Escape')clb();if(e.key==='ArrowLeft')lbn(-1);if(e.key==='ArrowRight')lbn(1);}});
+document.addEventListener('keydown',e=>{if(e.key==='ArrowRight'||e.key==='ArrowDown')hgo(1);if(e.key==='ArrowLeft'||e.key==='ArrowUp')hgo(-1);});
+let ty=0;document.querySelector('.hero').addEventListener('touchstart',e=>{ty=e.changedTouches[0].screenY;},{passive:true});
+document.querySelector('.hero').addEventListener('touchend',e=>{const d=ty-e.changedTouches[0].screenY;if(Math.abs(d)>40){d>0?hgo(1):hgo(-1);}},{passive:true});
+
+// ===== i18n 다국어 시스템 =====
+const i18n={
+ko:{
+nav1:'조찬포럼',nav2:'네트워크',nav3:'갤러리',nav4:'운영계획',nav5:'오시는 길',nav6:'함께하기',
+f_title:'토요조찬포럼',f_tag:'"일상이 교회, 삶이 예배"',
+f_desc:'CBMC 김해한마음지회의 트레이드 마크입니다. 매주 토요일 아침, 크리스천 비즈니스맨들이 함께 모여 말씀을 나누고, 간증을 듣고, 일터의 문제를 기도로 풀어갑니다.',
+f_time:'매주 토요일 오전 7:00 ~ 9:00',f_addr:'반석인더스트리즈(주) — 경남 김해시 장유로 167-23',f_who:'회원 및 초청 VIP 비즈니스맨',
+f_ft1t:'🎤 초청 강의',f_ft1d:'비즈니스 리더, 목회자, 전문가 초청 강연',
+f_ft2t:'📖 말씀 나눔',f_ft2d:'토론식 성경공부, 삶에 적용하는 말씀',
+f_ft3t:'🙏 구원 간증',f_ft3d:'Before → How → After 3분 구원 간증',
+spk_t:'조찬포럼 강사진',spk_d:'김해한마음지회 조찬포럼에서 말씀과 삶의 지혜를 나눠주시는 강사님들입니다.',spk_yt:'▶ 강의 보기',
+grace_t:'은혜로운 나눔 공간',grace_d:'조찬포럼은 단순한 강의가 아닙니다. 말씀을 통해 삶을 돌아보고, 간증을 통해 서로를 격려하며, 기도를 통해 하나님의 인도하심을 구하는 은혜의 자리입니다. 비즈니스 현장에서 겪는 고민과 감사를 나누고, 함께 기도하며 성장하는 공동체입니다.',
+gr1t:'말씀 묵상',gr1d:'매주 본문을 함께 읽고 삶에 적용합니다',
+gr2t:'소그룹 나눔',gr2d:'테이블별 진솔한 삶의 이야기를 나눕니다',
+gr3t:'합심 기도',gr3d:'서로의 일터와 가정을 위해 기도합니다',
+sch_t:'📋 포럼 일정',sch_yt:'지난 포럼 강의를 다시 만나보십시오',sch_ytb:'▶ 조찬포럼 강의 시청하기 (YouTube)',
+net_t:'사역과 섬김',net_d:'조찬포럼을 중심으로 네트워킹, 봉사, 글로컬 연결까지 — 삶의 모든 영역에서 하나님 나라를 세워갑니다.',
+n1t:'조찬 교제 · 소그룹 나눔',n1d:'매주 토요일 아침, 따뜻한 밥상을 나누며 서로의 일터와 삶을 격려합니다. 테이블별 소그룹 나눔과 합심 기도가 이어집니다.',
+n2t:'회원 기업 네트워킹',n2d:'삼성생명·네이처셀, 켐텍, 정밀인쇄, 반석인더스트리즈 등 회원 기업 간 신뢰 기반 협력과 비즈니스 매칭을 진행합니다.',
+n3t:'이주민 · 글로컬 브릿지',n3d:'엘림G선교회와 연계하여 18개국 이주민 네트워크와 글로컬 인재 양성 플랫폼을 구축합니다.',
+n4t:'기독교 문화 · 역사 탐방',n4d:'세계기독교박물관 방문, 한국 기독교 유적지 탐방 등 신앙의 뿌리를 함께 돌아봅니다.',
+n5t:'야외 수련회 · 친교',n5d:'봄 야유회, 체육대회, CBMC 경남연합 수련회를 통해 깊은 형제 교제와 영적 충전의 시간을 갖습니다.',
+n6t:'교회 · 지역사회 봉사',n6d:'지역 교회 협력, 이주민 한국어 교육, 다문화가정 지원, 청년 창업 멘토링으로 선한 영향력을 나눕니다.',
+gal_t:'사역의 현장을 만나보십시오',gt_all:'전체',gt_forum:'포럼',gt_fellow:'교제·수련회',gt_nature:'풍경',
+test_t:'포럼에서 만난 은혜',
+team_t:'함께 걸어가는 임원진',team_d:'김해한마음지회를 이끌어가는 크리스천 비즈니스 리더들입니다.',
+plan_t:'2026년 김해한마음지회 운영계획',plan_d:'비전, 회칙, 연간일정을 확인하시고 함께 동행해 주십시오.',
+pl1t:'2026 비전',pl1d:'비전 선언문 · 핵심 목표<br>연간 전략 방향',
+pl2t:'회칙',pl2d:'김해한마음지회 회칙<br>운영 규정 안내',
+pl3t:'연간 일정',pl3d:'2026년 월별 행사<br>포럼 · 연합 · 봉사 일정',
+link_t:'CBMC 사역과 연결',map_t:'오시는 길',
+map_g:'📍 구글 지도 열기',map_n:'🗺️ 네이버 지도 열기',map_call:'📞 전화 연결',
+cta_t:'당신의 일터에서<br>하나님 나라를 함께 세우십시오',
+cta_d:'CBMC 김해한마음지회는 크리스천 비즈니스맨의 연합입니다.<br>매주 토요일, 조찬포럼에서 먼저 만나겠습니다.',
+gc1:'서재찬 박사 — 믿음과 실력, 사마이론(DHT)',gc2:'조찬포럼 — 따뜻한 교제의 시간',
+gc3:'세계기독교박물관 연합 수련회',gc4:'자연 속에서 나누는 형제 교제',
+gc5:'한국 기독교 역사 유적 탐방',gc6:'경남연합 야외 친교 모임',
+gc7:'예배당 — 십자가 아래 모이는 공동체',gc8:'하나님의 창조 세계 — 수국의 아름다움',
+gc9:'하나님이 입히신 영광 — 수국 정원',gc10:'어부와 등대 — 회원 비즈니스 네트워크',
+gc11:'김해 장유 — 우리가 섬기는 도시',gc12:'하나님의 작품 — 장엄한 석양',
+ts1:'보험과 바이오 분야에서 오랜 세월 일하면서 성과와 실적에만 매달렸습니다. 조찬포럼에서 형제들과 기도하며 깨달은 것은 — 비즈니스의 궁극적 목적은 하나님 나라를 세우는 것이라는 사실이었습니다. 그 깨달음이 매 순간 제 사업의 방향을 바로잡아 줍니다.',
+ts1i:'배',ts1n:'배병옥 회장',ts1r:'삼성생명 · 네이처셀',
+ts2:'인쇄업을 운영하며 경기 침체와 디지털 전환이라는 이중 파도를 맞았습니다. 포럼에서 나눈 말씀 한 구절 — "두려워하지 말라, 내가 너와 함께함이라" — 이 말씀이 새벽마다 저를 일으켜 세웁니다. 혼자가 아니라는 것, 이것이 CBMC의 힘입니다.',
+ts2i:'임',ts2n:'임명식 총무',ts2r:'정밀인쇄 대표',
+ts3:'화학 소재 사업은 전문성과 신뢰가 생명입니다. 조찬포럼에서 만난 형제들의 기도가 거래처와의 관계를 변화시켰습니다. 계약서 앞에서 기도하게 되었고, 경쟁 대신 동행을 선택하게 되었습니다. 일터가 진짜 사역지가 되는 경험을 하고 있습니다.',
+ts3i:'김',ts3n:'김도현 부회장',ts3r:'켐텍 대표',
+ft_name:'김해한마음지회',
+ft_about:'CBMC는 실업인과 전문인에게 복음을 전하여 예수 그리스도가 구주이심을 증거하고, 주님의 지상명령을 성취하는 국제적 복음단체입니다.<br>📍 반석인더스트리즈(주) — 경남 김해시 장유로 167-23<br>📞 010-2083-3106',
+ft_h1:'사역',ft_m1:'토요조찬포럼',ft_m2:'사역과 섬김',ft_m3:'간증',ft_m4:'2026 운영계획',
+ft_h2:'소개',ft_i1:'임원소개',ft_i2:'갤러리',ft_i3:'YouTube',ft_i4:'오시는 길',
+ft_h3:'연결',ft_c1:'CBMC 한국본부',ft_c2:'2026 비전',ft_c3:'회칙',ft_c4:'연간 일정',
+ft_copy:'© 2026 CBMC 김해한마음지회 · 사단법인 한국기독실업인회',ft_privacy:'개인정보처리방침',
+res_t:'📚 자료실',res_d:'토요조찬포럼의 말씀과 비즈니스 원칙을 체계적으로 정리한 자료를 다운로드하십시오.',
+pv_title:'개인정보처리방침'
+},
+en:{
+nav1:'Forum',nav2:'Ministry',nav3:'Gallery',nav4:'Plans',nav5:'Directions',nav6:'Join Us',
+f_title:'Saturday Breakfast Forum',f_tag:'"Life is Church, Work is Worship"',
+f_desc:'The signature program of CBMC Gimhae Hanmaeum. Every Saturday morning, Christian businessmen gather to share the Word, hear testimonies, and bring workplace challenges to God in prayer.',
+f_time:'Every Saturday 7:00 – 9:00 AM',f_addr:'Bansuk Industries — 167-23, Jangyu-ro, Gimhae, Gyeongnam',f_who:'Members & Invited VIP Businessmen',
+f_ft1t:'🎤 Guest Lectures',f_ft1d:'Invited talks by business leaders, pastors & experts',
+f_ft2t:'📖 Word Sharing',f_ft2d:'Discussion-based Bible study applied to daily life',
+f_ft3t:'🙏 Salvation Testimony',f_ft3d:'Before → How → After: 3-minute testimony',
+spk_t:'Forum Speakers',spk_d:'Distinguished speakers who share wisdom of the Word and life at our breakfast forum.',spk_yt:'▶ Watch Lecture',
+grace_t:'A Space of Grace',grace_d:'The breakfast forum is more than a lecture. It is a place of grace where we reflect on life through the Word, encourage one another through testimonies, and seek God\'s guidance through prayer. We share business concerns, give thanks, and grow together as a praying community.',
+gr1t:'Scripture Meditation',gr1d:'We read the passage together and apply it to life',
+gr2t:'Small Group Sharing',gr2d:'Honest life stories shared at each table',
+gr3t:'United Prayer',gr3d:'Praying for each other\'s workplaces and families',
+sch_t:'📋 Forum Schedule',sch_yt:'Watch past forum lectures',sch_ytb:'▶ Watch Forum Lectures (YouTube)',
+net_t:'Ministry & Service',net_d:'From networking and volunteering to glocal connections centered on the breakfast forum — building God\'s kingdom in every area of life.',
+n1t:'Breakfast Fellowship · Small Groups',n1d:'Every Saturday morning, we share a warm meal and encourage one another in our work and life. Table-by-table sharing and united prayer follow.',
+n2t:'Member Business Networking',n2d:'Trust-based cooperation and business matching among member companies including Samsung Life, Chemtech, Precision Print, and Bansuk Industries.',
+n3t:'Immigrant · Glocal Bridge',n3d:'In partnership with Elim G Mission, building a glocal talent development platform connecting 18 countries.',
+n4t:'Christian Culture · Heritage Tours',n4d:'Visiting the World Christianity Museum, exploring Korean Christian heritage sites, and rediscovering the roots of our faith together.',
+n5t:'Retreats · Outdoor Fellowship',n5d:'Deepening brotherhood through spring picnics, sports events, and CBMC Gyeongnam United retreats.',
+n6t:'Church · Community Service',n6d:'Sharing goodwill through church partnerships, Korean language education for immigrants, multicultural family support, and youth mentoring.',
+gal_t:'Experience Our Ministry in Action',gt_all:'All',gt_forum:'Forum',gt_fellow:'Fellowship',gt_nature:'Scenery',
+test_t:'Grace We Found at the Forum',
+team_t:'Leadership Team',team_d:'Christian business leaders who guide the Gimhae Hanmaeum Chapter.',
+plan_t:'2026 Operations Plan',plan_d:'Check our vision, bylaws, and annual schedule — and walk with us.',
+pl1t:'2026 Vision',pl1d:'Vision Statement · Core Goals<br>Annual Strategic Direction',
+pl2t:'Bylaws',pl2d:'Chapter Bylaws<br>Operational Regulations',
+pl3t:'Annual Schedule',pl3d:'2026 Monthly Events<br>Forum · Union · Service Calendar',
+link_t:'Connect with CBMC',map_t:'Directions',
+map_g:'📍 Open Google Maps',map_n:'🗺️ Open Naver Maps',map_call:'📞 Call Us',
+cta_t:'Build the Kingdom of God<br>Together in Your Workplace',
+cta_d:'CBMC Gimhae Hanmaeum is a union of Christian businessmen.<br>Join us at the Saturday Breakfast Forum.',
+gc1:'Dr. Seo Jae-chan — Faith & Excellence, Dead Horse Theory',gc2:'Breakfast Forum — A Time of Warm Fellowship',
+gc3:'World Christianity Museum United Retreat',gc4:'Brotherhood in Nature',
+gc5:'Korean Christian Heritage Tour',gc6:'Gyeongnam United Outdoor Fellowship',
+gc7:'Chapel — Community Gathered Under the Cross',gc8:'God\'s Creation — Beauty of Hydrangeas',
+gc9:'Glory He Clothed — Hydrangea Garden',gc10:'Fisherman & Lighthouse — Business Network',
+gc11:'Gimhae Jangyu — The City We Serve',gc12:'God\'s Masterpiece — Majestic Sunset',
+ts1:'For many years in insurance and bio-industry, I was obsessed with performance and results. Praying with brothers at the breakfast forum, I realized the ultimate purpose of business is to build God\'s Kingdom. That realization corrects the direction of my business every moment.',
+ts1i:'B',ts1n:'Chairman Bae Byeong-ok',ts1r:'Samsung Life · NatureCell',
+ts2:'Running a printing business, I faced the double wave of economic downturn and digital transformation. A verse shared at the forum — "Do not fear, for I am with you" — lifts me up every dawn. Knowing I am not alone — that is the power of CBMC.',
+ts2i:'I',ts2n:'Secretary General Im Myeong-sik',ts2r:'CEO, Precision Print',
+ts3:'In the chemical materials business, expertise and trust are everything. The prayers of brothers at the forum transformed my client relationships. I began praying before contracts and chose partnership over competition. I am experiencing my workplace truly becoming a mission field.',
+ts3i:'K',ts3n:'Vice Chairman Kim Do-hyeon',ts3r:'CEO, Chemtech',
+ft_name:'Gimhae Hanmaeum',
+ft_about:'CBMC is an international evangelical organization that shares the Gospel with businessmen and professionals, testifying that Jesus Christ is Lord, and fulfilling the Great Commission.<br>📍 Bansuk Industries — 167-23, Jangyu-ro, Gimhae, Gyeongnam<br>📞 010-2083-3106',
+ft_h1:'Ministry',ft_m1:'Saturday Forum',ft_m2:'Ministry & Service',ft_m3:'Testimonies',ft_m4:'2026 Plans',
+ft_h2:'About',ft_i1:'Leadership',ft_i2:'Gallery',ft_i3:'YouTube',ft_i4:'Directions',
+ft_h3:'Connect',ft_c1:'CBMC Korea HQ',ft_c2:'2026 Vision',ft_c3:'Bylaws',ft_c4:'Annual Schedule',
+ft_copy:'© 2026 CBMC Gimhae Hanmaeum · CBMC Korea',ft_privacy:'Privacy Policy',
+res_t:'📚 Resources',res_d:'Download systematically organized materials from the Saturday Breakfast Forum — Scripture study and business principles.',
+pv_title:'Privacy Policy'
+},
+vi:{
+nav1:'Diễn đàn',nav2:'Mục vụ',nav3:'Thư viện ảnh',nav4:'Kế hoạch',nav5:'Đường đi',nav6:'Tham gia',
+f_title:'Diễn đàn Bữa sáng Thứ Bảy',f_tag:'"Cuộc sống là Nhà thờ, Công việc là Thờ phượng"',
+f_desc:'Chương trình đặc trưng của Chi hội CBMC Gimhae Hanmaeum. Mỗi sáng Thứ Bảy, các doanh nhân Cơ Đốc cùng nhau chia sẻ Lời Chúa, nghe chứng đạo và cầu nguyện cho thách thức nơi công sở.',
+f_time:'Mỗi Thứ Bảy 7:00 – 9:00 sáng',f_addr:'Bansuk Industries — 167-23, Jangyu-ro, Gimhae, Gyeongnam',f_who:'Hội viên & Doanh nhân VIP được mời',
+f_ft1t:'🎤 Bài giảng đặc biệt',f_ft1d:'Diễn giả: Lãnh đạo doanh nghiệp, mục sư & chuyên gia',
+f_ft2t:'📖 Chia sẻ Lời Chúa',f_ft2d:'Nghiên cứu Kinh Thánh thảo luận, áp dụng vào cuộc sống',
+f_ft3t:'🙏 Chứng đạo Cứu rỗi',f_ft3d:'Trước → Thế nào → Sau: Chứng đạo 3 phút',
+spk_t:'Diễn giả Diễn đàn',spk_d:'Các diễn giả chia sẻ sự khôn ngoan của Lời Chúa và cuộc sống tại diễn đàn bữa sáng.',spk_yt:'▶ Xem bài giảng',
+grace_t:'Không gian Ân điển',grace_d:'Diễn đàn bữa sáng không chỉ là bài giảng. Đây là nơi ân điển, nơi chúng tôi nhìn lại cuộc sống qua Lời Chúa, khích lệ nhau qua chứng đạo, và tìm kiếm sự dẫn dắt của Chúa qua cầu nguyện. Chia sẻ lo lắng kinh doanh, tạ ơn, và cùng nhau lớn lên.',
+gr1t:'Suy ngẫm Kinh Thánh',gr1d:'Cùng đọc phân đoạn và áp dụng vào cuộc sống',
+gr2t:'Chia sẻ Nhóm nhỏ',gr2d:'Những câu chuyện cuộc sống chân thành tại mỗi bàn',
+gr3t:'Cầu nguyện Hiệp nhất',gr3d:'Cầu nguyện cho nơi làm việc và gia đình của nhau',
+sch_t:'📋 Lịch Diễn đàn',sch_yt:'Xem lại bài giảng diễn đàn trước',sch_ytb:'▶ Xem bài giảng Diễn đàn (YouTube)',
+net_t:'Mục vụ & Phục vụ',net_d:'Từ kết nối, phục vụ đến liên kết glocal xoay quanh diễn đàn bữa sáng — xây dựng Nước Chúa trong mọi lĩnh vực cuộc sống.',
+n1t:'Thông công Bữa sáng · Nhóm nhỏ',n1d:'Mỗi sáng Thứ Bảy, chia sẻ bữa ăn ấm áp, khích lệ nhau trong công việc và cuộc sống. Chia sẻ nhóm nhỏ theo bàn và cầu nguyện hiệp nhất.',
+n2t:'Kết nối Doanh nghiệp Hội viên',n2d:'Hợp tác dựa trên niềm tin và kết nối kinh doanh giữa các doanh nghiệp hội viên như Samsung Life, Chemtech, Precision Print và Bansuk Industries.',
+n3t:'Di dân · Cầu nối Glocal',n3d:'Liên kết với Hội truyền giáo Elim G, xây dựng nền tảng đào tạo nhân tài glocal kết nối 18 quốc gia.',
+n4t:'Văn hóa Cơ Đốc · Tham quan Di sản',n4d:'Thăm Bảo tàng Cơ Đốc giáo Thế giới, khám phá di tích Cơ Đốc giáo Hàn Quốc, cùng nhìn lại cội nguồn đức tin.',
+n5t:'Trại hè · Thông công Ngoài trời',n5d:'Giao lưu sâu sắc qua picnic mùa xuân, đại hội thể thao, trại liên hiệp CBMC Gyeongnam.',
+n6t:'Nhà thờ · Phục vụ Cộng đồng',n6d:'Hợp tác nhà thờ, dạy tiếng Hàn cho di dân, hỗ trợ gia đình đa văn hóa, hướng dẫn khởi nghiệp thanh niên.',
+gal_t:'Trải nghiệm Mục vụ Thực tế',gt_all:'Tất cả',gt_forum:'Diễn đàn',gt_fellow:'Thông công',gt_nature:'Phong cảnh',
+test_t:'Ân điển tại Diễn đàn',
+team_t:'Ban Lãnh đạo',team_d:'Các nhà lãnh đạo doanh nghiệp Cơ Đốc dẫn dắt Chi hội Gimhae Hanmaeum.',
+plan_t:'Kế hoạch Hoạt động 2026',plan_d:'Xem tầm nhìn, điều lệ và lịch trình hàng năm — cùng đồng hành với chúng tôi.',
+pl1t:'Tầm nhìn 2026',pl1d:'Tuyên bố Tầm nhìn · Mục tiêu Cốt lõi<br>Hướng Chiến lược Hàng năm',
+pl2t:'Điều lệ',pl2d:'Điều lệ Chi hội<br>Quy định Hoạt động',
+pl3t:'Lịch trình Hàng năm',pl3d:'Sự kiện Hàng tháng 2026<br>Diễn đàn · Liên hiệp · Phục vụ',
+link_t:'Kết nối với CBMC',map_t:'Đường đi',
+map_g:'📍 Mở Google Maps',map_n:'🗺️ Mở Naver Maps',map_call:'📞 Gọi cho Chúng tôi',
+cta_t:'Cùng nhau xây dựng<br>Nước Đức Chúa Trời tại nơi làm việc',
+cta_d:'CBMC Gimhae Hanmaeum là liên minh các doanh nhân Cơ Đốc.<br>Hãy tham gia cùng chúng tôi tại Diễn đàn Bữa sáng Thứ Bảy.',
+gc1:'TS. Seo Jae-chan — Đức tin & Năng lực, Lý thuyết Ngựa Chết',gc2:'Diễn đàn Bữa sáng — Thời gian Thông công Ấm áp',
+gc3:'Trại Liên hiệp Bảo tàng Cơ Đốc giáo Thế giới',gc4:'Tình Anh em trong Thiên nhiên',
+gc5:'Tham quan Di sản Cơ Đốc giáo Hàn Quốc',gc6:'Thông công Ngoài trời Liên hiệp Gyeongnam',
+gc7:'Nhà nguyện — Cộng đồng Dưới Thập tự giá',gc8:'Tạo vật của Chúa — Vẻ đẹp Cẩm tú cầu',
+gc9:'Vinh quang Chúa Mặc cho — Vườn Cẩm tú cầu',gc10:'Ngư dân & Ngọn hải đăng — Mạng lưới Kinh doanh',
+gc11:'Gimhae Jangyu — Thành phố Chúng tôi Phục vụ',gc12:'Tác phẩm của Chúa — Hoàng hôn Huy hoàng',
+ts1:'Trong nhiều năm làm việc trong lĩnh vực bảo hiểm và công nghệ sinh học, tôi chỉ chạy theo thành tích. Cầu nguyện cùng anh em tại diễn đàn bữa sáng, tôi nhận ra mục đích cuối cùng của kinh doanh là xây dựng Nước Đức Chúa Trời. Nhận thức đó điều chỉnh hướng đi kinh doanh của tôi mỗi ngày.',
+ts1i:'B',ts1n:'Hội trưởng Bae Byeong-ok',ts1r:'Samsung Life · NatureCell',
+ts2:'Kinh doanh ngành in ấn, tôi đối mặt với làn sóng kép: suy thoái kinh tế và chuyển đổi số. Một câu Kinh Thánh chia sẻ tại diễn đàn — "Đừng sợ, vì Ta ở cùng ngươi" — nâng tôi dậy mỗi bình minh. Biết rằng tôi không đơn độc — đó là sức mạnh của CBMC.',
+ts2i:'I',ts2n:'Tổng thư ký Im Myeong-sik',ts2r:'Giám đốc, Precision Print',
+ts3:'Trong ngành vật liệu hóa học, chuyên môn và niềm tin là tất cả. Lời cầu nguyện của anh em tại diễn đàn đã thay đổi mối quan hệ với đối tác. Tôi bắt đầu cầu nguyện trước hợp đồng và chọn đồng hành thay vì cạnh tranh. Nơi làm việc thực sự trở thành cánh đồng truyền giáo.',
+ts3i:'K',ts3n:'Phó Hội trưởng Kim Do-hyeon',ts3r:'Giám đốc, Chemtech',
+ft_name:'Gimhae Hanmaeum',
+ft_about:'CBMC là tổ chức Phúc âm quốc tế chia sẻ Tin Lành cho doanh nhân và chuyên gia, làm chứng Chúa Giê-su Christ là Cứu Chúa, và thực hiện Đại Mạng Lệnh.<br>📍 Bansuk Industries — 167-23, Jangyu-ro, Gimhae, Gyeongnam<br>📞 010-2083-3106',
+ft_h1:'Mục vụ',ft_m1:'Diễn đàn Thứ Bảy',ft_m2:'Mục vụ & Phục vụ',ft_m3:'Chứng đạo',ft_m4:'Kế hoạch 2026',
+ft_h2:'Giới thiệu',ft_i1:'Ban Lãnh đạo',ft_i2:'Thư viện ảnh',ft_i3:'YouTube',ft_i4:'Đường đi',
+ft_h3:'Kết nối',ft_c1:'CBMC Hàn Quốc',ft_c2:'Tầm nhìn 2026',ft_c3:'Điều lệ',ft_c4:'Lịch trình Hàng năm',
+ft_copy:'© 2026 CBMC Gimhae Hanmaeum · CBMC Hàn Quốc',ft_privacy:'Chính sách Bảo mật',
+res_t:'📚 Thư viện Tài liệu',res_d:'Tải xuống tài liệu học Kinh Thánh và nguyên tắc kinh doanh được tổ chức có hệ thống từ Diễn đàn Bữa sáng Thứ Bảy.',
+pv_title:'Chính sách Bảo mật'
+}
+};
+
+// 히어로 슬라이더 번역 데이터
+const HD_i18n={
+en:[
+{tag:'God\'s Creation',t:'A Symphony of <em>Hydrangeas</em>,<br>Glory He Clothed',d:'Consider how the lilies of the field grow — Matthew 6:28'},
+{tag:'Season of New Life',t:'Renewed like <em>Spring</em>,<br>Beautiful like Flowers',d:'Singing the hope of new life within God\'s creation.'},
+{tag:'Glocal Vision',t:'Embracing the <em>World</em><br>from Above the Clouds',d:'From local to global — looking to the nations from the mountain of God\'s vision.'},
+{tag:'God\'s Masterpiece',t:'The Creator\'s <em>Detail</em><br>in a Single Flower',d:'God\'s craftsmanship is perfectly contained in every single petal.'},
+{tag:'Light & Salt',t:'Standing as <em>Light</em><br>in the Darkness',d:'The calling of Christian businessmen to illuminate the world.'},
+{tag:'God\'s Rock Enterprise',t:'Shining Even<br>in the <em>Night</em>',d:'God\'s flame rests upon the rock enterprise.'},
+{tag:'Garden of Eden',t:'A Beautiful Garden<br><em>Planted</em> by God',d:'Like a garden tended by the Lord, our lives bloom beautifully under His hands.'},
+{tag:'World Christianity Museum',t:'Tracing the Roots<br>of the <em>Word</em> Together',d:'CBMC Gyeongnam United Retreat — A business calling built on the history of faith'},
+{tag:'Fellowship',t:'<em>Grace</em> at the Table,<br>Community of Sharing',d:'Encouraging and building one another through the warmth of breakfast fellowship'},
+{tag:'Forum Scene',t:'Every Saturday Morning,<br>Meet at the <em>Breakfast Forum</em>',d:'Word, prayer, testimony & fellowship — a spiritual recharging station for businessmen'}
+],
+vi:[
+{tag:'Tạo vật của Chúa',t:'Bản giao hưởng <em>Cẩm tú cầu</em>,<br>Vinh quang Chúa Mặc cho',d:'Hãy xem hoa huệ ngoài đồng mọc lên thể nào — Ma-thi-ơ 6:28'},
+{tag:'Mùa Sự sống Mới',t:'Đổi mới như <em>Mùa Xuân</em>,<br>Xinh đẹp như Hoa',d:'Hát lên hy vọng sự sống mới trong tạo vật của Chúa.'},
+{tag:'Tầm nhìn Glocal',t:'Ôm trọn <em>Thế giới</em><br>từ trên Mây',d:'Từ địa phương đến toàn cầu — Nhìn đến muôn dân từ đỉnh núi tầm nhìn của Chúa.'},
+{tag:'Tác phẩm của Chúa',t:'Sự <em>Tinh tế</em> của Đấng Tạo Hóa<br>trong Một Bông Hoa',d:'Tay nghề của Chúa được chứa đựng hoàn hảo trong mỗi cánh hoa.'},
+{tag:'Ánh sáng & Muối',t:'Đứng làm <em>Ánh sáng</em><br>trong Bóng tối',d:'Sứ mệnh của doanh nhân Cơ Đốc soi sáng thế giới.'},
+{tag:'Doanh nghiệp Đá Tảng',t:'Tỏa sáng ngay cả<br>trong <em>Đêm tối</em>',d:'Ngọn lửa Đức Chúa Trời ngự trên doanh nghiệp đá tảng.'},
+{tag:'Vườn Ê-đen',t:'Khu vườn Xinh đẹp<br><em>Được trồng</em> bởi Chúa',d:'Như khu vườn được Chúa chăm sóc, cuộc đời chúng ta nở hoa dưới bàn tay Ngài.'},
+{tag:'Bảo tàng Cơ Đốc giáo',t:'Cùng nhau tìm về<br>Cội nguồn <em>Lời Chúa</em>',d:'Hội trại Liên hiệp CBMC Gyeongnam — Sứ mệnh kinh doanh trên nền lịch sử đức tin'},
+{tag:'Thông công',t:'<em>Ân điển</em> trên Bàn ăn,<br>Cộng đồng Chia sẻ',d:'Khích lệ và xây dựng lẫn nhau qua sự ấm áp của bữa sáng thông công'},
+{tag:'Hiện trường Diễn đàn',t:'Mỗi sáng Thứ Bảy,<br>Gặp nhau tại <em>Diễn đàn</em>',d:'Lời Chúa, cầu nguyện, chứng đạo & thông công — Trạm sạc tâm linh cho doanh nhân'}
+]
+};
+
+let curLang='ko';
+function switchLang(lang){
+curLang=lang;
+// 1. data-i 요소 번역
+document.querySelectorAll('[data-i]').forEach(el=>{
+const k=el.dataset.i;
+if(i18n[lang]&&i18n[lang][k]){
+if(k==='cta_t'||k==='cta_d'||k==='pl1d'||k==='pl2d'||k==='pl3d'||k==='ft_about')el.innerHTML=i18n[lang][k];
+else el.textContent=i18n[lang][k];
+}
+});
+// 2. 언어 버튼 활성화
+document.querySelectorAll('.lang-btn').forEach(b=>{
+b.classList.toggle('on',b.dataset.lang===lang);
+});
+// 3. 히어로 슬라이더 번역
+if(lang!=='ko'&&HD_i18n[lang]){
+HD_i18n[lang].forEach((item,idx)=>{if(idx<HD.length){HD[idx]._orig=HD[idx]._orig||{tag:HD[idx].tag,t:HD[idx].t,d:HD[idx].d};HD[idx].tag=item.tag;HD[idx].t=item.t;HD[idx].d=item.d;}});
+}else{
+HD.forEach(item=>{if(item._orig){item.tag=item._orig.tag;item.t=item._orig.t;item.d=item._orig.d;}});
+}
+// 현재 슬라이드 갱신
+const e=HD[ci];
+document.getElementById('hTag').textContent=e.tag;
+document.getElementById('hT').innerHTML=e.t;
+document.getElementById('hD').textContent=e.d;
+// 4. html lang 속성
+document.documentElement.lang=lang==='ko'?'ko':lang==='en'?'en':'vi';
+}
+
+// 네비 언어 버튼 이벤트
+document.querySelectorAll('#langSw .lang-btn').forEach(b=>{
+b.addEventListener('click',()=>switchLang(b.dataset.lang));
+});
+
+// 자료실 필터
+function filterRes(cat){
+document.querySelectorAll('.res-card').forEach(c=>{
+c.style.display=(cat==='all'||c.dataset.rc===cat)?'':'none';
+});
+document.querySelectorAll('.res-tab').forEach(t=>{
+const isOn=t.dataset.rf===cat;
+t.classList.toggle('res-tab-on',isOn);
+if(isOn){t.style.background='#0a1f35';t.style.color='#fff';}
+else{t.style.background='transparent';t.style.color=t.dataset.rf==='biz'?'#5e35b1':'#0a1f35';}
+});
+}
+
+// ===== Notion DB → 포럼 일정 자동 로딩 =====
+(function(){
+const ENDPOINT='/api/forum-schedule';
+const container=document.querySelector('.fup .upl');
+if(!container)return;
+
+fetch(ENDPOINT).then(r=>r.json()).then(data=>{
+if(!data.items||!data.items.length)return;
+
+// 오늘 날짜
+const today=new Date().toISOString().slice(0,10);
+
+// 과거/현재/미래 분류
+const past=[],upcoming=[],holiday=[];
+data.items.forEach(item=>{
+if(item.status==='휴강') holiday.push(item);
+else if(item.date<today) past.push(item);
+else upcoming.push(item);
+});
+past.sort((a,b)=>b.date.localeCompare(a.date));
+upcoming.sort((a,b)=>a.date.localeCompare(b.date));
+
+// HTML 생성 함수
+function fmtDate(d){const dt=new Date(d+'T00:00:00');const m=['JAN','FEB','MAR','APR','MAY','JUN','JUL','AUG','SEP','OCT','NOV','DEC'];return{mo:m[dt.getMonth()],dy:String(dt.getDate()).padStart(2,'0')};}
+
+function itemHTML(item,isPast){
+const d=fmtDate(item.date);
+const opacity=isPast?'opacity:.7':'';
+const isHoliday=item.status==='휴강';
+const bgStyle=isHoliday?'border-color:rgba(184,137,46,.25);background:rgba(184,137,46,.06)':'';
+const dateStyle=isHoliday?'background:rgba(184,137,46,.25)':'';
+const titleStyle=isHoliday?'color:var(--gl)':'';
+
+let links='';
+if(isHoliday){
+links='<span style="padding:4px 10px;border-radius:12px;background:rgba(255,165,0,.15);color:#ffa500;font-size:.62rem;font-weight:700;white-space:nowrap">휴강</span>';
+}else if(item.status==='예정'){
+links='<span style="padding:4px 10px;border-radius:12px;background:rgba(255,165,0,.15);color:#ffa500;font-size:.62rem;font-weight:700;white-space:nowrap">예정</span>';
+}else{
+const btns=[];
+if(item.youtube5)btns.push('<a href="'+item.youtube5+'" target="_blank" rel="noopener noreferrer" class="upy">▶ 5분 영상</a>');
+if(item.youtube2)btns.push('<a href="'+item.youtube2+'" target="_blank" rel="noopener noreferrer" class="upy" style="background:rgba(255,165,0,.12);border-color:rgba(255,165,0,.25);color:#ffa500">▶ 2분 영상</a>');
+links='<div style="display:flex;gap:6px;flex-wrap:wrap">'+btns.join('')+'</div>';
+}
+
+return '<div class="upi" style="'+opacity+';'+bgStyle+'">'+
+'<div class="upd" style="'+dateStyle+'"><div class="mo">'+d.mo+'</div><div class="dy">'+d.dy+'</div></div>'+
+'<div class="upn"><h4 style="'+titleStyle+'">'+item.title+'</h4><p>'+(item.scripture?item.scripture+' · ':'')+''+(item.speaker?'강사: '+item.speaker:'')+(isHoliday?item.summary:'')+'</p></div>'+
+links+'</div>';
+}
+
+// 기존 일정 컨텐츠를 Notion 데이터로 교체
+let html='';
+
+// 지난 포럼 (최근 2개만)
+const recentPast=past.slice(0,2);
+if(recentPast.length){
+html+='<div style="font-size:.62rem;letter-spacing:2px;color:rgba(255,255,255,.35);font-weight:600;text-transform:uppercase;margin-bottom:.3rem;margin-top:.3rem">지난 포럼</div>';
+recentPast.forEach(item=>{html+=itemHTML(item,true);});
+}
+
+// 휴강 안내
+const recentHolidays=holiday.filter(h=>h.date>=today||new Date(h.date+'T00:00:00')>new Date(Date.now()-7*86400000));
+recentHolidays.sort((a,b)=>a.date.localeCompare(b.date));
+recentHolidays.forEach(item=>{
+html+='<div style="font-size:.62rem;letter-spacing:2px;color:var(--gl);font-weight:600;text-transform:uppercase;margin-bottom:.3rem;margin-top:1rem">📢 휴강 안내</div>';
+html+=itemHTML(item,false);
+});
+
+// 다가오는 포럼
+const nextForums=upcoming.filter(u=>u.status!=='휴강').slice(0,3);
+if(nextForums.length){
+html+='<div style="font-size:.62rem;letter-spacing:2px;color:rgba(255,255,255,.35);font-weight:600;text-transform:uppercase;margin-bottom:.3rem;margin-top:1rem">다가오는 포럼</div>';
+nextForums.forEach(item=>{html+=itemHTML(item,false);});
+}
+
+// YouTube 전체 재생목록 링크 유지
+html+='<div style="margin-top:1.2rem;padding:1rem;background:rgba(255,255,255,.04);border-radius:var(--rs);border:1px solid rgba(255,255,255,.06);text-align:center">'+
+'<p style="font-size:.82rem;color:rgba(255,255,255,.5);margin-bottom:.6rem" data-i="sch_yt">'+
+(curLang==='en'?'Watch past forum lectures':curLang==='vi'?'Xem lại bài giảng diễn đàn trước':'지난 포럼 강의를 다시 만나보십시오')+'</p>'+
+'<a href="https://www.youtube.com/watch?v=MDJIkMahVYY&list=PLIhQ51lQQFP8s95ZNqD9fZyi1F1rpqYCU&index=11" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;gap:6px;padding:8px 22px;border-radius:24px;background:rgba(255,0,0,.12);border:1px solid rgba(255,0,0,.25);color:#ff4444;font-size:.78rem;font-weight:600;text-decoration:none;transition:all .3s ease" data-i="sch_ytb">▶ 조찬포럼 강의 시청하기 (YouTube)</a></div>';
+
+container.innerHTML=html;
+
+// Notion 데이터 로드 시간 표시 (작은 텍스트)
+const ts=document.createElement('div');
+ts.style.cssText='text-align:center;margin-top:.5rem;font-size:.55rem;color:rgba(255,255,255,.15)';
+ts.textContent='Notion DB 동기화: '+new Date(data.updated).toLocaleString('ko-KR');
+container.parentElement.appendChild(ts);
+
+}).catch(function(){
+// API 실패 시 기존 정적 일정 유지 (아무것도 안 함)
+console.log('Notion API unavailable — using static schedule');
+});
+})();
+</script>
+</body></html>

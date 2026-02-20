@@ -1,0 +1,48 @@
+[build]
+  publish = "."
+
+[functions]
+  directory = "netlify/functions"
+  node_bundler = "esbuild"
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "SAMEORIGIN"
+    X-Content-Type-Options = "nosniff"
+    X-XSS-Protection = "1; mode=block"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Permissions-Policy = "camera=(), microphone=(), geolocation=()"
+    Content-Security-Policy = "default-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.google-analytics.com; img-src 'self' data: https:; frame-src https://www.google.com https://www.youtube.com; connect-src 'self' https://www.google-analytics.com https://analytics.google.com https://region1.google-analytics.com;"
+    Cache-Control = "public, max-age=3600, s-maxage=86400"
+
+# Old URLs redirect to new index
+[[redirects]]
+  from = "/ops"
+  to = "/"
+  status = 301
+
+[[redirects]]
+  from = "/ops.html"
+  to = "/"
+  status = 301
+
+[[redirects]]
+  from = "/tools"
+  to = "/"
+  status = 301
+
+[[redirects]]
+  from = "/tools.html"
+  to = "/"
+  status = 301
+
+[[redirects]]
+  from = "/contact"
+  to = "/"
+  status = 301
+
+[[redirects]]
+  from = "/contact.html"
+  to = "/"
+  status = 301
