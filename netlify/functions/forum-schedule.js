@@ -60,7 +60,7 @@ const FALLBACK_DATA = [
     id: "30dedb42-7c02-8113-b6a2-cf701609ffa4",
     title: "가짜 복음과 진짜 복음의 차이를 아십니까",
     date: "2026-02-08",
-    speaker: "한진준 목사",
+    speaker: "서재찬 박사",
     scripture: "갈라디아서 1:6-10 · 창세기 5:21-27",
     status: "완료",
     category: "조찬주회",
