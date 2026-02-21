@@ -896,20 +896,49 @@ section{padding:90px 2.5rem}.si{max-width:1180px;margin:0 auto}
 <section style="background:linear-gradient(135deg,#f8f5f0,#fff);padding:70px 2.5rem" id="contact-form"><div class="si">
 <div class="ct sh rv"><span class="sl">Contact Us</span><h2 class="st">문의 · 방문 신청</h2><p class="sd cm">조찬포럼 방문, 회원 가입, 기타 문의를 남겨주세요.</p></div>
 <div style="max-width:600px;margin:0 auto" class="rv">
-<form name="cbmc-contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" style="background:var(--w);border-radius:16px;padding:2rem;border:1px solid var(--g2);box-shadow:0 4px 20px rgba(0,0,0,.06)">
+<form id="cbmc-form" name="cbmc-contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" style="background:var(--w);border-radius:16px;padding:2rem;border:1px solid var(--g2);box-shadow:0 4px 20px rgba(0,0,0,.06)">
 <input type="hidden" name="form-name" value="cbmc-contact">
 <p style="display:none"><label>봇 방지: <input name="bot-field"></label></p>
 <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-bottom:1rem">
-<div><label style="font-size:.72rem;font-weight:700;color:var(--nd);display:block;margin-bottom:.3rem">이름 *</label><input type="text" name="name" required style="width:100%;padding:10px 14px;border:1.5px solid var(--g2);border-radius:8px;font-size:.85rem;font-family:inherit;transition:border-color .3s" onfocus="this.style.borderColor='#b8892e'" onblur="this.style.borderColor='#e5e3de'"></div>
-<div><label style="font-size:.72rem;font-weight:700;color:var(--nd);display:block;margin-bottom:.3rem">연락처 *</label><input type="tel" name="phone" required style="width:100%;padding:10px 14px;border:1.5px solid var(--g2);border-radius:8px;font-size:.85rem;font-family:inherit;transition:border-color .3s" onfocus="this.style.borderColor='#b8892e'" onblur="this.style.borderColor='#e5e3de'" placeholder="010-0000-0000"></div>
+<div><label style="font-size:.72rem;font-weight:700;color:var(--nd);display:block;margin-bottom:.3rem">이름 *</label><input type="text" name="name" id="cf-name" required style="width:100%;padding:10px 14px;border:1.5px solid var(--g2);border-radius:8px;font-size:.85rem;font-family:inherit;transition:border-color .3s" onfocus="this.style.borderColor='#b8892e'" onblur="this.style.borderColor='#e5e3de'"></div>
+<div><label style="font-size:.72rem;font-weight:700;color:var(--nd);display:block;margin-bottom:.3rem">연락처 *</label><input type="tel" name="phone" id="cf-phone" required style="width:100%;padding:10px 14px;border:1.5px solid var(--g2);border-radius:8px;font-size:.85rem;font-family:inherit;transition:border-color .3s" onfocus="this.style.borderColor='#b8892e'" onblur="this.style.borderColor='#e5e3de'" placeholder="010-0000-0000"></div>
 </div>
 <div style="margin-bottom:1rem"><label style="font-size:.72rem;font-weight:700;color:var(--nd);display:block;margin-bottom:.3rem">문의 유형</label>
-<select name="type" style="width:100%;padding:10px 14px;border:1.5px solid var(--g2);border-radius:8px;font-size:.85rem;font-family:inherit;background:var(--w);transition:border-color .3s" onfocus="this.style.borderColor='#b8892e'" onblur="this.style.borderColor='#e5e3de'">
-<option value="visit">조찬포럼 방문 신청</option><option value="join">회원 가입 문의</option><option value="vip">VIP 초대 안내</option><option value="prayer">기도 요청</option><option value="other">기타 문의</option></select></div>
-<div style="margin-bottom:1rem"><label style="font-size:.72rem;font-weight:700;color:var(--nd);display:block;margin-bottom:.3rem">메시지</label><textarea name="message" rows="4" style="width:100%;padding:10px 14px;border:1.5px solid var(--g2);border-radius:8px;font-size:.85rem;font-family:inherit;resize:vertical;transition:border-color .3s" onfocus="this.style.borderColor='#b8892e'" onblur="this.style.borderColor='#e5e3de'" placeholder="문의 내용을 입력해 주세요."></textarea></div>
-<button type="submit" style="width:100%;padding:14px;border-radius:10px;background:var(--g);color:var(--w);font-size:.9rem;font-weight:700;border:none;cursor:pointer;font-family:inherit;transition:all .3s" onmouseover="this.style.background='var(--gl)'" onmouseout="this.style.background='var(--g)'">문의 보내기</button>
-<p style="text-align:center;margin-top:.6rem;font-size:.65rem;color:var(--g5)">전화 문의: 010-3844-4422(회장) / 010-3338-3332(총무)</p>
+<select name="type" id="cf-type" style="width:100%;padding:10px 14px;border:1.5px solid var(--g2);border-radius:8px;font-size:.85rem;font-family:inherit;background:var(--w);transition:border-color .3s" onfocus="this.style.borderColor='#b8892e'" onblur="this.style.borderColor='#e5e3de'">
+<option value="조찬포럼 방문">조찬포럼 방문 신청</option><option value="회원 가입">회원 가입 문의</option><option value="VIP 초대">VIP 초대 안내</option><option value="기도 요청">기도 요청</option><option value="기타">기타 문의</option></select></div>
+<div style="margin-bottom:1rem"><label style="font-size:.72rem;font-weight:700;color:var(--nd);display:block;margin-bottom:.3rem">메시지</label><textarea name="message" id="cf-msg" rows="4" style="width:100%;padding:10px 14px;border:1.5px solid var(--g2);border-radius:8px;font-size:.85rem;font-family:inherit;resize:vertical;transition:border-color .3s" onfocus="this.style.borderColor='#b8892e'" onblur="this.style.borderColor='#e5e3de'" placeholder="문의 내용을 입력해 주세요."></textarea></div>
+<button type="submit" id="cf-btn" style="width:100%;padding:14px;border-radius:10px;background:var(--g);color:var(--w);font-size:.9rem;font-weight:700;border:none;cursor:pointer;font-family:inherit;transition:all .3s" onmouseover="this.style.background='var(--gl)'" onmouseout="this.style.background='var(--g)'">문의 보내기</button>
+<div id="cf-result" style="display:none;margin-top:1rem;padding:1rem;border-radius:10px;text-align:center;font-size:.85rem;font-weight:600"></div>
+<p style="text-align:center;margin-top:.6rem;font-size:.65rem;color:var(--g5)">문의 접수 후 총무(010-3338-3332)에게 문자로 자동 연결됩니다.</p>
 </form>
+<script>
+document.getElementById('cbmc-form').addEventListener('submit',function(e){
+  e.preventDefault();
+  var nm=document.getElementById('cf-name').value.trim();
+  var ph=document.getElementById('cf-phone').value.trim();
+  var tp=document.getElementById('cf-type').value;
+  var mg=document.getElementById('cf-msg').value.trim();
+  var btn=document.getElementById('cf-btn');
+  var res=document.getElementById('cf-result');
+  btn.disabled=true;btn.textContent='전송 중...';
+  var fd=new FormData(this);
+  fetch('/',{method:'POST',headers:{'Content-Type':'application/x-www-form-urlencoded'},body:new URLSearchParams(fd).toString()})
+  .then(function(){
+    res.style.display='block';res.style.background='rgba(46,125,50,.08)';res.style.color='#2e7d32';
+    res.innerHTML='문의가 접수되었습니다. 총무에게 문자를 보냅니다.';
+    var smsBody=encodeURIComponent('[CBMC 김해한마음] '+tp+'\n이름: '+nm+'\n연락처: '+ph+(mg?'\n내용: '+mg:''));
+    setTimeout(function(){window.location.href='sms:010-3338-3332?body='+smsBody;},1200);
+    btn.textContent='전송 완료';
+  })
+  .catch(function(){
+    var smsBody=encodeURIComponent('[CBMC 김해한마음] '+tp+'\n이름: '+nm+'\n연락처: '+ph+(mg?'\n내용: '+mg:''));
+    res.style.display='block';res.style.background='rgba(184,137,46,.08)';res.style.color='var(--g)';
+    res.innerHTML='총무에게 문자를 보냅니다.';
+    setTimeout(function(){window.location.href='sms:010-3338-3332?body='+smsBody;},800);
+    btn.textContent='문자 연결 중...';
+  });
+});
+</script>
 </div>
 </div></section>
 
