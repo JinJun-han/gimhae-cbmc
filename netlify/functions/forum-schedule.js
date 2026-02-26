@@ -38,8 +38,8 @@ const FALLBACK_DATA = [
     scripture: "",
     status: "완료",
     category: "조찬주회",
-    youtube5: "",
-    youtube2: "",
+    youtube5: "https://www.youtube.com/watch?v=H_i5L8Qwo9k",
+    youtube2: "https://www.youtube.com/watch?v=OerzKuFZ2PQ&list=PLIhQ51lQQFP8s95ZNqD9fZyi1F1rpqYCU&index=1",
     pdf: "",
     summary: ""
   }
