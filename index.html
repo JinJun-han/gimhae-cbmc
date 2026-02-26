@@ -1502,26 +1502,26 @@ links+'</div>';
 // 기존 일정 컨텐츠를 Notion 데이터로 교체
 let html='';
 
-// 지난 포럼 (최근 2개만)
-const recentPast=past.slice(0,2);
+// 지난 강의 (최근 1개)
+const recentPast=past.slice(0,1);
 if(recentPast.length){
-html+='<div style="font-size:.62rem;letter-spacing:2px;color:rgba(255,255,255,.35);font-weight:600;text-transform:uppercase;margin-bottom:.3rem;margin-top:.3rem">지난 포럼</div>';
+html+='<div style="font-size:.62rem;letter-spacing:2px;color:rgba(255,255,255,.35);font-weight:600;text-transform:uppercase;margin-bottom:.3rem;margin-top:.3rem">지난 강의</div>';
 recentPast.forEach(item=>{html+=itemHTML(item,true);});
 }
 
-// 휴강 안내
-const recentHolidays=holiday.filter(h=>h.date>=today||new Date(h.date+'T00:00:00')>new Date(Date.now()-7*86400000));
-recentHolidays.sort((a,b)=>a.date.localeCompare(b.date));
-recentHolidays.forEach(item=>{
-html+='<div style="font-size:.62rem;letter-spacing:2px;color:var(--gl);font-weight:600;text-transform:uppercase;margin-bottom:.3rem;margin-top:1rem">📢 휴강 안내</div>';
-html+=itemHTML(item,false);
-});
-
-// 다가오는 포럼
-const nextForums=upcoming.filter(u=>u.status!=='휴강').slice(0,3);
-if(nextForums.length){
-html+='<div style="font-size:.62rem;letter-spacing:2px;color:rgba(255,255,255,.35);font-weight:600;text-transform:uppercase;margin-bottom:.3rem;margin-top:1rem">다가오는 포럼</div>';
-nextForums.forEach(item=>{html+=itemHTML(item,false);});
+// 이번 주 강의 + 다음 주 강의
+const nextForums=upcoming.filter(u=>u.status!=='휴강').slice(0,2);
+if(nextForums.length>=1){
+html+='<div style="font-size:.62rem;letter-spacing:2px;color:rgba(255,255,255,.35);font-weight:600;text-transform:uppercase;margin-bottom:.3rem;margin-top:1rem">이번 주 강의</div>';
+const thisWeek=nextForums[0];
+html+='<div class="upi" style="border-color:rgba(76,175,80,.3);background:rgba(76,175,80,.06)">'+
+'<div class="upd"><div class="mo">'+fmtDate(thisWeek.date).mo+'</div><div class="dy">'+fmtDate(thisWeek.date).dy+'</div></div>'+
+'<div class="upn"><h4>'+thisWeek.title+'</h4><p>'+(thisWeek.scripture?thisWeek.scripture+' · ':'')+''+(thisWeek.speaker?'강사: '+thisWeek.speaker:'')+'</p></div>'+
+'<span style="padding:4px 10px;border-radius:12px;background:rgba(76,175,80,.2);color:#4caf50;font-size:.62rem;font-weight:700;white-space:nowrap">이번 주</span></div>';
+}
+if(nextForums.length>=2){
+html+='<div style="font-size:.62rem;letter-spacing:2px;color:rgba(255,255,255,.35);font-weight:600;text-transform:uppercase;margin-bottom:.3rem;margin-top:1rem">다음 주 강의</div>';
+html+=itemHTML(nextForums[1],false);
 }
 
 // YouTube 전체 재생목록 링크 유지

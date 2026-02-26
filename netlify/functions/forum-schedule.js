@@ -5,9 +5,22 @@
 // 2026-02-21 MCP에서 가져온 실제 Notion DB 데이터
 const FALLBACK_DATA = [
   {
-    id: "30dedb42-7c02-81ba-8751-deef38cec8c3",
-    title: "조찬주회 — 임성택 한의학박사",
+    id: "310edb42-7c02-8158-a142-c3afe0f47db1",
+    title: "조찬주회 — 서재찬 박사",
     date: "2026-03-07",
+    speaker: "서재찬 박사 (반석인더스트리즈 대표)",
+    scripture: "",
+    status: "예정",
+    category: "조찬주회",
+    youtube5: "",
+    youtube2: "",
+    pdf: "",
+    summary: ""
+  },
+  {
+    id: "310edb42-7c02-81fd-9e1b-e9fe0b66d67f",
+    title: "조찬주회 — 임성택 한의학박사",
+    date: "2026-02-28",
     speaker: "임성택 한의학박사 (자연힐 한방병원 병원장)",
     scripture: "",
     status: "예정",
@@ -18,56 +31,17 @@ const FALLBACK_DATA = [
     summary: "건강과 비즈니스"
   },
   {
-    id: "30dedb42-7c02-8185-977f-cfc882980e51",
-    title: "조찬주회 — 최무열 목사",
-    date: "2026-02-28",
-    speaker: "최무열 목사 (전 부산장신대 총장)",
-    scripture: "",
-    status: "예정",
-    category: "조찬주회",
-    youtube5: "",
-    youtube2: "",
-    pdf: "",
-    summary: "김해한마음지회 지도목사"
-  },
-  {
-    id: "30dedb42-7c02-8137-93c9-c8fdf8aa5f0e",
-    title: "설 명절 휴강",
-    date: "2026-02-21",
-    speaker: "",
-    scripture: "",
-    status: "휴강",
-    category: "휴강",
-    youtube5: "",
-    youtube2: "",
-    pdf: "",
-    summary: "복된 설 명절 보내시기 바랍니다."
-  },
-  {
-    id: "30dedb42-7c02-819a-bb98-d6a133904951",
-    title: "설 명절 휴강",
-    date: "2026-02-15",
-    speaker: "",
-    scripture: "",
-    status: "휴강",
-    category: "휴강",
-    youtube5: "",
-    youtube2: "",
-    pdf: "",
-    summary: "복된 설 명절 보내시기 바랍니다."
-  },
-  {
     id: "30dedb42-7c02-8113-b6a2-cf701609ffa4",
-    title: "가짜 복음과 진짜 복음의 차이를 아십니까",
-    date: "2026-02-08",
-    speaker: "서재찬 박사",
-    scripture: "갈라디아서 1:6-10 · 창세기 5:21-27",
+    title: "조찬주회 — 서재찬 박사",
+    date: "2026-02-07",
+    speaker: "서재찬 박사 (반석인더스트리즈 대표)",
+    scripture: "",
     status: "완료",
     category: "조찬주회",
-    youtube5: "https://www.youtube.com/watch?v=H_i5L8Qwo9k",
-    youtube2: "https://www.youtube.com/watch?v=OerzKuFZ2PQ&list=PLIhQ51lQQFP8s95ZNqD9fZyi1F1rpqYCU&index=1",
+    youtube5: "",
+    youtube2: "",
     pdf: "",
-    summary: "바울의 다메섹 전환점 ↔ 에녹의 므두셀라 전환점 · 므두셀라 969년 심화 · 소그룹 질문 · 간증 프레임워크"
+    summary: ""
   }
 ];
 
