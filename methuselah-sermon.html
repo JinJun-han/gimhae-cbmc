@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>므두셀라의 공식 — 일터에서 깨어나는 영성 | CBMC 김해한마음지회</title>
+<link href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@400;700;800&family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--nd:#0a1f35;--gl:#b8892e;--bg:#faf8f4;--txt:#2c2c2c;--g5:#6b7280;--accent:#5e35b1;--holy:#1a5276}
+body{font-family:'Noto Sans KR',sans-serif;background:var(--bg);color:var(--txt);line-height:1.9;-webkit-font-smoothing:antialiased}
+
+/* Top Bar */
+.top-bar{background:var(--nd);padding:12px 2rem;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100;backdrop-filter:blur(10px)}
+.top-bar a{color:rgba(255,255,255,.7);text-decoration:none;font-size:.75rem;font-weight:500;transition:color .3s}
+.top-bar a:hover{color:#fff}
+.top-logo{display:flex;align-items:center;gap:8px}
+.top-logo-icon{background:var(--gl);color:#fff;font-size:.55rem;font-weight:900;padding:4px 7px;border-radius:4px;letter-spacing:1px}
+.top-logo-text{color:#fff;font-size:.82rem;font-weight:700}
+.top-actions{display:flex;gap:16px;align-items:center}
+.btn-print{padding:6px 16px;border-radius:20px;border:1px solid rgba(255,255,255,.3);background:transparent;color:#fff;font-size:.7rem;font-weight:600;cursor:pointer;transition:all .3s}
+.btn-print:hover{background:rgba(255,255,255,.15)}
+
+/* Hero */
+.hero{background:linear-gradient(135deg,var(--nd) 0%,#1a3a5c 50%,var(--nd) 100%);padding:80px 2rem 60px;text-align:center;position:relative;overflow:hidden}
+.hero::before{content:'';position:absolute;top:0;left:0;right:0;bottom:0;background:url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23b8892e' fill-opacity='0.04'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")}
+.hero-inner{position:relative;z-index:1;max-width:700px;margin:0 auto}
+.hero-badge{display:inline-flex;align-items:center;gap:6px;padding:6px 18px;border-radius:20px;background:rgba(184,137,46,.15);border:1px solid rgba(184,137,46,.3);margin-bottom:1.5rem}
+.hero-badge span{color:var(--gl);font-size:.65rem;font-weight:700;letter-spacing:2px;text-transform:uppercase}
+.hero h1{font-family:'Nanum Myeongjo',serif;font-size:2.4rem;font-weight:800;color:#fff;line-height:1.4;margin-bottom:1rem}
+.hero h1 em{font-style:normal;color:var(--gl)}
+.hero-sub{font-size:.95rem;color:rgba(255,255,255,.7);margin-bottom:.5rem;font-weight:300}
+.hero-meta{display:flex;gap:20px;justify-content:center;flex-wrap:wrap;margin-top:1.5rem}
+.hero-meta-item{display:flex;align-items:center;gap:6px;color:rgba(255,255,255,.5);font-size:.72rem}
+
+/* Progress / TOC */
+.toc-bar{background:#fff;border-bottom:1px solid rgba(0,0,0,.06);padding:16px 2rem;position:sticky;top:48px;z-index:99;box-shadow:0 2px 12px rgba(0,0,0,.04)}
+.toc-inner{max-width:900px;margin:0 auto;display:flex;gap:8px;overflow-x:auto;padding:4px 0}
+.toc-btn{padding:8px 16px;border-radius:20px;border:1px solid rgba(0,0,0,.1);background:transparent;color:var(--g5);font-size:.7rem;font-weight:600;cursor:pointer;transition:all .3s;white-space:nowrap}
+.toc-btn:hover,.toc-btn.active{background:var(--nd);color:#fff;border-color:var(--nd)}
+
+/* Content Area */
+.content{max-width:760px;margin:0 auto;padding:3rem 2rem 4rem}
+
+/* Section Styles */
+.section{margin-bottom:3.5rem;animation:fadeUp .6s ease both}
+@keyframes fadeUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
+
+.section-num{display:inline-flex;align-items:center;justify-content:center;width:36px;height:36px;border-radius:50%;background:var(--accent);color:#fff;font-size:.85rem;font-weight:800;margin-bottom:1rem}
+.section-title{font-family:'Nanum Myeongjo',serif;font-size:1.6rem;font-weight:800;color:var(--nd);margin-bottom:.5rem;line-height:1.4}
+.section-subtitle{font-size:.88rem;color:var(--gl);font-weight:700;margin-bottom:1.5rem;letter-spacing:.5px}
+
+/* Scripture Box */
+.scripture{background:linear-gradient(135deg,#f5f0e8,#faf6ef);border-left:4px solid var(--gl);padding:1.2rem 1.5rem;border-radius:0 12px 12px 0;margin:1.5rem 0;position:relative}
+.scripture::before{content:'\201C';position:absolute;top:-10px;left:12px;font-size:3rem;color:var(--gl);opacity:.3;font-family:'Nanum Myeongjo',serif}
+.scripture p{font-family:'Nanum Myeongjo',serif;font-size:.92rem;color:var(--nd);line-height:1.8;font-weight:400}
+.scripture cite{display:block;margin-top:.5rem;font-size:.75rem;color:var(--gl);font-weight:700;font-style:normal}
+
+/* Body Text */
+.body-text{font-size:.92rem;color:var(--txt);line-height:2;margin-bottom:1.2rem}
+.body-text strong{color:var(--nd);font-weight:700}
+
+/* Highlight Box */
+.highlight{background:linear-gradient(135deg,rgba(94,53,177,.06),rgba(94,53,177,.02));border:1px solid rgba(94,53,177,.15);border-radius:12px;padding:1.2rem 1.5rem;margin:1.5rem 0}
+.highlight-title{font-size:.8rem;font-weight:800;color:var(--accent);margin-bottom:.5rem;letter-spacing:.5px}
+.highlight p{font-size:.88rem;color:var(--txt);line-height:1.8}
+
+/* Key Point */
+.key-point{background:var(--nd);color:#fff;border-radius:12px;padding:1.5rem;margin:1.5rem 0;position:relative;overflow:hidden}
+.key-point::after{content:'';position:absolute;top:0;right:0;width:80px;height:80px;background:var(--gl);opacity:.1;border-radius:0 0 0 100%}
+.key-point p{font-family:'Nanum Myeongjo',serif;font-size:1rem;line-height:1.8;font-weight:400}
+.key-point em{font-style:normal;color:var(--gl);font-weight:700}
+
+/* Table */
+.formula-table{width:100%;border-collapse:separate;border-spacing:0;border-radius:12px;overflow:hidden;margin:1.5rem 0;box-shadow:0 2px 16px rgba(0,0,0,.06)}
+.formula-table thead th{background:var(--nd);color:#fff;padding:12px 16px;font-size:.72rem;font-weight:700;text-align:left;letter-spacing:.5px}
+.formula-table tbody td{padding:12px 16px;font-size:.78rem;border-bottom:1px solid rgba(0,0,0,.05);vertical-align:top;line-height:1.6}
+.formula-table tbody tr:nth-child(even){background:rgba(0,0,0,.02)}
+.formula-table tbody tr:last-child td{border-bottom:none}
+
+/* Calculation Box */
+.calc-box{background:#fff;border:2px solid var(--gl);border-radius:12px;padding:1.5rem;margin:1.5rem 0}
+.calc-box h4{font-size:.85rem;font-weight:800;color:var(--gl);margin-bottom:1rem}
+.calc-row{display:flex;justify-content:space-between;align-items:center;padding:8px 0;border-bottom:1px dashed rgba(0,0,0,.1);font-size:.85rem}
+.calc-row:last-child{border-bottom:none;padding-top:12px;border-top:2px solid var(--nd);font-weight:800;color:var(--nd);font-size:1rem}
+.calc-row span:first-child{color:var(--g5)}
+
+/* Prayer Box */
+.prayer{background:linear-gradient(135deg,#fef9ef,#fff8e8);border:1px solid rgba(184,137,46,.2);border-radius:12px;padding:1.5rem;margin:1.5rem 0}
+.prayer-title{font-size:.8rem;font-weight:800;color:var(--gl);margin-bottom:.8rem;display:flex;align-items:center;gap:6px}
+.prayer p{font-family:'Nanum Myeongjo',serif;font-size:.88rem;color:var(--nd);line-height:2;font-style:italic}
+
+/* Separator */
+.sep{text-align:center;margin:3rem 0;color:var(--gl);font-size:1rem;letter-spacing:12px;opacity:.5}
+
+/* Final Formula Summary */
+.formula-summary{background:linear-gradient(135deg,var(--nd),#1a3a5c);border-radius:16px;padding:2rem;margin:2rem 0;color:#fff}
+.formula-summary h3{font-family:'Nanum Myeongjo',serif;font-size:1.2rem;font-weight:800;margin-bottom:1.5rem;text-align:center;color:var(--gl)}
+.formula-item{display:flex;gap:12px;align-items:flex-start;margin-bottom:1rem;padding-bottom:1rem;border-bottom:1px solid rgba(255,255,255,.1)}
+.formula-item:last-child{margin-bottom:0;padding-bottom:0;border-bottom:none}
+.formula-num{width:28px;height:28px;border-radius:50%;background:var(--gl);color:#fff;display:flex;align-items:center;justify-content:center;font-size:.7rem;font-weight:800;flex-shrink:0;margin-top:2px}
+.formula-item-title{font-weight:700;font-size:.85rem;margin-bottom:2px}
+.formula-item-desc{font-size:.78rem;color:rgba(255,255,255,.65);line-height:1.6}
+
+/* Footer CTA */
+.footer-cta{text-align:center;padding:3rem 2rem;background:#fff;border-top:1px solid rgba(0,0,0,.06)}
+.footer-cta p{font-size:.8rem;color:var(--g5);margin-bottom:1rem}
+.footer-cta a{display:inline-flex;align-items:center;gap:6px;padding:12px 28px;border-radius:24px;background:var(--nd);color:#fff;text-decoration:none;font-size:.82rem;font-weight:700;transition:all .3s}
+.footer-cta a:hover{background:var(--gl)}
+.footer-cta .copy{margin-top:2rem;font-size:.65rem;color:rgba(0,0,0,.3)}
+
+/* Responsive */
+@media(max-width:640px){
+.hero h1{font-size:1.6rem}
+.content{padding:2rem 1.2rem 3rem}
+.section-title{font-size:1.3rem}
+.hero-meta{flex-direction:column;gap:8px}
+.formula-table{font-size:.7rem}
+.formula-table thead th,.formula-table tbody td{padding:8px 10px}
+}
+
+/* Print */
+@media print{
+.top-bar,.toc-bar,.footer-cta,.btn-print{display:none!important}
+.hero{padding:40px 20px;background:var(--nd)!important;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+.content{max-width:100%;padding:20px}
+.section{break-inside:avoid;page-break-inside:avoid}
+.key-point,.scripture,.highlight,.prayer,.formula-summary{break-inside:avoid;page-break-inside:avoid}
+body{font-size:11pt;line-height:1.7}
+}
+</style>
+</head>
+<body>
+
+<!-- Top Bar -->
+<div class="top-bar">
+<a href="index.html" class="top-logo">
+<span class="top-logo-icon">CBMC</span>
+<span class="top-logo-text">김해한마음지회</span>
+</a>
+<div class="top-actions">
+<button class="btn-print" onclick="window.print()">🖨 인쇄 / PDF</button>
+<a href="index.html#resources">← 자료실</a>
+</div>
+</div>
+
+<!-- Hero -->
+<div class="hero">
+<div class="hero-inner">
+<div class="hero-badge"><span>CBMC 비즈니스 모듈</span></div>
+<h1><em>므두셀라의 공식</em><br>일터에서 깨어나는 영성</h1>
+<div class="hero-sub">창세기 5:21-27 | 베드로후서 3:9</div>
+<div class="hero-meta">
+<div class="hero-meta-item">📖 본문: 창세기 5장</div>
+<div class="hero-meta-item">👥 대상: CBMC 김해한마음지회</div>
+<div class="hero-meta-item">⏱ 분량: 20분</div>
+</div>
+</div>
+</div>
+
+<!-- TOC -->
+<div class="toc-bar">
+<div class="toc-inner">
+<button class="toc-btn active" onclick="scrollToSection('opening')">여는 말</button>
+<button class="toc-btn" onclick="scrollToSection('part1')">1부 · 에녹의 임계점</button>
+<button class="toc-btn" onclick="scrollToSection('part2')">2부 · 969년의 비밀</button>
+<button class="toc-btn" onclick="scrollToSection('part3')">3부 · 300년 동행</button>
+<button class="toc-btn" onclick="scrollToSection('part4')">4부 · 공식 대입</button>
+<button class="toc-btn" onclick="scrollToSection('closing')">닫는 말</button>
+</div>
+</div>
+
+<!-- Content -->
+<div class="content">
+
+<!-- 여는 말 -->
+<div class="section" id="opening">
+<div class="section-title">사장님, 대표님, 솔직히 한 가지만 여쭙겠습니다</div>
+<div class="section-subtitle">여는 말</div>
+
+<p class="body-text">김해한마음지회 회원 여러분, 반갑습니다.</p>
+<p class="body-text">오늘 여러분에게 한 가지만 솔직히 여쭙겠습니다.</p>
+<p class="body-text">사업하신 지 몇 년 되셨습니까? 10년, 20년, 30년. 어떤 분은 사업이 곧 인생이신 분들도 계실 것입니다. 새벽기도도 다녀보셨습니다. 금요모임도 빠지지 않으셨습니다. CBMC 모임에서 간증도 하셨습니다.</p>
+<p class="body-text">그런데 가끔, 아주 솔직한 새벽에 — 거래처 걱정에 잠이 안 오는 그 시간에 — 이런 생각이 스친 적은 없으십니까?</p>
+
+<div class="highlight">
+<p><strong>"나는 CBMC 회원인데, 왜 월요일 아침 사무실에 들어서면 하나님이 멀어지는 것 같을까."</strong></p>
+<p><strong>"주일에는 믿음의 사람인데, 왜 거래처 앞에서는 다른 사람이 될까."</strong></p>
+<p><strong>"이렇게 오래 믿었는데, 일터에서의 나는 왜 변하지 않을까."</strong></p>
+</div>
+
+<p class="body-text">그 생각이 드는 순간, 부끄러워서 얼른 덮어버리셨을 것입니다. 그리고 또 주일이 오고, 또 월요일이 오고, 또 한 해가 지나갑니다.</p>
+<p class="body-text"><strong>창세기 5장이 바로 그 이야기입니다.</strong> "낳았고, 살았고, 죽었더라." 이 말이 여덟 번 반복됩니다. 성경에서 가장 지루한 페이지입니다. 마치 매일 반복되는 출근과 퇴근처럼.</p>
+
+<div class="key-point">
+<p>그런데 하나님은 이 반복 속에 <em>비즈니스맨을 위한 공식 하나</em>를 숨겨두셨습니다. 오늘 그것을 함께 찾아보겠습니다.</p>
+</div>
+</div>
+
+<div class="sep">✦ ✦ ✦</div>
+
+<!-- 1부 -->
+<div class="section" id="part1">
+<div class="section-num">1</div>
+<div class="section-title">에녹의 임계점 — 사업가도 변할 수 있습니다</div>
+<div class="section-subtitle">Critical Point of Enoch</div>
+
+<div class="scripture">
+<p>에녹은 육십오 세에 므두셀라를 낳았고 므두셀라를 낳은 후 삼백 년을 하나님과 동행하며</p>
+<cite>— 창세기 5:21-22</cite>
+</div>
+
+<p class="body-text"><strong>65세 이전의 에녹, 변화 없는 신앙인</strong></p>
+<p class="body-text">에녹은 65세까지 평범한 사람이었습니다. 성경은 65세 이전의 에녹에 대해 아무 말도 하지 않습니다. 특별한 것이 없었다는 뜻입니다. 그냥 살았습니다.</p>
+<p class="body-text">CBMC 회원 여러분에게 비유하자면 이렇습니다. 사업도 하고, 모임도 나가고, 예배도 드렸지만, 진짜 변화는 없었던 시절. 신앙과 비즈니스가 따로 놀던 시절. 주일의 나와 월요일의 내가 다른 사람이었던 시절.</p>
+<p class="body-text">에녹도 그랬습니다. <strong>65년 동안.</strong></p>
+
+<p class="body-text"><strong>아들의 이름이 인생을 바꿨습니다</strong></p>
+<p class="body-text">그런데 아들이 태어나면서 모든 것이 바뀝니다. 그 아들의 이름, <strong>므두셀라(&#x5DE;&#x5B0;&#x5EA;&#x5D5;&#x5BC;&#x5E9;&#x5C6;&#x5DC;&#x5B7;&#x5D7;)</strong>.</p>
+<p class="body-text">히브리어 '므투'는 '죽음', '셀라흐'는 '보내다'입니다. <strong>"그가 죽으면 심판이 보내어진다."</strong> 하나님께서 에녹에게 계시를 주신 것입니다. "네 아들이 죽는 날, 이 세상에 심판이 온다."</p>
+<p class="body-text">에녹은 매일 아들을 부릅니다. "므두셀라야, 일어나." "므두셀라야, 밥 먹어라." 이름을 부를 때마다 에녹의 가슴에 새겨지는 것이 있었습니다.</p>
+
+<div class="key-point">
+<p>이 세상은 영원하지 않다. 내 사업도, 내 성공도, 내 통장 잔고도 영원하지 않다.<br><em>심판은 반드시 온다. 그렇다면 나는 어떻게 살아야 하는가.</em></p>
+</div>
+
+<p class="body-text">바로 그 순간부터 에녹은 하나님과 동행하기 시작했습니다.</p>
+
+<p class="body-text"><strong>그렇다면, 오늘 우리에게 므두셀라의 신호는 무엇입니까?</strong></p>
+<p class="body-text">에녹에게 므두셀라는 임시 신호였습니다. 969년 뒤에 사라질 신호였습니다. 므두셀라도 결국 죽었고, 홍수가 왔고, 그 신호는 끝났습니다.</p>
+<p class="body-text">그러나 우리에게는 영원히 꺼지지 않는 신호가 주어졌습니다.</p>
+
+<div class="key-point">
+<p><em>그것은 예수 그리스도의 십자가입니다.</em></p>
+<p>므두셀라의 이름이 "그가 죽으면 심판이 온다"는 뜻이었다면, 십자가의 메시지는 이것입니다:<br><em>"그가 죽으셨으므로 심판이 은혜로 바뀌었다."</em></p>
+</div>
+
+<div class="scripture">
+<p>성령으로 아니하고는 누구든지 예수를 주시라 할 수 없느니라.</p>
+<cite>— 고린도전서 12:3</cite>
+</div>
+
+<p class="body-text">여러분이 오늘 이 자리에서 "예수는 나의 주님이십니다"라고 고백할 수 있다면, 그것 자체가 성령께서 여러분 안에 계시다는 증거입니다.</p>
+
+<div class="highlight">
+<div class="highlight-title">에녹의 신호 vs 우리의 신호</div>
+<p>므두셀라의 신호는 에녹의 <strong>밖에</strong> 있었습니다. 아들의 얼굴이라는 외적 신호였습니다.<br>그러나 우리의 신호는 내 <strong>안에</strong> 있습니다. 내 안에 계신 성령의 임재, 그것이 우리의 <strong>영원한 므두셀라</strong>입니다.</p>
+</div>
+
+<div class="scripture">
+<p>만일 우리가 성령으로 살면 또한 성령으로 행할지니.</p>
+<cite>— 갈라디아서 5:25</cite>
+</div>
+
+<p class="body-text">에녹이 므두셀라를 통해 300년을 동행했다면, 우리는 내 안에 계신 성령님을 통해 <strong>일터에서 동행</strong>하는 것입니다. 므두셀라는 에녹의 집에만 있었지만, 성령님은 여러분의 사무실에도, 공장에도, 회의실에도, 거래처에도 함께 계십니다.</p>
+<p class="body-text">여러분, <strong>므두셀라의 신호를 업그레이드하십시오.</strong> 내 안에 예수 그리스도를 주인으로 모시고, 내 안에 성령님의 임재를 늘 의식하는 것. 이것이 영원한 신호입니다. 이 신호는 사업이 잘 될 때도 울리고, 어려울 때도 울리고, 기쁠 때도, 힘들 때도 울립니다. <strong>한 번도 꺼지지 않습니다.</strong></p>
+</div>
+
+<div class="sep">✦ ✦ ✦</div>
+
+<!-- 2부 -->
+<div class="section" id="part2">
+<div class="section-num">2</div>
+<div class="section-title">969년의 비밀 — 하나님은 왜 기다리시는가</div>
+<div class="section-subtitle">The Secret of 969 Years</div>
+
+<div class="scripture">
+<p>므두셀라는 구백육십구 세를 살고 죽었더라</p>
+<cite>— 창세기 5:27</cite>
+</div>
+
+<p class="body-text"><strong>숫자 안에 숨겨진 방정식</strong></p>
+<p class="body-text">실업인 여러분은 숫자에 익숙하신 분들입니다. 매출, 원가, 이익률. 숫자로 사업을 판단하십니다. 오늘 성경의 숫자 하나를 함께 계산해 보겠습니다.</p>
+
+<div class="calc-box">
+<h4>므두셀라의 방정식</h4>
+<div class="calc-row"><span>므두셀라가 187세에 라멕을 낳음</span><span>187</span></div>
+<div class="calc-row"><span>라멕이 182세에 노아를 낳음</span><span>+ 182</span></div>
+<div class="calc-row"><span>노아 600세에 홍수 시작</span><span>+ 600</span></div>
+<div class="calc-row"><span>므두셀라의 향년</span><span>= 969</span></div>
+</div>
+
+<p class="body-text">므두셀라의 향년이 정확히 969세입니다. <strong>므두셀라가 죽은 바로 그 해에 노아의 홍수가 일어난 것입니다.</strong> 이름이 예언이 되었고, 숫자가 성취가 되었습니다. 족보의 숫자 안에 하나님의 경영이 들어 있었던 것입니다.</p>
+
+<p class="body-text"><strong>그런데 왜 969년이나 기다리셨습니까?</strong></p>
+<p class="body-text">하나님은 심판을 서두르지 않으셨습니다. 100년만 살게 하셔도 됐습니다. 500년만 살게 하셔도 됐습니다. 그런데 왜 969년이나 살게 하셨습니까?</p>
+
+<div class="scripture">
+<p>주의 약속은 어떤 이들이 더디다고 생각하는 것 같이 더딘 것이 아니라 오직 너희를 대하여 오래 참으사 아무도 멸망하지 아니하고 다 회개하기에 이르기를 원하시느니라.</p>
+<cite>— 베드로후서 3:9</cite>
+</div>
+
+<div class="key-point">
+<p><em>969년은 하나님의 인내의 크기입니다.</em></p>
+<p>므두셀라가 하루를 더 사는 것은 심판이 하루 더 유예되는 것입니다. 한 사람이라도 더 돌아오기를 기다리시는 하나님의 심장이 969라는 숫자 안에 뛰고 있었습니다.</p>
+</div>
+
+<p class="body-text"><strong>십자가는 영원한 인내입니다</strong></p>
+<p class="body-text">므두셀라의 969년은 유한한 인내였습니다. 결국 끝이 왔습니다. 그러나 십자가에서 예수님이 하신 일은 <strong>영원한 인내의 선언</strong>입니다. 하나님은 독생자를 십자가에 내어주시면서까지 우리를 기다리셨습니다. 969년이 아니라, <strong>영원을 걸고 기다리신 것</strong>입니다.</p>
+<p class="body-text">그런데 우리는 그 인내를 어떻게 사용하고 있습니까?</p>
+<p class="body-text">솔직히 돌아보겠습니다. 하나님이 참아주시니까 "아직 괜찮겠지" 했습니다. 사업이 바쁘니까 "다음 달부터" 했습니다. 내년 CBMC 대회 때 결단하면 되겠지 했습니다.</p>
+<p class="body-text"><strong>므두셀라도 결국 죽었습니다. 그리고 홍수는 정확히 왔습니다.</strong></p>
+<p class="body-text">그러나 감사한 것은, 우리에게는 므두셀라의 마지막이 아니라 <strong>십자가의 은혜</strong>가 있다는 것입니다. 내 안에 성령님이 계시다는 것, 그분이 지금도 나를 일깨우고 계시다는 것 — 이것이 여전히 기회가 있다는 증거입니다.</p>
+
+<div class="prayer">
+<div class="prayer-title">🙏 묵상</div>
+<p>지금 이 CBMC 모임이 여러분에게 주어진 기회일 수 있습니다. 내 안의 성령님이 지금 이 순간 여러분의 마음을 두드리고 계십니다. 그 두드림을 느끼고 계십니까? 그것이 므두셀라의 신호보다 더 강력한 영원한 알람입니다.</p>
+</div>
+</div>
+
+<div class="sep">✦ ✦ ✦</div>
+
+<!-- 3부 -->
+<div class="section" id="part3">
+<div class="section-num">3</div>
+<div class="section-title">에녹의 300년 동행 — 일터가 곧 예배당입니다</div>
+<div class="section-subtitle">Walking with God in the Workplace</div>
+
+<div class="scripture">
+<p>에녹이 하나님과 동행하더니 하나님이 그를 데려가시므로 세상에 있지 아니하였더라</p>
+<cite>— 창세기 5:24</cite>
+</div>
+
+<p class="body-text"><strong>동행의 장소는 일상이었습니다</strong></p>
+<p class="body-text">에녹이 하나님과 동행한 300년. 그 장소가 어디였습니까?</p>
+<p class="body-text">성경은 말하지 않습니다. 화려한 교회당이 아니었습니다. 22절을 다시 보십시오. "므두셀라를 낳은 후 삼백 년을 하나님과 동행하며 <strong>자녀를 낳았으며.</strong>"</p>
+<p class="body-text">"하나님과 동행하며"와 "자녀를 낳았으며"가 동시에 나옵니다. 히브리어 원문에서 이 두 동사는 미완료형으로, 두 행동이 분리된 것이 아니라 <strong>동시에 진행된 것</strong>입니다.</p>
+
+<div class="key-point">
+<p>집에서 아이를 키우면서 하나님과 동행했습니다. 밥을 먹으면서 동행했습니다. 사람들과 부대끼면서 동행했습니다.<br><em>평범한 일상이 300년의 예배가 된 것입니다.</em></p>
+</div>
+
+<p class="body-text"><strong>내 안의 성령님이 동행을 가능하게 합니다</strong></p>
+
+<div class="scripture">
+<p>너희는 성령을 따라 행하라 그리하면 육체의 욕심을 이루지 아니하리라.</p>
+<cite>— 갈라디아서 5:16</cite>
+</div>
+
+<p class="body-text">에녹의 동행은 외적 계시에 의한 것이었습니다. 그러나 우리의 동행은 내 안에 계신 성령님에 의한 것입니다. 이것이 구약과 신약의 차이입니다.</p>
+
+<div class="prayer">
+<div class="prayer-title">🏢 일터에서의 동행 실천</div>
+<p>사무실에 앉아 있을 때, "성령님, 지금 제 안에 계시지요?"<br>
+거래처와 계약서를 앞에 놓고 있을 때, "성령님, 이 결정을 함께해 주십시오."<br>
+직원에게 화가 날 때, "성령님, 지금 제 입술을 붙잡아 주십시오."</p>
+</div>
+
+<p class="body-text"><strong>CBMC 회원 여러분, 이것이 바로 우리의 사역입니다</strong></p>
+<p class="body-text">CBMC의 비전이 무엇입니까? <strong>"비즈니스 세계에 하나님의 나라가 임하게 한다."</strong> 올해 한국 CBMC 사역 주제가 무엇입니까? <strong>"일터에서 복음을 전파하자"</strong>(막 16:15).</p>
+<p class="body-text">에녹이 이미 이것을 살아낸 것입니다. 삶의 현장에서, 자녀를 키우는 가정에서, 사람들과 함께하는 일상에서 하나님과 동행했습니다.</p>
+
+<div class="highlight">
+<div class="highlight-title">히트할레크(הִתְהַלֵּךְ) — 동행의 히브리어</div>
+<p>"동행하다"의 히브리어는 '할라크'(걷다)의 재귀형 <strong>'히트할레크'</strong>입니다. <strong>"내가 걸은 것의 결과가 나에게 돌아온다"</strong>는 뜻입니다. 여러분이 일터에서 성령님과 함께 정직하게 걸으면, 그 결과가 여러분에게 돌아옵니다.</p>
+</div>
+
+<p class="body-text"><strong>성령의 열매</strong> — 사랑, 희락, 화평, 오래 참음, 자비, 양선, 충성, 온유, 절제(갈 5:22-23) — 가 여러분의 비즈니스에 열리기 시작합니다. 이것은 이론이 아닙니다. <strong>매일의 실천</strong>입니다.</p>
+
+<div class="key-point">
+<p>에녹은 300년을 그렇게 걸었습니다. 그리고 24절, 놀라운 결말이 나옵니다.</p>
+<p>창세기 5장에 등장하는 모든 사람의 결말은 똑같습니다. "죽었더라." 단 한 사람만 다릅니다. 에녹입니다.<br><em>"죽었더라"가 아니라 "하나님이 데려가시므로"입니다.</em></p>
+</div>
+</div>
+
+<div class="sep">✦ ✦ ✦</div>
+
+<!-- 4부 -->
+<div class="section" id="part4">
+<div class="section-num">4</div>
+<div class="section-title">므두셀라의 공식을 비즈니스에 대입하기</div>
+<div class="section-subtitle">Apply the Formula to Your Business</div>
+
+<p class="body-text">이제 정리하겠습니다. 므두셀라의 공식을 십자가와 성령님의 빛 아래서 업그레이드하겠습니다.</p>
+
+<table class="formula-table">
+<thead>
+<tr><th>공식</th><th>에녹의 신호</th><th>우리의 신호</th></tr>
+</thead>
+<tbody>
+<tr><td><strong>내용</strong></td><td>므두셀라의 이름 — "그가 죽으면 심판이 온다"</td><td>십자가 — "그가 죽으셨으므로 은혜가 왔다"</td></tr>
+<tr><td><strong>위치</strong></td><td>외적 — 아들의 얼굴</td><td>내적 — 내 안에 계신 성령님</td></tr>
+<tr><td><strong>기간</strong></td><td>유한 — 969년 후 끝남</td><td>영원 — 결코 꺼지지 않음</td></tr>
+<tr><td><strong>반응</strong></td><td>심판을 기억하고 동행 시작</td><td>은혜를 기억하고 일터에서 동행</td></tr>
+</tbody>
+</table>
+
+<div class="formula-summary">
+<h3>📋 므두셀라의 공식 — 5가지 원칙</h3>
+
+<div class="formula-item">
+<div class="formula-num">1</div>
+<div>
+<div class="formula-item-title">신호의 공식</div>
+<div class="formula-item-desc">매일 아침 확인하십시오. "성령님, 오늘도 제 안에 계시지요? 오늘도 저와 함께 일터로 가시지요?" — 이것이 꺼지지 않는 영원한 알람입니다.</div>
+</div>
+</div>
+
+<div class="formula-item">
+<div class="formula-num">2</div>
+<div>
+<div class="formula-item-title">인내의 공식</div>
+<div class="formula-item-desc">969년 = 하나님의 유한한 인내 | 십자가 = 하나님의 영원한 인내. 하나님은 독생자의 십자가를 투자하셨습니다. CBMC의 체인 리액션을 통해 영적 디모데를 세우십시오.</div>
+</div>
+</div>
+
+<div class="formula-item">
+<div class="formula-num">3</div>
+<div>
+<div class="formula-item-title">동행의 공식</div>
+<div class="formula-item-desc">에녹의 300년 = 평범한 일상 × 하나님과 함께 걷기. 김해의 사업장에서, 공장에서, 사무실에서 내 안에 계신 성령님과 함께 걷는 것.</div>
+</div>
+</div>
+
+<div class="formula-item">
+<div class="formula-num">4</div>
+<div>
+<div class="formula-item-title">전환의 공식</div>
+<div class="formula-item-desc">에녹에게 므두셀라의 탄생이 임계점이었듯, 오늘 이 CBMC 모임이 여러분의 임계점이 될 수 있습니다. 내 안에서 성령님의 두드림을 무시하지 마십시오.</div>
+</div>
+</div>
+
+<div class="formula-item">
+<div class="formula-num">5</div>
+<div>
+<div class="formula-item-title">결말의 공식</div>
+<div class="formula-item-desc">"죽었더라" vs "하나님이 데려가시므로" — 비즈니스의 최종 성과표는 매출이 아닙니다. 하나님 나라의 기록부에 어떤 한 줄이 남느냐입니다.</div>
+</div>
+</div>
+</div>
+
+<!-- Final Summary Table -->
+<table class="formula-table">
+<thead>
+<tr><th>공식</th><th>성경</th><th>에녹의 경험</th><th>우리의 경험</th></tr>
+</thead>
+<tbody>
+<tr><td><strong>신호</strong></td><td>므두셀라의 이름</td><td>외적, 유한한 신호</td><td>십자가 + 성령님 = 내적, 영원한 신호</td></tr>
+<tr><td><strong>인내</strong></td><td>969년의 생애</td><td>심판의 유예</td><td>은혜의 확장 — 독생자까지 내어주신 사랑</td></tr>
+<tr><td><strong>동행</strong></td><td>에녹의 300년</td><td>일상에서 하나님과 함께 걸음</td><td>일터에서 성령님과 함께 걸음</td></tr>
+<tr><td><strong>전환</strong></td><td>에녹의 65세</td><td>므두셀라 탄생이 임계점</td><td>오늘 이 CBMC 모임이 임계점</td></tr>
+<tr><td><strong>연결</strong></td><td>에녹→므두셀라→노아</td><td>세대를 잇는 체인 리액션</td><td>영적 디모데를 세우는 CBMC 사역</td></tr>
+<tr><td><strong>결말</strong></td><td>"하나님이 데려가시므로"</td><td>동행의 최종 결산</td><td>하나님 나라 기록부에 남는 한 줄</td></tr>
+</tbody>
+</table>
+</div>
+
+<div class="sep">✦ ✦ ✦</div>
+
+<!-- 닫는 말 -->
+<div class="section" id="closing">
+<div class="section-title">김해한마음지회 회원 여러분께</div>
+<div class="section-subtitle">닫는 말</div>
+
+<p class="body-text">존경하는 CBMC 김해한마음지회 회원 여러분.</p>
+<p class="body-text">에녹은 65세에 시작했습니다. 65년 동안은 평범했습니다. 아무것도 특별한 것이 없었습니다. 그런데 므두셀라를 만나는 순간, 인생이 완전히 바뀌었습니다.</p>
+<p class="body-text">그리고 <strong>오늘 우리는 에녹보다 더 큰 은혜 안에 있습니다.</strong> 에녹에게는 아들의 이름이라는 외적 신호만 있었지만, 우리에게는 십자가와 성령님이라는 영원한 신호가 있습니다.</p>
+
+<div class="key-point">
+<p>십자가는 "심판이 온다"가 아니라 <em>"은혜가 왔다"</em>는 선언입니다.<br>그리고 내 안에 계신 성령님은 그 은혜를 매 순간 일깨워주시는 <em>영원한 알람</em>입니다.</p>
+</div>
+
+<p class="body-text">여러분의 나이가 몇이든 상관없습니다. 사업 경력이 몇 년이든 상관없습니다. <strong>오늘 이 말씀을 듣는 이 순간이 여러분의 임계점입니다.</strong></p>
+
+<div class="prayer">
+<div class="prayer-title">🙏 결단의 기도</div>
+<p>"주님, 오늘부터 일터에서 진짜로 동행하겠습니다. 내 안에 계신 성령님, 매 순간 저를 깨워주십시오."</p>
+</div>
+
+<p class="body-text">내일 아침, 사무실 문을 열기 전에 잠깐 멈추십시오.<br><strong>"성령님, 오늘 이 사업장에서 저와 함께 걸어주십시오."</strong></p>
+<p class="body-text">거래처 미팅 전에 잠깐 멈추십시오.<br><strong>"성령님, 이 자리에서 제가 주님의 사람답게 하소서."</strong></p>
+<p class="body-text">직원과 대화하기 전에 잠깐 멈추십시오.<br><strong>"성령님, 이 사람을 주님의 눈으로 보게 하소서."</strong></p>
+
+<p class="body-text"><strong>그 작은 한 걸음이 쌓이면, 에녹의 300년이 됩니다.</strong></p>
+
+<div class="key-point">
+<p>창세기 5장의 모든 사람은 <strong>"죽었더라"</strong>로 끝났습니다.<br>단 한 사람, 에녹만 <em>"하나님이 데려가시므로"</em>로 끝났습니다.</p>
+<p>사업이 성공해도 "죽었더라"로 끝나는 인생이 있고,<br>세상은 기억하지 못해도 <em>"하나님이 데려가시므로"</em>로 끝나는 인생이 있습니다.</p>
+</div>
+
+<p class="body-text" style="font-family:'Nanum Myeongjo',serif;font-size:1.05rem;font-weight:700;color:var(--nd);text-align:center;margin-top:2rem;line-height:2.2">므두셀라의 공식이 오늘<br>김해한마음지회 여러분의 일터를 깨우기를 축원합니다.<br><br><span style="color:var(--gl)">지금도 늦지 않았습니다.<br>내 안의 성령님이 지금 이 순간도 여러분을 깨우고 계십니다.<br>오늘이 바로 그 시작입니다.</span></p>
+
+</div>
+</div>
+
+<!-- Footer CTA -->
+<div class="footer-cta">
+<p>CBMC 김해한마음지회 비즈니스 모듈 시리즈</p>
+<a href="index.html#resources">← 자료실로 돌아가기</a>
+<div class="copy">© 2026 CBMC 김해한마음지회 · 사단법인 한국기독실업인회</div>
+</div>
+
+<script>
+function scrollToSection(id){
+  const el=document.getElementById(id);
+  if(el){
+    const offset=120;
+    const top=el.getBoundingClientRect().top+window.pageYOffset-offset;
+    window.scrollTo({top,behavior:'smooth'});
+  }
+  document.querySelectorAll('.toc-btn').forEach(b=>b.classList.remove('active'));
+  event.target.classList.add('active');
+}
+
+// Scroll spy for TOC
+const sections=['opening','part1','part2','part3','part4','closing'];
+const tocBtns=document.querySelectorAll('.toc-btn');
+window.addEventListener('scroll',()=>{
+  const scrollY=window.pageYOffset+150;
+  let current='opening';
+  sections.forEach(id=>{
+    const el=document.getElementById(id);
+    if(el&&el.offsetTop<=scrollY)current=id;
+  });
+  const idx=sections.indexOf(current);
+  tocBtns.forEach((b,i)=>{
+    b.classList.toggle('active',i===idx);
+  });
+});
+
+// Animate sections on scroll
+const observer=new IntersectionObserver((entries)=>{
+  entries.forEach(entry=>{
+    if(entry.isIntersecting){
+      entry.target.style.animationPlayState='running';
+    }
+  });
+},{threshold:0.1});
+document.querySelectorAll('.section').forEach(s=>{
+  s.style.animationPlayState='paused';
+  observer.observe(s);
+});
+</script>
+</body>
+</html>
