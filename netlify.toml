@@ -16,6 +16,17 @@
     Content-Security-Policy = "default-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.google-analytics.com; img-src 'self' data: https:; frame-src https://www.google.com https://www.youtube.com; connect-src 'self' https://www.google-analytics.com https://analytics.google.com https://region1.google-analytics.com;"
     Cache-Control = "public, max-age=3600, s-maxage=86400"
 
+# SEO 메타 파일은 짧은 캐시 (변경 즉시 반영)
+[[headers]]
+  for = "/sitemap.xml"
+  [headers.values]
+    Cache-Control = "public, max-age=300, s-maxage=300"
+
+[[headers]]
+  for = "/robots.txt"
+  [headers.values]
+    Cache-Control = "public, max-age=300, s-maxage=300"
+
 # Old URLs redirect to new index
 [[redirects]]
   from = "/ops"
